@@ -55,15 +55,15 @@ main:
     url: 
     weight: -90
   - name: 교육신청
-    url: research&education/classes
+    url: researcheducations/classes
     weight: 1
     parent: 연구/교육
   - name: 교육자료
-    url: research&education/papers
+    url: researcheducations/papers
     weight: 2
     parent: 연구/교육
   - name: 학술행사
-    url: research&education/events
+    url: researcheducations/events
     weight: 3
     parent: 연구/교육            
 
@@ -95,7 +95,7 @@ main:
     weight: 1
     parent: 박물관소개
   - name: 미션/비전
-    url: about/mision&vision
+    url: about/missionvision
     weight: 2
     parent: 박물관소개
   - name: 연혁

@@ -1,5 +1,5 @@
 ---
-title: test
+title: Home
 ---
 
-test
+Home
