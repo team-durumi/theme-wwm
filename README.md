@@ -1,4 +1,4 @@
-# hugo tailwind base theme
+# hugo tailwind theme / Project wwm
 
 Based on [bep/hugo-starter-tailwind-basic](https://github.com/bep/hugo-starter-tailwind-basic)
 
@@ -6,7 +6,7 @@ Based on [bep/hugo-starter-tailwind-basic](https://github.com/bep/hugo-starter-t
 ## development
 
 ```
-hugo mod init github.com/team-durumi/hugo-theme-tw
+hugo mod init github.com/team-durumi/theme-wwm
 hugo new site exampleSite
 
 npm -g i google-font-downloader
@@ -23,7 +23,7 @@ google-font-downloader https://fonts.googleapis.com/css2?family=Gothic+A1:wght@5
 # Run server.
 
 $ git clone https://github.com/team-durumi/hugo-theme-tw.git
-$ cd hugo-theme-tw/exampleSite
+$ cd theme-wwm/exampleSite
 $ npm i && hugo serve
 # open http://localhost:1313
 ```
