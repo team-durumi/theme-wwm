@@ -1,7 +1,108 @@
 main:
-  - name: About
-    url: /about/
+  - name: 박물관이용
+    url: guide
     weight: -110
-  - name: Browse
-    url: /browse/
+  - name: 관람예약 및 안내
+    url: guide/admission
+    weight: 1
+    parent: 박물관이용
+  - name: 오시는 길
+    url: guide/location
+    weight: 2
+    parent: 박물관이용
+  - name: 뮤지엄 샵
+    url: items/shop
+    weight: 3
+    parent: 박물관이용
+
+  - name: 전시
+    url: /exhibitions
     weight: -100
+  - name: 상설전시
+    url: /exhibitions/permanent
+    weight: 1
+    parent: 전시
+  - name: 특별전시
+    url: /exhibitions/special
+    weight: 2
+    parent: 전시
+  - name: 온라인교육
+    url: /exhibitions/online-leaning
+    weight: 3
+    parent: 전시
+  - name: 소장품
+    url: items
+    weight: 4
+    parent: 전시
+
+  - name: 아카이브
+    url: /archives/articles
+    weight: -90
+  - name: 이달의 기록
+    url: /archives/articles
+    weight: 1
+    parent: 아카이브
+  - name: 기록물 이용
+    url: /archives/use-materials
+    weight: 2
+    parent: 아카이브
+  - name: 기록물 기증
+    url: /archives/donate-materials
+    weight: 3
+    parent: 아카이브
+
+  - name: 연구/교육
+    url: 
+    weight: -90
+  - name: 교육신청
+    url: research&education/classes
+    weight: 1
+    parent: 연구/교육
+  - name: 교육자료
+    url: research&education/papers
+    weight: 2
+    parent: 연구/교육
+  - name: 학술행사
+    url: research&education/events
+    weight: 3
+    parent: 연구/교육            
+
+  - name: 소식/참여
+    url:
+    weight: -80
+  - name: 공지사항
+    url: news/posts
+    weight: 1
+    parent: 소식/참여
+  - name: 뉴스레터
+    url: news/newsletter
+    weight: 2
+    parent: 소식/참여
+  - name: 자원활동신청
+    url: news/volunteer
+    weight: 3
+    parent: 소식/참여
+  - name: 박물관 후원
+    url: news/musium-donation
+    weight: 4
+    parent: 소식/참여
+
+  - name: 박물관소개
+    url: about
+    weight: -70
+  - name: 인사말
+    url: about/greeting
+    weight: 1
+    parent: 박물관소개
+  - name: 미션/비전
+    url: about/mision&vision
+    weight: 2
+    parent: 박물관소개
+  - name: 연혁
+    url: about/history
+    weight: 3
+    parent: 박물관소개
+  - name: 기부자의벽
+    url: about/wall-of-donator
+    weight: 4
+    parent: 박물관소개

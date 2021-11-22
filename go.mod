@@ -1,3 +1,3 @@
-module github.com/team-durumi/hugo-theme-tw
+module github.com/team-durumi/theme-wwm
 
 go 1.17
