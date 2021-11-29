@@ -2,12 +2,9 @@
 <div class="container pt-5 {{ .Type }}">
     <div class="row">
         <div class="col-md-9">
-            <h1 class="border-bottom py-3 mb-3">{{ .Title }}</h1>
-            {{ if ne "about" .Type }}
-            <date class="d-block mb-5">{{ .Date.Local.Format "2006-01-02" }}</date>
-            {{ end }}
+            <h1 class="border-bottom py-3 mb-3">title</h1>
+            <date class="d-block mb-5"></date>
             <div class="body">
-                {{ .Content }}
             </div>
         </div>
         <div class="col-md-3">
@@ -15,4 +12,5 @@
         </div>
     </div>
 </div>
+
 {{ end }}
