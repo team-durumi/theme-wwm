@@ -1,16 +1,10 @@
 {{ define "main" }}
-<div class="container pt-5 {{ .Type }}">
-    <div class="row">
-        <div class="col-md-9">
-            <h1 class="border-bottom py-3 mb-3">title</h1>
-            <date class="d-block mb-5"></date>
-            <div class="body">
-            </div>
+    <div class="contents-area" id="main-content">
+        {{ partial "breadcrumb" . }}
+        <div class="container pt-12 pb-28">
+            <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1> 
+            {{ partial "banner--section-single" . }}
+            {{ partial "form/form--donate-materials" . }}
         </div>
-        <div class="col-md-3">
-            메뉴
-        </div>
-    </div>
-</div>
-
+    </div>  
 {{ end }}

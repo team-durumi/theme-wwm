@@ -1,10 +1,41 @@
+{{ define "header" }}
+    {{ partial "header-home" . }}
+{{ end }}
+
 {{ define "main" }}
 {{- `<!-- /index.html  -->` | safeHTML -}}
-<div class="container-prose">
-{{ .Content }}
-{{ range first 5 (where .Site.RegularPages "Section" "slides") }}
-  {{ .Render "summary" }}
-{{ end }}
+
+
+<div id="main-wrap" class="overflow-x-hidden relative">
+	<div id="skip-link">
+	    <a class="block w-full h-10 leading-10 text-center absolute -top-10 left-0 bg-white z-50" href="#main-content">컨텐츠 바로가기</a>
+	</div>
+    <!-- contents-area -->
+    <div class="contents-area" id="main-content">
+        {{ partial "banner--slide" . }}
+        <!-- notice-area -->
+        {{ partial "banner--sticky" . }}
+        <!-- //notice-area -->
+        <!-- 관람안내 / 관람시간 -->
+        {{ partial "banner--admission" . }}
+        <!-- //관람안내 / 관람시간 -->
+        <!-- 교육 프로그램 -->
+        {{ partial "featured--classes" . }}
+        <!-- //교육 프로그램 -->
+        <!-- 환영 -->
+        {{ partial "banner--welcome" . }}
+        <!-- //환영 -->
+        <!-- 상설전시 / 특별전시 -->
+        {{ partial "featured--exhibitions" . }}
+        <!-- //상설전시 / 특별전시 -->
+        <!-- 소장품 -->
+        {{ partial "featured--items" . }}
+        <!-- //소장품 -->
+        <!-- 뉴스레터 -->
+        {{ partial "form/form--newsletter" . }}
+        <!-- //뉴스레터 -->
+    </div>
 </div>
-{{- `<!-- /index.html  -->` | safeHTML -}}
+
+
 {{ end }}
