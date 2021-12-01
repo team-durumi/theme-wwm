@@ -55,7 +55,7 @@ main:
     url: 
     weight: -90
   - name: 교육신청
-    url: researcheducations/classes
+    url: researcheducations/courses
     weight: 1
     parent: 연구/교육
   - name: 교육자료
