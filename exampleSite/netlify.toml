@@ -1,0 +1,6 @@
+[build]
+  command = "hugo mod tidy && hugo --gc"
+  publish = "exampleSite/public/"
+
+[build.environment]
+  HUGO_VERSION = "0.89.2"

@@ -1,97 +1,41 @@
-    <footer class="bg-aa-gray-100">
-        <div class="container pt-8 lg:pt-20">
-            <div class="justify-between mb-16 leading-normal hidden lg:flex">
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">박물관 이용</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">관람예약 및 안내</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">오시는 길</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">뮤지엄샵</a></li>
-                        </ul>
-
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">전시</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">상설전시</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">특별전시</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">온라인 교육</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">소장품</a></li>
-                        </ul>
-
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">아카이브</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">이달의 기록</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">기록물 이용</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">기록물 기증</a></li>
-                        </ul>
-
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">연구/교육</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">교육신청</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">교육자료</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">학술행사</a></li>
-                        </ul>
-
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">소식/참여</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">공지사항</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">뉴스레터</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">자원활동신청</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">박물관 후원</a></li>
-                        </ul>
-
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="font-bold mb-2 text-aa-gray-900">박물관 소개</dt>
-                    <dd>
-                        <ul>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">인사말</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">미션비전</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">연혁</a></li>
-                            <li class="text-aa-gray-600 mb-2"><a href="#">기부자의 벽</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <a class="flex h-10 justify-center items-center px-6 bg-aa-purple-500 text-white hover:bg-black" href="#"><span class="mr-2">통합 검색</span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg></a>
-            </div>
-            <div class="lg:flex justify-between mb-14">
-                <div><a href="/" class="logo flex-shrink-0 z-20 mb-8 lg:mb-0" style="background-image : url(/images/logo.png)">전쟁과 여성 인권 박물관</a></div>
-                <address class="text-aa-gray-600">
-                    <span class="block mb-3">
-                        <em class="not-italic mr-4 block lg:inline">기관명: 전쟁과여성인권박물관</em>
-                        <em class="not-italic">주소: 서울특별시 마포구 월드컵북로 11길 20</em>
-                    </span>
-                    <span class="block mb-3">
-                        <em class="not-italic mr-4 block lg:inline">이메일: <a href="mailto:museum@womenandwar.net">museum@womenandwar.net</a></em>
-                        <em class="not-italic mr-4 block lg:inline">전화: 02-392-5252</em>
-                        <em class="not-italic">팩스: 02-332-5256</em>
-                    </span>
-                    <span class="block mb-3">
-                        <em class="not-italic">사업자등록번호: 219-82-61946</em>
-                    </span>
-                </address>
-            </div>
-            <div class="py-3 border-t border-aa-gray-200 text-center text-aa-gray-500 -mx-4 lg:mx-0">
-                전쟁과여성인권박물관 ©All rights reserved.
-            </div>
+<footer class="bg-aa-gray-100">
+    <div class="container pt-8 lg:pt-20">
+        <div class="justify-between mb-16 leading-normal hidden lg:flex">
+            {{ range site.Menus.main }}
+            <dl>
+                <dt class="font-bold mb-2 text-aa-gray-900">{{ .Name }}</dt>
+                <dd>
+                    {{ range .Children }}
+                    <ul>
+                        <li class="text-aa-gray-600 mb-2"><a href="{{ .URL | absURL }}">{{ .Name }} </a></li>
+                    </ul>
+                    {{ end }}
+                </dd>
+            </dl>
+            {{ end }}
+            <a class="flex h-10 justify-center items-center px-6 bg-aa-purple-500 text-white hover:bg-black" href="/search"><span class="mr-2">통합 검색</span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg></a>
         </div>
-    </footer>
+        <div class="lg:flex justify-between mb-14">
+            <div><a href="/" class="logo flex-shrink-0 z-20 mb-8 lg:mb-0" style="background-image : url(/images/logo.png)">전쟁과 여성 인권 박물관</a></div>
+            <address class="text-aa-gray-600">
+                <span class="block mb-3">
+                    <em class="not-italic mr-4 block lg:inline">기관명: 전쟁과여성인권박물관</em>
+                    <em class="not-italic">주소: 서울특별시 마포구 월드컵북로 11길 20</em>
+                </span>
+                <span class="block mb-3">
+                    <em class="not-italic mr-4 block lg:inline">이메일: <a href="mailto:museum@womenandwar.net">museum@womenandwar.net</a></em>
+                    <em class="not-italic mr-4 block lg:inline">전화: 02-392-5252</em>
+                    <em class="not-italic">팩스: 02-332-5256</em>
+                </span>
+                <span class="block mb-3">
+                    <em class="not-italic">사업자등록번호: 219-82-61946</em>
+                </span>
+            </address>
+        </div>
+        <div class="py-3 border-t border-aa-gray-200 text-center text-aa-gray-500 -mx-4 lg:mx-0">
+            전쟁과여성인권박물관 ©All rights reserved.
+        </div>
+    </div>
+</footer>

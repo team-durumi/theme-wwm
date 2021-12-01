@@ -17,60 +17,21 @@
             </span>
         </a>
         <ul class="menu-main lg:flex justify-end items-center whitespace-nowrap absolute left-0 top-16 lg:static w-full lg:w-auto px-4 lg:px-0 max-h-0 lg:max-h-full overflow-hidden lg:overflow-visible">
+            {{ range site.Menus.main }}
             <li class="relative xl:mr-14 lg:mr-11 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">박물관 이용</a>
+                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">{{ .Name }}</a>
                 <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">관람예약 및 안내</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">오시는 길</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">뮤지엄샵</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">박물관 소개</a></li>
+                    {{ range .Children }}
+                    <li>
+                        <a class="block py-3 text-center hover:bg-aa-gray-100" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
                 </ul>
             </li>
-            <li class="relative xl:mr-14 lg:mr-11 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">전시</a>
-                <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">상설전시</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">특별전시</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">온라인 투어</a></li>
-                </ul>
-            </li>
-            <li class="relative xl:mr-14 lg:mr-11 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">아카이브</a>
-                <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">이달의 기록</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기록물 이용</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기록물 기증</a></li>
-                </ul>
-            </li>
-            <li class="relative xl:mr-14 lg:mr-11 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">연구/교육</a>
-                <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">교육신청</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">교육자료</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">학술행사</a></li>
-                </ul>
-            </li>
-            <li class="relative xl:mr-14 lg:mr-11 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">소식/참여</a>
-                <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">공지사항</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">뉴스레터</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">자원활동신청</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">박물관 후원</a></li>
-                </ul>
-            </li>
-            <li class="relative xl:mr-7 lg:mr-5 border-b lg:border-none border-aa-gray-300">
-                <a class="block lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0" x-on:mouseover="megaMenu = true" href="#">박물관 소개</a>
-                <ul class="lg:absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20" x-on:mouseover="megaMenu = true" x-show="megaMenu">
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">인사말</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">미션비전</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">연혁</a></li>
-                    <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기부자의 벽</a></li>
-                </ul>
-            </li>
+            {{ end }}
             <li class="buttons xl:block hidden">
-                <a class="bg-aa-purple-500 inline-block px-7 py-3.5 text-white rounded-sm text-center mr-2" href="#">관람예약</a>
-                <a class="inline-block border border-white text-white px-7 py-3.5 rounded-sm text-center box-border" :class="{ 'border-aa-purple-500 text-aa-purple-500': megaMenu }" href="#">후원하기</a>
+                <a class="bg-aa-purple-500 inline-block px-7 py-3.5 text-white rounded-sm text-center mr-2" href="/guide/admission/">관람예약</a>
+                <a class="inline-block border border-white text-white px-7 py-3.5 rounded-sm text-center box-border" :class="{ 'border-aa-purple-500 text-aa-purple-500': megaMenu }" href="/news/musium-donation/">후원하기</a>
             </li>
         </ul>
     </div>

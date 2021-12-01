@@ -27,3 +27,15 @@ $ cd theme-wwm/exampleSite
 $ npm i && hugo serve
 # open http://localhost:1313
 ```
+
+
+## netlify-build
+- netlify.toml
+
+
+## firebase-realtime(test)
+
+items
+https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAFdHxQd06rDHUxkHu80WVOQC7fYNh4UuYYYJ-590/items.json
+
+
