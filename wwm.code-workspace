@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "assets-src",
+      "path": "assets"
+    },
+    {
+      "name": "layouts-default",
+      "path": "layouts/_default"
+    },
+    {
+      "name": "layouts-partials",
+      "path": "layouts/partials"
+    },
+    {
+      "name": "site-content",
+      "path": "exampleSite/content"
+    },
+    {
+      "name": "project-root",
+      "path": "."
+    },
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "yzhang.markdown-all-in-one",
+      "esbenp.prettier-vscode",
+      "flesler.url-encode",
+      "Tyriar.lorem-ipsum",
+      "budparr.language-hugo-vscode",
+      "eliostruyf.vscode-hugo-themer",
+      "bradlc.vscode-tailwindcss",
+      "csstools.postcss"
+    ]
+  }
+}
