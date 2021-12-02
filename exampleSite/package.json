@@ -1,19 +1,19 @@
 {
-	"name": "hugo-starter-tailwind-basic",
+	"name": "hugo-theme-wwm",
 	"version": "0.1.0",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bep/hugo-starter-tailwind-basic.git"
+		"url": "https://github.com/team-durumi/theme-wwm.git"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.4.1",
-		"@tailwindcss/line-clamp": "^0.2.2",
 		"autoprefixer": "^10.3.1",
 		"postcss": "^8.3.6",
 		"postcss-cli": "^8.3.1",
 		"postcss-purgecss": "^2.0.3",
 		"tailwindcss": "^2.2.7",
+    "@tailwindcss/typography": "^0.4.1",
+		"@tailwindcss/line-clamp": "^0.2.2",
 		"alpinejs": "^3.5.1"
 	}
 }

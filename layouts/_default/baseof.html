@@ -14,29 +14,27 @@
     {{- template "_internal/schema.html" . -}}
     {{- block "headCss" . }}{{ end -}}
     {{- if .Site.Params.themeNoPipe }}
-
+    <link href="/assets/style.min.css" rel="stylesheet" />
     {{ else }}
       {{- $options := dict "inlineImports" true }}
       {{ $styles := resources.Get "style.css" | resources.PostCSS $options }}
       {{ if hugo.IsProduction }}{{ $styles = $styles | minify | resources.PostProcess }}{{ end -}}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
-    <link href="/assets/style.min.css" rel="stylesheet" />    
     {{ end -}}{{- block "headJs" . }}{{ end -}}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/style-custom.css">
     {{- if .Site.Params.themeNoPipe }}
     <script src="/assets/index.min.js" defer></script>
-    {{ else }}
+    {{ else -}}
       {{- $js := resources.Get "index.js" | js.Build (dict "targetPath" "assets/index.js") -}}
       {{- if hugo.IsProduction }}{{ $js = $js | minify }}{{ end -}}
     <script src="{{ $js.RelPermalink }}" defer></script>
     {{ end -}}
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/assets/css/style-build.css">
-    <link rel="stylesheet" href="/assets/css/style-custom.css">    
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   </head>
   <body class="{{ if .IsHome }}front{{ else }} page{{ delimit (split .Page.RelPermalink "/") "--" "" }}{{ end }}">
-  <!-- {{/* @see https://github.com/team-durumi/tailwind-aa-theme/tree/master/layouts/partials/basic */}} -->
+  {{/* @see https://github.com/team-durumi/tailwind-aa-theme/tree/master/layouts/partials/basic */}}
     {{- block "header" . }}{{ partial "header.html" . }}{{- end }}
     {{- block "main" . }}{{- end }}
     {{- block "footer" . }}{{ partial "footer.html" . }}{{- end }}
