@@ -4,11 +4,20 @@ Based on [bep/hugo-starter-tailwind-basic](https://github.com/bep/hugo-starter-t
 
 ## development
 
+### run server
+
 ```bash
 $ git clone https://github.com/team-durumi/hugo-theme-tw.git
 $ cd theme-wwm/exampleSite
 $ npm i && hugo serve
 # open http://localhost:1313
+```
+
+### css, js (via hugo pipe)
+
+```
+src: assets/style.css => build: /static/assets/style.min.css
+src: assets/index.js => build: /static/assets/index.min.js
 ```
 
 ## firebase-realtime(test)
