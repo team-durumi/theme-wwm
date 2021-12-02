@@ -1,5 +1,6 @@
 <!-- main-slider -->
-<div x-data="{swiper: null}"
+<div class="relative"
+  x-data="{swiper: null}"
   x-init="swiper = new Swiper($refs.container, {
     loop: true,
     slidesPerView: 1,
@@ -8,7 +9,6 @@
       },
     }
   )"
-class="relative"
 >
   <div class="absolute left-10 bottom-6 z-20 lg:flex hidden">
     <button @click="swiper.slidePrev()"

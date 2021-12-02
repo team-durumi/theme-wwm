@@ -1,43 +1,35 @@
-{{ define "header" }}
-    {{ partial "header-home" . }}
-{{ end }}
+{{ define "header" }}{{ partial "header-home" . }}{{ end }}
 
 {{ define "main" }}
 {{- `<!-- /index.html  -->` | safeHTML -}}
 <div id="main-wrap" class="overflow-x-hidden relative">
-	<div id="skip-link">
-	    <a class="block w-full h-10 leading-10 text-center absolute -top-10 left-0 bg-white z-50" href="#main-content">컨텐츠 바로가기</a>
-	</div>
-    <!-- contents-area -->
-    <div class="contents-area" id="main-content">
-        {{ partial "banner--slide" . }}
-        <!-- notice-area -->
-        {{ partial "banner--sticky" . }}
-        <!-- //notice-area -->
+  <div id="skip-link">
+    <a class="block w-full h-10 leading-10 text-center absolute -top-10 left-0 bg-white z-50" href="#main-content">컨텐츠 바로가기</a>
+  </div>
+  <div class="contents-area" id="main-content">
+    {{/* 슬라이드 배너 */}}
+    {{ partial "banner--slide" . }}
 
-        <!-- 관람안내 / 관람시간 -->
-        {{ partial "banner--admission" . }}
-        <!-- //관람안내 / 관람시간 -->
+    <!-- notice-area -->
+    {{ partial "banner--sticky" . }}
 
-        <!-- 교육 프로그램 -->
-        {{ partial "featured--courses" . }}
-        <!-- //교육 프로그램 -->
+    <!-- 관람안내 / 관람시간 -->
+    {{ partial "banner--admission" . }}
 
-        <!-- 환영 -->
-        {{ partial "banner--welcome" . }}
-        <!-- //환영 -->
+    <!-- 교육 프로그램 -->
+    {{ partial "featured--courses" . }}
 
-        <!-- 상설전시 / 특별전시 -->
-        {{ partial "featured--exhibitions" . }}
-        <!-- //상설전시 / 특별전시 -->
+    <!-- 환영 -->
+    {{ partial "banner--welcome" . }}
 
-        <!-- 소장품 -->
-        {{ partial "featured--items" . }}
-        <!-- //소장품 -->
+    <!-- 상설전시 / 특별전시 -->
+    {{ partial "featured--exhibitions" . }}
 
-        <!-- 뉴스레터 -->
-        {{ partial "form/form--newsletter" . }}
-        <!-- //뉴스레터 -->
-    </div>
+    <!-- 소장품 -->
+    {{ partial "featured--items" . }}
+
+    <!-- 뉴스레터 -->
+    {{ partial "form/form--newsletter" . }}
+  </div>
 </div>
 {{ end }}
