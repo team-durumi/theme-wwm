@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: static/img # 미디어파일이 static 경로에 쌓이면 aa 컨셉과 맞지는 않음
+public_folder: /img
+collections:
+  - name: 'posts'
+    label: '공지사항'
+    folder: 'content/news/posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: '제목', name: 'title', widget: 'string' }
+      - { label: '날짜', name: 'date', widget: 'datetime' }
+      - { label: '작성자', name: 'author', widget: 'string' }  
+      - { label: '본문', name: 'body', widget: 'markdown' }
+  - name: 'slides'
+    label: '슬라이드'
+    folder: 'content/slides'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: '제목', name: 'title', widget: 'string' }
+      - { label: '날짜', name: 'date', widget: 'datetime' }
+      - { label: '작성자', name: 'author', widget: 'string' }       
+      - { label: '본문', name: 'body', widget: 'markdown' }      
