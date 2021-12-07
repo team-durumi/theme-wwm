@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- `<!-- _default/list.html  -->` | safeHTML -}}
+<div class="contents-area" id="main-content">
+  {{ partial "base/breadcrumb" . }}
+  <div class="container pt-12 pb-28">
+    <div class="contents-area" id="main-content">
+      <div class="container pt-12 pb-28">
+        <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
+        {{ partial "marketing/banner--section-single" . }} 
+        <div class="mb-20">
+            <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">상시교육</h2>
+            <ul class="list-gallary01 flex flex-wrap mb-20">
+                <li>
+                    <span class="block relative overflow-hidden rounded-lg mb-4">
+                        <img class="absolute h-full w-full object-cover" src="/images/@education-program.png" alt="">
+                    </span>
+                    <span class="block">
+                        <b class="text-aa-gray-700 text-xl mb-1 block">나비더하기</b>
+                        <span class="block text-sm text-aa-gray-500">2021. 11. 16 </span>
+                    </span>
+                </li>
+                <li>
+                    <span class="block relative overflow-hidden rounded-lg mb-4">
+                        <img class="absolute h-full w-full object-cover" src="/images/@education-program.png" alt="">
+                    </span>
+                    <span class="block">
+                        <b class="text-aa-gray-700 text-xl mb-1 block">전쟁과여성인권박물관</b>
+                        <span class="block text-sm text-aa-gray-500">2021. 11. 16 </span>
+                    </span>
+                </li>
+                <li>
+                    <span class="block relative overflow-hidden rounded-lg mb-4">
+                        <img class="absolute h-full w-full object-cover" src="/images/@education-program.png" alt="">
+                    </span>
+                    <span class="block">
+                        <b class="text-aa-gray-700 text-xl mb-1 block">김복동 평화인권상 공모</b>
+                        <span class="block text-sm text-aa-gray-500">2021. 10. 12 ~ 10.25</span>
+                    </span>
+                </li>
+            </ul>
+            <div class="text-center">
+                <a class="inline-block py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" href="/exhibitions/online-leaning/">온라인 교육 프로그램 체험하기</a>
+            </div>
+        </div>
+        <div class="mb-20">
+            <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">전체교육 목록</h2>
+            {{ $paginator := .Paginate .RegularPagesRecursive }}
+            <ul class="list-gallary01 flex flex-wrap mb-20">
+              {{ range $paginator.Pages }}
+                {{ .Render "li" }}
+              {{ end }}
+            </ul>
+            {{ partial "app/pagination.html" $paginator }}
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>  
+{{- `<!-- _default/list.html  -->` | safeHTML -}}
+{{ end}}

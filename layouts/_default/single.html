@@ -1,12 +1,27 @@
 {{ define "main" }}
 {{- `<!-- _default/single.html  -->` | safeHTML -}}
-<section id="main" class="post layout-single container-prose">
-  <article id="content">
-    <header class="my-5">
-      <h1 id="title">{{ .Title }}</h1>
-    </header>
-    {{ .Content }}
-  </article>
-</section>
+{{ partial "base/breadcrumb" . }}
+<div class="contents-area" id="main-content">
+    <!-- contents -->
+    <div class="container pt-12 pb-28">
+        <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+            <div class="mb-8">
+                <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
+                <span class="block text-sm">
+                    {{ .Date.Format "2006년 1월 2일" }}
+                    <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
+                </span>
+            </div>
+            <p class="mb-8">{{ .Summary }}</p>
+        </div>
+        <div class="mb-8">
+            <img class="w-full" src="/images/banner-archive-main.png" alt="이달의 기록">
+        </div>
+        <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+            <p class="mb-8">{{ .Content }}</p>
+        </div>
+    </div>
+    <!-- //contents -->
+</div>
 {{- `<!-- _default/single.html  -->` | safeHTML -}}
 {{ end }}

@@ -1,4 +1,17 @@
-<li>
-  <time>{{ .Date.Format "2006년 1월 2일" }}</time>
-  <a href="{{ .Permalink }}">{{ .Title }}</a>
+<li class="mb-12">
+  <a href="{{ .Permalink }}" class="flex items-center justify-between gap-5">
+      <span class="text-aa-gray-500">
+          <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
+          <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
+          <span class="block text-sm">
+              <time>{{ .Date.Format "2006년 1월 2일" }}</time>
+              <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.Author }}</em>
+          </span>
+      </span>
+      <span class="flex-shrink-0">
+          <span class="block overflow-hidden relative">
+              <img class="absolute h-full w-full object-cover" src="/images/@content-01.png" alt="">
+          </span>
+      </span>
+  </a>
 </li>
