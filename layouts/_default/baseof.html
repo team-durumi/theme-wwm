@@ -36,8 +36,8 @@
   </head>
   <body class="{{ if .IsHome }}front{{ else }} page{{ delimit (split .Page.RelPermalink "/") "--" "" }}{{ end }}">
   {{/* @see https://github.com/team-durumi/tailwind-aa-theme/tree/master/layouts/partials/basic */}}
-    {{- block "header" . }}{{ partial "header.html" . }}{{- end }}
+    {{- block "header" . }}{{ partial "base/header.html" . }}{{- end }}
     {{- block "main" . }}{{- end }}
-    {{- block "footer" . }}{{ partial "footer.html" . }}{{- end }}
+    {{- block "footer" . }}{{ partial "base/footer.html" . }}{{- end }}
   </body>
 </html>

@@ -1,4 +1,4 @@
-{{ define "header" }}{{ partial "header-home" . }}{{ end }}
+{{ define "header" }}{{ partial "base/header-home" . }}{{ end }}
 
 {{ define "main" }}
 {{- `<!-- /index.html  -->` | safeHTML -}}
@@ -8,28 +8,28 @@
   </div>
   <div class="contents-area" id="main-content">
     {{/* 슬라이드 배너 */}}
-    {{ partial "banner--slide" . }}
+    {{ partial "marketing/banner--slide" . }}
 
     <!-- notice-area -->
-    {{ partial "banner--sticky" . }}
+    {{ partial "marketing/banner--sticky" . }}
 
     <!-- 관람안내 / 관람시간 -->
-    {{ partial "banner--admission" . }}
+    {{ partial "marketing/banner--admission" . }}
 
     <!-- 교육 프로그램 -->
-    {{ partial "featured--courses" . }}
+    {{ partial "marketing/featured--courses" . }}
 
     <!-- 환영 -->
-    {{ partial "banner--welcome" . }}
+    {{ partial "marketing/banner--welcome" . }}
 
     <!-- 상설전시 / 특별전시 -->
-    {{ partial "featured--exhibitions" . }}
+    {{ partial "marketing/featured--exhibitions" . }}
 
     <!-- 소장품 -->
-    {{ partial "featured--items" . }}
+    {{ partial "marketing/featured--items" . }}
 
     <!-- 뉴스레터 -->
-    {{ partial "form/form--newsletter" . }}
+    {{ partial "marketing/form--newsletter" . }}
   </div>
 </div>
 {{ end }}
