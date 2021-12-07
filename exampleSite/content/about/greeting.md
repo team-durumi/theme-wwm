@@ -4,4 +4,4 @@ date: 2011-11-17
 layout: section_single
 ---
 
-인사말 본문
+{{< about/greeting-message >}}

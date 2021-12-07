@@ -4,4 +4,4 @@ date: 2011-11-17
 layout: section_single
 ---
 
-기부자의 벽 본문
+{{< about/wall-of-donator >}}

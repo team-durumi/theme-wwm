@@ -83,7 +83,7 @@ main:
     weight: 3
     parent: 소식/참여
   - name: 박물관 후원
-    url: news/musium-donation
+    url: news/museum-donation
     weight: 4
     parent: 소식/참여
 
