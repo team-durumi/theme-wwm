@@ -1,5 +1,5 @@
 ---
-title: "Classes"
+title: "Courses"
 date: 2021-08-23T20:23:39+09:00
 ---
 

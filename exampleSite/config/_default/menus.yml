@@ -11,7 +11,7 @@ main:
     weight: 2
     parent: 박물관이용
   - name: 뮤지엄 샵
-    url: items/shop
+    url: shop-items
     weight: 3
     parent: 박물관이용
 
@@ -19,11 +19,11 @@ main:
     url: /exhibitions
     weight: -100
   - name: 상설전시
-    url: /exhibitions/permanent
+    url: /exhibitions
     weight: 1
     parent: 전시
   - name: 특별전시
-    url: /exhibitions/special
+    url: /exhibitions
     weight: 2
     parent: 전시
   - name: 온라인교육
