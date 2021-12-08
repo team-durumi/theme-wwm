@@ -1,108 +1,108 @@
 main:
   - name: 박물관이용
-    url: guide
+    url: /guide
     weight: -110
   - name: 관람예약 및 안내
-    url: guide/admission
+    url: /guide/admission
     weight: 1
     parent: 박물관이용
   - name: 오시는 길
-    url: guide/location
+    url: /guide/location
     weight: 2
     parent: 박물관이용
   - name: 뮤지엄 샵
-    url: shop-items
+    url: /guide/store
     weight: 3
     parent: 박물관이용
 
   - name: 전시
-    url: /exhibitions
+    url: /exhibition
     weight: -100
   - name: 상설전시
-    url: /exhibitions
+    url: /exhibition/permanent
     weight: 1
     parent: 전시
   - name: 특별전시
-    url: /exhibitions
+    url: /exhibition/special
     weight: 2
     parent: 전시
   - name: 온라인교육
-    url: /exhibitions/online-leaning
+    url: /exhibition/elearning
     weight: 3
     parent: 전시
   - name: 소장품
-    url: items
+    url: /exhibition/collections
     weight: 4
     parent: 전시
 
   - name: 아카이브
-    url: /archives/articles
+    url: /archive
     weight: -90
   - name: 이달의 기록
-    url: /archives/articles
+    url: /archive/featured
     weight: 1
     parent: 아카이브
   - name: 기록물 이용
-    url: /archives/use-materials
+    url: /archive/usage
     weight: 2
     parent: 아카이브
   - name: 기록물 기증
-    url: /archives/donate-materials
+    url: /archive/donate
     weight: 3
     parent: 아카이브
 
   - name: 연구/교육
-    url: 
+    url: /research-and-learning
     weight: -90
   - name: 교육신청
-    url: researcheducations/courses
+    url: /research-and-learning/courses
     weight: 1
     parent: 연구/교육
   - name: 교육자료
-    url: researcheducations/papers
+    url: /research-and-learning/resources
     weight: 2
     parent: 연구/교육
   - name: 학술행사
-    url: researcheducations/events
+    url: /research-and-learning/events
     weight: 3
     parent: 연구/교육            
 
   - name: 소식/참여
-    url:
+    url: /connect
     weight: -80
   - name: 공지사항
-    url: news/posts
+    url: /connect/notice
     weight: 1
     parent: 소식/참여
   - name: 뉴스레터
-    url: news/newsletter
+    url: /connect/newsletter
     weight: 2
     parent: 소식/참여
   - name: 자원활동신청
-    url: news/volunteer
+    url: /connect/volunteer
     weight: 3
     parent: 소식/참여
   - name: 박물관 후원
-    url: news/museum-donation
+    url: /connect/support
     weight: 4
     parent: 소식/참여
 
   - name: 박물관소개
-    url: about
+    url: /about
     weight: -70
   - name: 인사말
-    url: about/greeting
+    url: /about/greetings
     weight: 1
     parent: 박물관소개
   - name: 미션/비전
-    url: about/missionvision
+    url: /about/mission-and-vision
     weight: 2
     parent: 박물관소개
   - name: 연혁
-    url: about/history
+    url: /about/history
     weight: 3
     parent: 박물관소개
   - name: 기부자의벽
-    url: about/wall-of-donator
+    url: /about/donor-wall
     weight: 4
     parent: 박물관소개
