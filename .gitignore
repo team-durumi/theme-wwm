@@ -6,3 +6,11 @@ exampleSite/resources
 hugo_stats.json
 .hugo_build.lock
 exampleSite/content/items
+static/html/archive-view.html
+static/html/archive-list.html
+static/html/archive-use.html
+static/html/education-list.html
+static/html/news-museum-support.html
+static/html/news-newsletter-list.html
+static/html/news-notice-list.html
+static/html/news-volunteer-from.html
