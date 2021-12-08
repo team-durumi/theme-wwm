@@ -18,53 +18,34 @@
     </button>
   </div>
 
+          {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+
   <div class="swiper-container main-slider" x-ref="container">
     <div class="swiper-wrapper">
+      {{ range (.Paginate (where .Site.RegularPages "Type" "slides")).Pages }}
       <div class="swiper-slide">
-        <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url(https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80)">
+        <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url({{ .Params.image | absURL }})">
           <div class="w-full h-full absolute top-0 left-0 bg-black opacity-30"></div>
           <div class="container relative">
             <div class="text-white">
-              <b class="mb-2 font-normal">2020. 08. 17. - 11. 27.</b>
+              <b class="mb-2 font-normal">{{ .Params.upper_message }}</b>
               <dl class="mb-8">
-                  <dt class="font-serif font-bold text-6xl leading-tight mb-2">그날의 목소리</dt>
-                  <dd>故김학순 공개증언 30주년 기념전시</dd>
+                  <dt class="font-serif font-bold text-6xl leading-tight mb-2">{{ .Title }}</dt>
+                  <dd>{{ .Params.sub_title }}</dd>
               </dl>
-              <a href="#" class="inline-block px-7 py-3.5 bg-aa-purple-500 hover:bg-black">전시 소개 보기</a>
+              {{ if .Params.button_url }} 
+              <a href="{{ .Params.button_url | absURL }}" class="inline-block px-7 py-3.5 bg-aa-purple-500 hover:bg-black">{{ .Params.button_name }}</a>
+              {{ end }}
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-          <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url(https://images.unsplash.com/photo-1598951092651-653c21f5d0b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80)">
-              <div class="w-full h-full absolute top-0 left-0 bg-black opacity-30"></div>
-              <div class="container relative">
-                  <div class="text-white">
-                      <b class="mb-2 font-normal">2020. 08. 17. - 11. 27.</b>
-                      <dl class="mb-8">
-                          <dt class="font-serif font-bold text-6xl leading-tight mb-2">그날의 목소리</dt>
-                          <dd>故김학순 공개증언 30주년 기념전시</dd>
-                      </dl>
-                      <a href="#" class="inline-block px-7 py-3.5 bg-aa-purple-500 hover:bg-black">전시 소개 보기</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="swiper-slide">
-          <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url(https://images.unsplash.com/photo-1598946423291-ce029c687a42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80)">
-              <div class="w-full h-full absolute top-0 left-0 bg-black opacity-30"></div>
-              <div class="container relative">
-                  <div class="text-white">
-                      <b class="mb-2 font-normal">2020. 08. 17. - 11. 27.</b>
-                      <dl class="mb-8">
-                          <dt class="font-serif font-bold text-6xl leading-tight mb-2">그날의 목소리</dt>
-                          <dd>故김학순 공개증언 30주년 기념전시</dd>
-                      </dl>
-                      <a href="#" class="inline-block px-7 py-3.5 bg-aa-purple-500 hover:bg-black">전시 소개 보기</a>
-                  </div>
-              </div>
-          </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 
