@@ -1,7 +1,8 @@
 public
 static/node_modules
 node_modules
-resources
+/resources
+exampleSite/resources
 hugo_stats.json
 .hugo_build.lock
 exampleSite/content/items
