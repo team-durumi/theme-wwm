@@ -21,10 +21,10 @@
     
     <!-- 옆 아이템으로 이동 -->
     <div>
-        {{ with .PrevInSection }}
+        {{ with .Prev }}
           [이전 아아템]<a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
-        {{ with .NextInSection }}
+        {{ with .Next }}
           [이후 아이템]<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
     </div>

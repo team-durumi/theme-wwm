@@ -2,7 +2,7 @@
     <div class="container text-white py-4 lg:py-2 lg:flex justify-between relative">
         <dl class="lg:flex">
             <dt class="lg:w-28 font-bold mb-4 lg:mb-0">공지사항</dt>
-            {{ range first 1 (where .Site.RegularPages "Type" "news") }}
+            {{ range first 1 (where .Site.RegularPages "Type" "connect") }}
                 <dd>
                     <a href="{{ .Permalink }}" class="line-clamp-1">{{ .Title }}</a>
                 </dd>
