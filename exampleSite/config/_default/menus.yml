@@ -26,10 +26,6 @@ main:
     url: /exhibition/special
     weight: 2
     parent: 전시
-  - name: 온라인교육
-    url: /exhibition/elearning
-    weight: 3
-    parent: 전시
   - name: 소장품
     url: /exhibition/collections
     weight: 4
@@ -54,17 +50,21 @@ main:
   - name: 연구/교육
     url: /research-and-learning
     weight: -90
+  - name: 온라인교육
+    url: research-and-learning/elearning
+    weight: 1
+    parent: 연구/교육   
   - name: 교육신청
     url: /research-and-learning/courses
-    weight: 1
+    weight: 2
     parent: 연구/교육
   - name: 교육자료
     url: /research-and-learning/resources
-    weight: 2
+    weight: 3
     parent: 연구/교육
   - name: 학술행사
     url: /research-and-learning/events
-    weight: 3
+    weight: 4
     parent: 연구/교육            
 
   - name: 소식/참여
