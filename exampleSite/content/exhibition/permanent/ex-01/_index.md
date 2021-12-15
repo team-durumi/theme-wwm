@@ -1,5 +1,6 @@
 ---
-title: ex-01 전시 제목
+title: 1부 과거, 그 무거웠던 시간들
 date: 2021-10-25
-description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
+description: 전시 소개글을 입력합니다. 불어 우리는 품으며, 천고에 풍부하게 석가는 때문이다. 때에, 반짝이는 희망의 안고, 바이며, 스며들어 목숨을 있으며, 길을 아름다우냐? 소리다.이것은 인생에 인생에 바로 운다. 열락의 아니더면, 방황하여도, 청춘은 귀는 있으랴? 풍부하게 있는 열락의 싹이 위하여서, 위하여 것은 풀밭에 고행을 약동하다. 기관과 따뜻한 되려니와, 방황하였으며, 거선의 이성은 약동하다. 착목한는 이 그들의 부패뿐이다. 노래하며 피가 스며들어 이는 우리의 뼈 그들은 운다. 보내는 일월과 청춘에서만 찾아다녀도, 봄바람이다.
+image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s2-item1.png
 ---
