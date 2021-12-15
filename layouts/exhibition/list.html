@@ -1,31 +1,44 @@
 {{ define "main" }}
 {{- `<!-- _default/list.html  -->` | safeHTML -}}
-<div class="bg-white">
-    <div class="container py-20">
-        <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
-        {{ partial "marketing/banner--section-single" . }} 
-        
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <ul class="masonry01 mb-20" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer", "percentPosition": "true"}'>
-            <li class="grid-sizer"></li>
-            <li class="gutter-sizer"></li>
-            {{ range last 20 (where site.RegularPages "Type" "items").ByTitle }}
-            <li class="mb-10 grid-item">
-              <a href="{{ .Permalink }}">
-                <span class="overflow-hidden mr-7">
-                    {{ range .Params.Components }}
-                    <img class="w-full" src="{{ . | absURL }}" alt="">
-                    {{ end }}
-                </span>
-                <span class="block">
-                    <b class="text-aa-gray-900 text-xl font-normal mb-2 block">{{ .Title }}</b>
-                    <span class="block text-sm line-clamp-2 text-aa-gray-700 leading-6">{{ .Params.descriptions }}</span>
-                </span>
-              </a>  
-            </li>
-            {{ end }}
-        </ul>
+<div class="contents-area" id="main-content">
+    {{ partial "base/breadcrumb" . }}
+    <div class="container pt-12 pb-28 relative">
+    
+        <div class="mb-20">
+            <!-- 전시 헤더 영역 ex-01/_index.md  -->
+            <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">제목 :{{ .Title }}</h1>
+            설명 : {{ .Params.description }}<br>
+            대표이미지 : {{ .Params.image }}
+            <img class="h-20" src="{{ .Params.image }}">
+
+
+            <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
+                <h2 class="text-2xl text-aa-gray-900 leading-none">총 {{ len ( .RegularPagesRecursive) }} 개 섹션</h2>
+            </div>
+            <ul>
+                {{ $paginator := .Paginate .RegularPagesRecursive }}
+                {{ range $paginator.Pages }}
+                <a href="{{ .Permalink }}">
+                    <li class="mb-10 grid-item">
+                        <span class="overflow-hidden mr-7">
+                            {{ $settings := .Site.Params }}
+                            {{ with .Params.image }}
+                              {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                                {{ $src := partial "basic/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+                                <img class="h-20" src="{{ $src }}" alt="{{ $.Title }}">
+                            {{ end }}
+                        </span>
+                        <span class="block">
+                            <b class="text-aa-gray-900 text-xl font-normal mb-2 block">{{ .Title }}</b>
+                            <span class="block text-sm line-clamp-2 text-aa-gray-700 leading-6">{{ .Description }} </span>
+                        </span>
+                    </li>
+                </a>    
+                {{ end }}
+            </ul>
+            {{ partial "app/pagination.html" $paginator }}
+        </div>
     </div>
-</div>
+</div>    
 {{- `<!-- _default/list.html  -->` | safeHTML -}}
 {{ end}}
