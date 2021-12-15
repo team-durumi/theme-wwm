@@ -11,7 +11,7 @@ main:
     weight: 2
     parent: 박물관이용
   - name: 뮤지엄 샵
-    url: /guide/store
+    url: /guide/stores
     weight: 3
     parent: 박물관이용
 
