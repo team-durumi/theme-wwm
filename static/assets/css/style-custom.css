@@ -41,6 +41,9 @@ header.header-main .logo{
 .main-slider .swiper-slide > div{
     height:42.5rem;
 }
+.item-slider .swiper-slide > div{
+    height:42.5rem;
+}
 
 .masonry01 .grid-item, .masonry01 .grid-sizer{
     width:21.6%
@@ -68,6 +71,13 @@ footer .logo{
     padding-bottom:141.35%;
 }
 
+.list-gallary02 > li{
+    width:21.6%;
+}
+.list-gallary02 > li > span:first-of-type{
+    padding-bottom:118.66%;
+}
+
 
 .list-board01 >  li > a > span:last-of-type{
     flex-basis:24%;
@@ -75,9 +85,23 @@ footer .logo{
 .list-board01 >  li > a > span:last-of-type >span{
     padding-bottom:67.8%;
 }
+.menu-tab01 li.checked a{
+    background-color:#8A64EA;
+    border-color:#8A64EA;
+    color:#fff;
+}
 
-
-
+select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2371717a' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
 
 /*레이아웃 모바일모드 변환*/
 @media screen and (max-width:1023px) {
@@ -87,6 +111,9 @@ footer .logo{
         height:40px;
     }
     .main-slider .swiper-slide > div{
+        height:634px;
+    }
+    .main-slider .item-slide > div{
         height:634px;
     }
 
@@ -102,7 +129,9 @@ footer .logo{
     .masonry01 .gutter-sizer{
         width:4%
     }
-
+    .list-gallary02 > li{
+        width:47.5%;
+    }
 }
 
 /* 태블릿 모드 세로 */

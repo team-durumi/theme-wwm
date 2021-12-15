@@ -26,10 +26,14 @@ main:
     url: /exhibition/special
     weight: 2
     parent: 전시
-  - name: 소장품
+  - name: 소장품(전시)
     url: /exhibition/collections
     weight: 4
     parent: 전시
+  - name: 소장품(items)
+    url: /items
+    weight: 5
+    parent: 전시    
 
   - name: 아카이브
     url: /archive
