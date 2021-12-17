@@ -1,17 +1,37 @@
-<li class="mb-12">
-  <a href="{{ .Permalink }}" class="flex items-center justify-between gap-5">
-      <span class="text-aa-gray-500">
-          <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
-          <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
-          <span class="block text-sm">
-              <time>{{ .Date.Format "2006년 1월 2일" }}</time>
-              <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.Author }}</em>
-          </span>
+{{ if eq .Parent.RelPermalink "/research-and-learning/courses/" }}
+  <li>
+    <a href="{{ .Permalink }}">
+      <span class="block relative overflow-hidden rounded-lg mb-4">
+        <img class="relative overflow-hidden rounded-lg mb-4 h-full w-full object-cover" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
       </span>
-      <span class="flex-shrink-0">
-          <span class="block overflow-hidden relative">
-              <img class="absolute h-full w-full object-cover" src="/images/@content-01.png" alt="">
-          </span>
+      <span class="block">
+          <b class="text-aa-gray-700 text-xl mb-1 block">{{ .Title }}</b>
+          <span class="block text-sm text-aa-gray-500">{{ .Date.Format "2006년 1월 2일" }}</span>
       </span>
-  </a>
-</li>
+    </a>  
+  </li>
+{{ else if eq .Parent.RelPermalink "/connect/notice/"}}
+  <li class="flex py-6 border-b border-aa-gray-200 text-aa-gray-600">
+  <a class="w-4/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .Permalink }}">{{ .Title }}</a>
+  <span class="w-1/6 text-center"><time>{{ .Date.Format "2006년 1월 2일" }}</time></span>
+  <span class="w-1/6 text-center">{{ .Params.Author }}</span>
+</li>  
+{{ else }}
+  <li class="mb-12">
+    <a href="{{ .Permalink }}" class="flex items-center justify-between gap-5">
+        <span class="text-aa-gray-500">
+            <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
+            <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
+            <span class="block text-sm">
+                <time>{{ .Date.Format "2006년 1월 2일" }}</time>
+                <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.Author }}</em>
+            </span>
+        </span>
+        <span class="flex-shrink-0">
+            <span class="block overflow-hidden relative">
+                <img class="absolute h-full w-full object-cover" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+            </span>
+        </span>
+    </a>
+  </li>
+{{ end }}
