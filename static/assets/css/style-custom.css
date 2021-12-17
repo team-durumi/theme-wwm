@@ -77,12 +77,31 @@ footer .logo{
 .list-gallary02 > li > span:first-of-type{
     padding-bottom:118.66%;
 }
+.list-gallary03 > div{
+    padding-bottom:100%;
+}
+.list-gallary03 > ul{
+    gap:4%;
+}
+.list-gallary03 > ul > li{
+    width:48% !important;
+    padding-bottom:50%;
+    margin-bottom:4%;
+}
+
+
 
 
 .list-board01 >  li > a > span:last-of-type{
     flex-basis:24%;
 }
 .list-board01 >  li > a > span:last-of-type >span{
+    padding-bottom:67.8%;
+}
+.list-board02 >  li > a > span:first-of-type{
+    flex-basis:24%;
+}
+.list-board02 >  li > a > span:first-of-type >span{
     padding-bottom:67.8%;
 }
 .menu-tab01 li.checked a{
@@ -132,6 +151,10 @@ select {
     .list-gallary02 > li{
         width:47.5%;
     }
+    .list-board02 >  li > a > span:first-of-type{
+        flex-basis:40%;
+    }    
+    
 }
 
 /* 태블릿 모드 세로 */
