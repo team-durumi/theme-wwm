@@ -43,7 +43,7 @@
                             {{ $settings := .Site.Params }}
                             {{ range .Params.Components }}
                                 {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "basic/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
+                                {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
                                 <img class="object-cover h-full" src="{{ $src }}" alt="{{ $.Title }}">
                             {{ end }}
                         </div>
@@ -83,7 +83,7 @@
                             {{ $settings := .Site.Params }}
                             {{ range .Params.Components }}
                               {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "basic/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+                                {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
                                 <img class="" src="{{ $src }}" alt="{{ $.Title }}">
                             {{ end }}
                         </span>

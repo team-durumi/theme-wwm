@@ -24,7 +24,7 @@
                             {{ $settings := .Site.Params }}
                             {{ with .Params.image }}
                               {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "basic/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+                                {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
                                 <img class="h-20" src="{{ $src }}" alt="{{ $.Title }}">
                             {{ end }}
                         </span>

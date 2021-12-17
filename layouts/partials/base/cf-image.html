@@ -2,7 +2,5 @@
 {{ $cfImageUrl := "" }}
 {{ $cfImagePrefix := .settings.cfImagePrefix }}
 {{ $image_style := index .settings.cfImageStyles .style }}
-{{ if eq hugo.IsProduction true }}
-    {{  $cfImageUrl = printf "%s/%s/%s" $cfImagePrefix $image_style .src }} 
-{{ end }}
+{{  $cfImageUrl = printf "%s/%s/%s" $cfImagePrefix $image_style .src }} 
 {{ return $cfImageUrl }}

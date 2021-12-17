@@ -28,7 +28,7 @@
                     {{ $settings := .Site.Params }}
                     {{ with (.Params.featured ) }}
                       {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                      {{ $src := partial "basic/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                    
+                      {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                    
                         <img class="absolute h-full w-full object-cover" src="{{ $src }}" alt="">
                     {{ end }}
                 </div>
@@ -36,7 +36,7 @@
                     {{ $settings := .Site.Params }}
                     {{ range (.Params.components ) }}
                       {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                      {{ $src := partial "basic/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
+                      {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
                     <li class="relative overflow-hidden">
                         <img class="absolute h-full w-full object-cover" src="{{ $src }}">
                     </li>
@@ -57,7 +57,7 @@
                             {{ $settings := .Site.Params }}
                             {{ with .Params.featured }}
                               {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "basic/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                        
+                                {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                        
                             <img class="absolute h-full w-full object-cover" src="{{ $src }}" alt="">
                             {{ end }}
                         </span>
