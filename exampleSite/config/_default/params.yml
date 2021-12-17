@@ -32,7 +32,7 @@ googleFonts:
   - https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap
   - https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;700&display=swap
 
-cfImagePrefix: 'https://kctu-photo.durumi.io/cdn-cgi/image'
+cfImagePrefix: 'https://durumi.io/cdn-cgi/image'
 cfImageStyles:
   thumb: 'fit=scale-down,width=300'
   full: 'fit=scale-down,width=1920'
