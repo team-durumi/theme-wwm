@@ -1,7 +1,15 @@
-<header class="header-sub bg-white text-gray-700" x-data="{ megaMenu: false }">
+<header x-data="{ megaMenu: false }" class="{{if .IsHome }}header-main bg-transparent absolute left-0 top-0 w-full text-white z-50{{ else }}header-sub bg-white text-gray-700{{ end }}" :class="{{ if .IsHome }}{ 'bg-white text-gray-700': megaMenu }{{ end }}">
   <div class="absolute top-0 left-0 bg-white w-full z-10 transition-all duration-300"  x-on:mouseleave="megaMenu = false"  :style="{ 'height' : (megaMenu ? '22rem' : '0') }"></div>
   <div class="mx-auto lg:px-8 px-4 lg:flex justify-between items-center h-20 z-10 relative">
-    <a href="/" class="logo flex-shrink-0 z-20 absolute top-4 lg:static" style="background-image :url(/images/logo.png)">전쟁과 여성 인권 박물관</a>
+    <a href="/" class="logo flex-shrink-0 z-20 absolute top-4 lg:static" 
+      {{ if .IsHome }}
+        :style="{ backgroundImage : (megaMenu ? 'url(/images/logo.png)' : 'url(/images/logo-main.png)') }"
+      {{ else }}
+        style="background-image :url(/images/logo.png)"
+      {{ end }}
+    >
+    전쟁과 여성 인권 박물관
+    </a>
     <a href="#" class="absolute right-4 top-6 lg:hidden">
       <span class="burger flex">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,6 +35,7 @@
         </ul>
       </li>
       {{ end }}
+      {{ if not .IsHome }}
       <li class="relative xl:mr-7 lg:mr-5 border-b lg:border-none border-aa-gray-300">
         <a class="lg:text-center text-lg leading-6 lg:leading-7 py-4 lg:px-0 flex" href="/search">
           검색
@@ -35,8 +44,14 @@
           </svg>
         </a>
       </li>
+      {{ end }}
       <li class="buttons xl:block hidden">
-        <a class="inline-block border border-aa-purple-500 text-aa-purple-500 px-7 py-3.5 rounded-sm text-center box-border" href="/news/museum-donation/">후원하기</a>
+        {{ if .IsHome }}
+          <a class="bg-aa-purple-500 inline-block px-7 py-3.5 text-white rounded-sm text-center mr-2" href="/guide/admission/">관람예약</a>
+          <a class="inline-block border border-white text-white px-7 py-3.5 rounded-sm text-center box-border" :class="{ 'border-aa-purple-500 text-aa-purple-500': megaMenu }" href="/news/museum-donation/">후원하기</a>
+        {{ else }}
+          <a class="inline-block border border-aa-purple-500 text-aa-purple-500 px-7 py-3.5 rounded-sm text-center box-border" href="/news/museum-donation/">후원하기</a>
+        {{ end }}
       </li>
     </ul>
   </div>
