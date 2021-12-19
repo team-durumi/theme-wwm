@@ -10,7 +10,7 @@
     <div class="mb-20">
         <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">상시교육</h2>
         <ul class="list-gallary01 flex flex-wrap mb-20"> 
-        {{ range .Pages }}   
+        {{ range where .Pages "Params.always" true }}
           {{ .Render "li" }}
         {{ end }}
         </ul>
