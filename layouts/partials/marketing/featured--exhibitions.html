@@ -7,8 +7,8 @@
                 {{ range where .Pages ".Params.Type" "permanent" }}
                 <li class="flex py-6 border-b border-aa-gray-200">
                     <a href="{ .Permalink }}" class="lg:flex items-center">
-                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem">
-                            <img class="w-full" src="{{ .Params.Image }}" alt="{{ .Title }}">
+                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem;height: 11.815rem">
+                            <img class="object-cover" src="{{ .Params.Image }}" alt="{{ .Title }}">
                         </span>
                         <span>
                             <em class="block text-sm not-italic text-aa-purple-500 mb-1">상설전시</em>
@@ -28,8 +28,8 @@
                 {{ range where .Pages ".Params.Type" "special" }}
                 <li class="flex py-6 border-aa-gray-200">
                     <a href="{{ .Permalink }}" class="lg:flex items-center">
-                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem">
-                            <img class="w-full" src="{{ .Params.Image }}" alt="{{ .Title }}">
+                        <span class="flex-shrink-0 mr-6" style="width:16.8125rem;height: 11.815rem">
+                            <img class="object-cover" src="{{ .Params.Image }}" alt="{{ .Title }}">
                         </span>
                         <span>
                             <em class="block text-sm not-italic text-aa-purple-500 mb-1">상설전시</em>
