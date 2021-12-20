@@ -19,14 +19,14 @@ main:
     url: /exhibition
     weight: -100
   - name: 상설전시
-    url: /exhibition/permanent
+    url: /exhibition
     weight: 1
     parent: 전시
   - name: 특별전시
-    url: /exhibition/special
+    url: exhibition/ex-04/
     weight: 2
     parent: 전시
-  - name: 소장품(items)
+  - name: 소장품
     url: /items
     weight: 4
     parent: 전시    
