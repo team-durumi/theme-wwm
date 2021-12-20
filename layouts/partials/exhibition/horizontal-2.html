@@ -1,0 +1,18 @@
+{{ $firstItem := index ( . ) 0 }}
+{{ $lastItem := index ( . ) 1 }}
+
+
+<div class="mb-24 flex justify-between -mx-2">
+  <div class="px-2 w-1/2">
+      <div class="overflow-hidden relative mb-4" style="padding-bottom:66.4%">
+          <img class="absolute h-full w-full object-cover" src="{{ $firstItem.src }}" alt="">
+      </div>
+      <p class="text-sm text-black">{{ $firstItem.description }}</p>
+  </div>
+  <div class="px-2 w-1/2">
+      <div class="overflow-hidden relative mb-4" style="padding-bottom:66.4%">
+          <img class="absolute h-full w-full object-cover" src="{{ $lastItem.src }}" alt="">
+      </div>
+      <p class="text-sm text-black">{{ $lastItem.description }}</p>
+  </div>
+</div>
