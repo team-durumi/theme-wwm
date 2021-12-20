@@ -1,1 +1,216 @@
-admission
+  <!-- 관람안내 -->
+  <div class="mb-20">
+      <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
+          <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">관람안내</h2>
+      </div>
+      <div class="lg:flex justify-between">
+          <div class="leading-loose text-lg">
+              <dl class="flex">
+                  <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">개관일<span>|</span></dt>
+                  <dd>화-토, 오전 10시부터 오후 6시까지 (*오후 5시 입장 마감) </dd>
+              </dl>
+              <dl class="flex">
+                  <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">휴관일<span>|</span></dt>
+                  <dd>일-월, 공휴일</dd>
+              </dl>
+              <dl class="flex">
+                  <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">주소<span>|</span></dt>
+                  <dd>서울 마포구 월드컵북로 11길 20</dd>
+              </dl>
+              <dl class="flex">
+                  <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">문의<span>|</span> </dt>
+                  <dd>02-392-5252</dd>
+              </dl>
+              <dl>
+                  <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">안내<span>|</span></dt>
+                  <dd class="ml-5">
+                      <ol class="list-decimal ml-5">
+                          <li>전쟁과여성인권박물관은 코로나19로 인하여 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)</li>
+                          <li>1회 예약 가능한 인원은 개인 1~4명까지 가능(* 단체 관람은 불가능합니다)</li>
+                          <li>시간 당 관람 인원을 9명으로 제한합니다. (*선착순 마감)</li>
+                          <li>오디오 가이드[한국어, 영어, 일어] 제공  (*별도의 교육이나 전시 설명은 진행하지 않습니다)</li>
+                      </ol>
+                  </dd>
+              </dl>
+              <a class="inline-block border text-white py-3 px-7 bg-aa-purple-500 hover:bg-black mr-3 mt-14" href="{{ .Site.Params.bookingNaver }}" target="_blank">네이버 예약</a>
+          </div>
+          <div class="mt-10 lg:mt-0">
+              <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black mr-3 cursor-pointer" @click="showModal = true" href="#">English guide</a>
+              <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black" @click="showModal = true" href="#">日本語ガイド</a>
+          </div>
+      </div>
+  </div>
+  <!-- //관람안내 -->
+  <!-- 관람요금 -->
+  <div class="mb-20">
+      <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
+          <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">관람요금</h2>
+      </div>
+      <div class="max-w-full overflow-x-scroll">
+          <table class="w-full" >
+              <tr>
+                  <th class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
+                      <b class="block lg:text-xl text-base">대인(만19세-만64세)</b>
+                      <span class="block font-normal">Age 19-64</span>
+                  </th>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
+                      <span>5,000 won</span>
+                  </td>
+              </tr>
+              <tr>
+                  <th class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
+                      <b class="block lg:text-xl text-base">소인(만7세-만18세)</b>
+                      <span class="block font-normal">Age 7-18</span>
+                  </th>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
+                      <span>5,000 won</span>
+                  </td>
+              </tr>
+              <tr>
+                  <th rowspan="2" class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
+                      <b class="block lg:text-xl text-base">단체(10인 이상)</b>
+                      <span class="block font-normal">Group(10 people or more)</span>
+                  </th>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <div class="flex">
+                          <div class="w-1/2">
+                              <b class="block lg:text-xl text-base font-bold text-aa-gray-900">대인(만19세-만64세)</b>
+                              <span>Age 19-64</span>
+                          </div>
+                          <div class="w-1/2">
+                              <b class="block lg:text-xl text-base font-bold text-aa-gray-900">4,000원</b>
+                              <span>4,000 won</span>
+                          </div>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <div class="flex">
+                          <div class="w-1/2">
+                              <b class="block lg:text-xl text-base font-bold text-aa-gray-900">소인(만7세-만18세)</b>
+                              <span>Age 7-18</span>
+                          </div>
+                          <div class="w-1/2">
+                              <b class="block lg:text-xl text-base font-bold text-aa-gray-900">2,000원</b>
+                              <span>2,000 won</span>
+                          </div>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <th rowspan="3" class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
+                      <b class="block lg:text-xl text-base">무료</b>
+                      <span class="block font-normal">Free</span>
+                  </th>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
+                      <span>5,000 won</span>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
+                      <span>5,000 won</span>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                      <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
+                      <span>5,000 won</span>
+                  </td>
+              </tr>
+          </table>
+      </div>
+  <!-- //관람요금 -->
+</div>
+<!-- Modal -->
+<div x-show="showModal">
+    <div class="fixed w-full h-full top-0 left-0 bg-black bg-opacity-60"></div>
+    <div class="absolute lg:w-10/12 w-full lg:top-24 top-0 lg:left-1/2 left-0 lg:transform lg:-translate-x-1/2 bg-white lg:rounded-xl overflow-hidden z-50">
+        <a href="#" class="absolute block w-12 h-12 top-4 right-4" @click="showModal = false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </a>
+        <div class="lg:py-14 py-6 lg:px-28 px-4">
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-6">관람안내(영문번역)</h2>
+            <div class="lg:flex justify-between">
+                <div class="leading-loose text-lg">
+                    <dl class="flex">
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">개관일<span>|</span></dt>
+                        <dd>화-토, 오전 10시부터 오후 6시까지 (*오후 5시 입장 마감) </dd>
+                    </dl>
+                    <dl class="flex">
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">휴관일<span>|</span></dt>
+                        <dd>일-월, 공휴일</dd>
+                    </dl>
+                    <dl class="flex">
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">주소<span>|</span></dt>
+                        <dd>서울 마포구 월드컵북로 11길 20</dd>
+                    </dl>
+                    <dl class="flex">
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">문의<span>|</span> </dt>
+                        <dd>02-392-5252</dd>
+                    </dl>
+                    <dl>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">안내<span>|</span></dt>
+                        <dd>
+                            <ol class="list-decimal ml-5">
+                                <li>전쟁과여성인권박물관은 코로나19로 인하여 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)</li>
+                                <li>1회 예약 가능한 인원은 개인 1~4명까지 가능(* 단체 관람은 불가능합니다)</li>
+                                <li>시간 당 관람 인원을 9명으로 제한합니다. (*선착순 마감)</li>
+                                <li>오디오 가이드[한국어, 영어, 일어] 제공  (*별도의 교육이나 전시 설명은 진행하지 않습니다)</li>
+                            </ol>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="lg:py-14 py-6 lg:px-28 px-4">
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">온라인 예약 안내</h2>
+            <ul>
+                <li class="lg:flex justify-between mb-4">
+                    <dl class="mb-2">
+                        <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">1</dt>
+                        <dd>상단부터 날짜선택> 회차선택> 다음단계</dd>
+                    </dl>
+                    <div class="w-56 h-56 bg-aa-gray-50 text-center fle">
+                        <img class="h-full mx-auto" src="/images/museum-booking01.png" alt="">
+                    </div>
+                </li>
+                <li class="lg:flex justify-between mb-4">
+                    <dl class="mb-2">
+                        <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">2</dt>
+                        <dd>티켓 수량 선택> 예매자 정보 입력(체크된 필드 필수 기입)><br/>
+                            개인정보 수집 및 제공 동의> 예매하기</dd>
+                    </dl>
+                    <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
+                        <img class="w-full mx-auto" src="/images/museum-booking02.png" alt="">
+                    </div>
+                </li>
+                <li class="lg:flex justify-between mb-4">
+                    <dl class="mb-2">
+                        <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">3</dt>
+                        <dd>예매 완료 확인</dd>
+                    </dl>
+                    <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
+                        <img class="w-full mx-auto" src="/images/museum-booking03.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="lg:py-14 py-6 lg:px-28 px-4">
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">예약 관련 문의</h2>
+            <p>
+                온라인 예약 시스템(네이버예약)에는 영문 페이지만 제공합니다. 따라서 일어 사용자들도 영문 페이지를 통해 예약하실 수 있습니다. 상단에 온라인 예약 방법을 따라 예약을 마친 이후에 혹시라도 예약여부 확인이 필요하다면 아래 메일 및 연락처를 통해 확인하시기 바랍니다. <br/>
+                <a href="mailto:{{ .Site.Params.footer.이메일 }}">{{ .Site.Params.footer.이메일 }}</a>
+            </p>
+        </div>
+        <br>
+        <a class="block text-center bg-aa-purple-500 text-white py-3.5" href="{{ .Site.Params.bookingNaver }}" target="_blank">온라인 예약 이동</a>
+    </div>
+</div>
+<!-- //Modal -->

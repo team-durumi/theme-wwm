@@ -44,6 +44,24 @@ header.header-main .logo{
 .item-slider .swiper-slide > div{
     height:42.5rem;
 }
+.exhibit-slider .swiper-slide > div{
+    height:28.125rem;
+}
+.pager-thumb01 li.current a{
+    position:relative;
+}
+.pager-thumb01 li.current a:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    border:4px solid #8A64EA;
+}
+
+
 
 .masonry01 .grid-item, .masonry01 .grid-sizer{
     width:21.6%
