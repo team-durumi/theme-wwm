@@ -1,3 +1,54 @@
+{{ define "main"}}
+    {{ if eq .Params.layout "view01" }}
+    <!-- contents-area -->
+    <div class="contents-area" id="main-content">
+        <!-- contents -->
+        <div class="container pt-20 pb-28 relative">
+            <div class="mb-20">
+                <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}<br/>
+                    <span class="text-aa-gray-500">: {{ .Params.Subtitle }}</span>
+                </h1>
+                <p class="text-lg text-aa-gray-700 leading-loose w-1/2">{{ .Summary }}</p>
+                <!-- <p class="text-lg text-aa-gray-700 leading-loose">전쟁의 포화소리와 함께 펼쳐지는 거친 돌길을 걸으며 <br/>
+                    피해자들이 겪어야 했던 전쟁과 고통의 시기로 들어선다. <br/>
+                    양쪽 벽면에 걸려있는 피해자들의 그림에 따라 어두운 지하로 향한다.</p> -->
+            </div>
+            {{ range $index, $element := .Params.Resources }}
+                {{ if ne .partial_layout nil }}
+                    {{ $partial := (print "exhibition/" .partial_layout ".html") }}
+                    {{ partial $partial .components }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <!-- //contents -->
+        <div class="bg-aa-purple-500 text-white py-4">
+            <div class="container flex justify-between items-center">
+                <!-- {{ if eq .Next.Section .Section }} -->
+                {{ with .Next }}
+                <a href="{{ .RelPermalink }}" class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>{{ .Title }}</span>
+                </a>
+                {{ end }}
+                <!-- {{ end }} -->
+                
+                <!-- {{ if eq .Prev.Section .Section }} -->
+                {{ with .Prev }}
+                <a href="{{ .RelPermalink }}" class="flex">
+                    <span>{{ .Title }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+                {{ end }}
+                <!-- {{ end }} -->
+            </div>
+        </div>
+    </div>
+    {{ else }}
 
-전시 섹션 세부
 
+    {{ end }}
+{{ end }}
