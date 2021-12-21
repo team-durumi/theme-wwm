@@ -7,10 +7,10 @@
       </h1>
       {{ partial "marketing/sharingbutton" . }}
       {{ partial "marketing/banner--section-single" . }}
-      {{ if eq .RelPermalink "/connect/support/" }}
-        {{ .Content }}
-      {{ else }}
+      {{ if eq .RelPermalink "/connect/volunteer/" }}
         {{ partial "marketing/form--volunteer" . }}
+      {{ else }}
+        {{ .Content }}        
       {{ end }}
     </div>
   </div>
