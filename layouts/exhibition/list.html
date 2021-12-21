@@ -21,18 +21,22 @@
 
     <!-- contents -->
     <div class="container pt-12 pb-28 relative">
-       <ul class="list-board02">
+       <ul>
            {{ range .Pages }}
             <li class="mb-12">
-                <a href="{{ .RelPermalink }}" class="flex items-center justify-between group gap-5">
-                    <span class="flex-shrink-0">
-                        <span class="block overflow-hidden relative">
+                <a href="{{ .RelPermalink }}" class="lg:flex lg:items-center lg:justify-between">
+                    <span class="block lg:w-1/4 flex-shrink-0 mb-3 lg:mb-0">
+                        <span class="block overflow-hidden relative" style="padding-bottom:67.8%">
                             <img class="absolute h-full w-full object-cover" src="{{ .Params.Image }}" alt="">
                         </span>
                     </span>
-                    <span class="text-aa-gray-500">
-                        <b class="block mb-2 text-2xl text-aa-gray-900 group-hover:text-aa-purple-500">{{ .Title }}</b>
-                        <span class="block mb-2 leading-7 line-clamp-4">{{ .Summary }}</span>
+                    <span class="lg:w-3/4 text-aa-gray-500 flex-shrink-0 lg:pl-5">
+                        <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
+                        <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
+                        <span class="block text-sm">
+                            2020.01.01
+                            <em class="text-aa-purple-500 not-italic ml-2">작성자</em>
+                        </span>
                     </span>
                 </a>
             </li>
