@@ -1,6 +1,6 @@
 <!-- submenu -->
 <div class="bg-aa-gray-50">
-    <dl class="container flex items-center py-3.5">
+    <dl class="container flex items-center md:px-8 sm:px-8 py-3.5">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }} 
             {{ if eq (print .URL "/") $currentPage.Parent.RelPermalink }}
