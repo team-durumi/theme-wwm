@@ -3,8 +3,8 @@ reference_code:
 date: 
 draft: 
 media_type: 
-title: Kim,Eun-rea
-description: 
+title: Kim,Eun-rea 김은례할머니 진단서
+description: 김은례는 위안소에서 당한 폭력으로 어깨가 탈구되고 난청을 얻었다. 이를 확인하는 의료진단서
 modified_at: 
 created_at: 
 public_access_status: 
