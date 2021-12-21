@@ -1,4 +1,4 @@
-<ul class="{{ if ne .Parent.RelPermalink "/exhibition/" }}absolute lg:right-0 right-4 top-14{{ else }}{{ end }} flex items-center gap-6">
+<ul class="{{ if ne .Parent.RelPermalink "/exhibition/" }} absolute lg:right-0 right-4 top-14 {{ end }} flex items-center gap-6">
     <!-- 트위터 공유버튼 -->
     <li>
         <a href="https://twitter.com/intent/tweet/?text={{ .Title }}&amp;url={{ .Permalink | absURL }}" target="_blank" rel="noopener" aria-label="트위터 공유하기">
