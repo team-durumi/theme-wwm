@@ -61,7 +61,9 @@
             </div>
         </div>
         <div class="mb-8">
-            <img class="w-full" src="/images/banner-archive-main.png" alt="이달의 기록">
+            {{ if .Params.Image }}
+            <img class="w-full h-1/2" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}대표이미지">
+            {{ end }}
         </div>
         <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
             <p class="mb-8">{{ .Content }}</p>
