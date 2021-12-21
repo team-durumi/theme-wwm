@@ -24,16 +24,16 @@ en:
   온라인예약안내: 
     title: Online Reservation Information
     body_1:
-    - 달력에서 관람 희망 날짜를 선택합니다. 선택한 날짜는 초록색으로 표시됩니다. *미선택시 당일 날짜가 초록색으로 표시됨
-    - 관람 희망 시간을 선택합니다. 각 시간대별 예매가능한 표의 수량을 확인하실 수 있습니다. 
-    - 날짜와 시간이 올바르게 선택되었다면 가장 하단의 ‘다음단계’를 클릭합니다.
+    - 1. Select the date you wish to visit on the calendar. The selected date will be shown in green. * If a date has not been selected, today’s date will be shown in green. 
+    - 2. Select the time you wish to visit. You can check the number of remaining tickets per time slot.  
+    - 3. Make sure you have chosen the correct date and time, and click the ‘Next Page’ button on the bottom of the page.
     body_2:
-    - 예매하고자 하는 표의 수량을 선택합니다. 좌우의 ‘-’와 ‘+’버튼을 클릭하여 수량을 조절할 수 있습니다. *하단의 선택 내역에서 수량에 따른 요금내역을 확인할 수 있습니다.
-    - 예매자 정보를 입력합니다. 예매자, 연락처는 반드시 입력해야 예약이 가능합니다.
-    - 예약을 위한 개인정보 수집, 제공에 관한 안내를 확인합니다.
-    - 정보가 바르게 기입되었는지 확인했다면 가장 하단에 있는 ‘예약하기’ 버튼을 클릭합니다.
+    - 1. Select the number of tickets you wish to reserve. You can adjust the quantity by clicking the ‘-’ and ‘+’ buttons on the left and right. * You can check out the total fee on the bottom of the page.
+    - 2. Fill in information of the person making the reservation. The name and contact information of the person making the reservation are required to book tickets.
+    - 3. Check the information regarding collection and provision of personal information.
+    - 4. Make sure the form is filled out correctly. Click the “Make a reservation” button on the bottom of the page.
     body_3:
-    - 예매가 확정되면 그림과 같은 안내메시지가 뜹니다. *안내메시지 하단의 알림을 켜두면 관람 예약 전날 안내를 받을 수 있습니다. 
+    - 1. When the reservation is confirmed, you will see the following confirmation message. * If you turn on the ‘Notification’ button below, you can receive a push notification one day before your reserved date.  
   예약관련문의: 
     title: Contact Us
     body: The online reservation page is currently available in Korean and English. Please refer to the guide to make reservations in Japanese. If you have any further questions regarding the reservations, please send us an email at 
