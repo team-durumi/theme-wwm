@@ -1,10 +1,10 @@
 ---
-title: 역사관
-subtitle: ": 전쟁이 낳고 키운 기형적 제도 - 일본군'위안부'"
+title: 계단전시
+subtitle: ":호소의벽"
 date: 2021-12-21
-summary: 일본군문서와 관련 자료의 전시를 통해 일본군성노예제 문제의 진상을 밝힌다. 일본군에 의해 조직적이고 체계적으로 이루어진 국가 범죄로서의 일본군성노예제도의 실체와 피해자들이 위안소에서 겪은 고통과 전후 상황 등을 살펴본다. 
-weight: 1
-image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition02/s0-item1.png
+summary: 피해자들이 절규하는 고통의 목소리가 사진과 함께 계단을 따라 벽 곳곳에서 메아리친다. 밝은 공간으로 나갈수록 피해자들의 목소리는 자신과 같은 일을 다시 겪지 않기를 바라는 호소와 함께 희망의 목소리로 변해간다. 할머니들의 사진과 한국어, 영어, 일어로 적힌 그녀들의 호소가 어우러져 마음 깊이 자리 잡는 공간이다.
+weight: 5
+image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s4-item1.png
 layout: view01
 resources:
 - partial_layout: diagonal-2
@@ -12,7 +12,7 @@ resources:
   - name: item-01
     params:
       icon: photo
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition02/s0-item1.png
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
     description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
     target: /items/exhibition/exbition01/s0-item1
   - name: item-02

@@ -1,71 +1,18 @@
 ---
-title: ex-1/section-01 제목
-subtitle: 어떤 부제목
-date: 2021-10-25
-summary: 불어 우리는 품으며, 천고에 풍부하게 석가는 때문이다. 때에, 반짝이는 희망의 안고, 바이며, 스며들어 목숨을 있으며, 길을 아름다우냐? 소리다.이것은 인생에 인생에 바로 운다. 열락의 아니더면, 방황하여도, 청춘은 귀는 있으랴?
+title: 인트로
+subtitle: 함께동행하는 할머니들의 힘찬 여정
+date: 2021-12-21
+summary: 전쟁과 여성인권박물관의 위치는 독특하다. 타 박물관들과 다르게 주택가에 자리 잡았으며, 기존의 집을 개조하여 만들었다. 또한 할머니들의 내면에 감정이입하기 위한 건축 상의 기법과 이를 활용한 독특한 동선이 있다. 즉, 일반적인 층별 관람순서가 아니라 건물 옆 좁은 쇄석길을 따라 어두운 지하에서 전시가 시작된다. 이는 할머니들이 겪어야 했던 세상과의 단절, 역사의 무게감을 느끼게 하는 장치이다. 지하에서 올라오면 할머니들이 절규하는 고통의 목소리가 사진과 함께 계얀을 따라 배열되어 있다. 그러나 이 호소는 밝은 공간으로 나아갈수록 희망의 목소리로 변해간다.
+weight: 1
 image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
 layout: view01
 resources:
-- partial_layout: diagonal-2
+- partial_layout: diagonal-1-left
   components: 
-  - name: item-01
+  - name: 할머니 신발
     params:
       icon: photo
     src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-    target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8311/
-  - name: item-02
-    params:
-      icon: photo
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam.
-    target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8340/
-- partial_layout: full-1
-  components: 
-    - name: item-03
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8361/
-- partial_layout: horizontal-2
-  components: 
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8445/
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8467/     
-- partial_layout: horizontal-4    
-  components: 
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8445/
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8467/     
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8445/
-    - name: item-04
-      params:
-        icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/2020년/1월/20200123_설-귀향-선전전-및-2020년-설-명절-노동진보사회단체-합동기자회견/_ctu8467/     
+    description: 전쟁과 여성인권박물관의 위치는 독특하다. 타 박물관들과 다르게 주택가에 자리 잡았으며, 기존의 집을 개조하여 만들었다. 또한 할머니들의 내면에 감정이입하기 위한 건축 상의 기법과 이를 활용한 독특한 동선이 있다. 즉, 일반적인 층별 관람순서가 아니라 건물 옆 좁은 쇄석길을 따라 어두운 지하에서 전시가 시작된다. 이는 할머니들이 겪어야 했던 세상과의 단절, 역사의 무게감을 느끼게 하는 장치이다. 지하에서 올라오면 할머니들이 절규하는 고통의 목소리가 사진과 함께 계얀을 따라 배열되어 있다. 그러나 이 호소는 밝은 공간으로 나아갈수록 희망의 목소리로 변해간다. 
+    target: /items/ex-01/s0-item1/
 ---
