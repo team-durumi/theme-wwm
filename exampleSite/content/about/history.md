@@ -4,4 +4,4 @@ date: 2011-11-17
 layout: section_single
 ---
 
-{{< about/history >}}
+{{< about/org-history >}}
