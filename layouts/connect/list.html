@@ -14,6 +14,9 @@
       </div>
       {{ $paginator := .Paginate .RegularPagesRecursive }}
       <ul class="mb-20"> 
+        {{ range where .Pages "Params.pinned" true }}
+          {{ .Render "li" }}
+        {{ end }}
         {{ range $paginator.Pages }}
           {{ .Render "li" }}
         {{ end }}
