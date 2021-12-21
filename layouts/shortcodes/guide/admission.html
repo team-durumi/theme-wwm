@@ -35,8 +35,8 @@
             <a class="inline-block border text-white py-3 px-7 bg-aa-purple-500 hover:bg-black mr-3 mt-14" href="{{ site.Params.bookingNaver }}" target="_blank">네이버 예약</a>
         </div>
         <div class="mt-10 lg:mt-0">
-            <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black mr-3 cursor-pointer" @click="showModal = true" href="#">English guide</a>
-            <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black" @click="showModal = true" href="#">日本語ガイド</a>
+            <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black mr-3 cursor-pointer" @click="enModal = true" href="#">English guide</a>
+            <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black" @click="jpModal = true" href="#">日本語ガイド</a>
         </div>
     </div>
 </div>
@@ -128,42 +128,42 @@
 </div>
 
 <!-- Modal -->
-<div x-show="showModal">
+{{ range $index, $element := site.Data.admission_guide }}
+<div x-show="{{ $index }}Modal">
     <div class="fixed w-full h-full top-0 left-0 bg-black bg-opacity-60"></div>
     <div class="absolute lg:w-10/12 w-full lg:top-24 top-0 lg:left-1/2 left-0 lg:transform lg:-translate-x-1/2 bg-white lg:rounded-xl overflow-hidden z-50">
-        <a href="#" class="absolute block w-12 h-12 top-4 right-4" @click="showModal = false">
+        <a href="#" class="absolute block w-12 h-12 top-4 right-4" @click="{{ $index }}Modal = false">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </a>
         <div class="lg:py-14 py-6 lg:px-28 px-4">
-            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-6">관람안내(영문번역)</h2>
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-6">{{ .관람안내.title }}</h2>
             <div class="lg:flex justify-between">
                 <div class="leading-loose text-lg">
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">개관일<span>|</span></dt>
-                        <dd>화-토, 오전 10시부터 오후 6시까지 (*오후 5시 입장 마감) </dd>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.개관일.title }}<span>|</span></dt>
+                        <dd>{{ .관람안내.개관일.body }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">휴관일<span>|</span></dt>
-                        <dd>일-월, 공휴일</dd>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.휴관일.title }}<span>|</span></dt>
+                        <dd>{{ .관람안내.휴관일.title }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">주소<span>|</span></dt>
-                        <dd>서울 마포구 월드컵북로 11길 20</dd>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.주소.title }}<span>|</span></dt>
+                        <dd>{{ .관람안내.주소.body }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">문의<span>|</span> </dt>
-                        <dd>02-392-5252</dd>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.문의.title }}<span>|</span> </dt>
+                        <dd>{{ .관람안내.문의.body }}</dd>
                     </dl>
                     <dl>
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">안내<span>|</span></dt>
+                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
                         <dd>
-                            <ol class="list-decimal ml-5">
-                                <li>전쟁과여성인권박물관은 코로나19로 인하여 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)</li>
-                                <li>1회 예약 가능한 인원은 개인 1~4명까지 가능(* 단체 관람은 불가능합니다)</li>
-                                <li>시간 당 관람 인원을 9명으로 제한합니다. (*선착순 마감)</li>
-                                <li>오디오 가이드[한국어, 영어, 일어] 제공  (*별도의 교육이나 전시 설명은 진행하지 않습니다)</li>
+                            <ol class="ml-5">
+                                {{ range .관람안내.안내.body }}
+                                    <li>{{ . }}</li>
+                                {{ end }}
                             </ol>
                         </dd>
                     </dl>
@@ -171,15 +171,14 @@
             </div>
         </div>
         <div class="lg:py-14 py-6 lg:px-28 px-4">
-            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">온라인 예약 안내</h2>
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">{{ .온라인예약안내.title }}</h2>
             <ul>
                 <li class="lg:flex justify-between mb-4">
                     <dl class="mb-2">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">1</dt>
-                        <dd>1.달력에서 관람 희망 날짜를 선택합니다. 선택한 날짜는 초록색으로 표시됩니다.
-                        <br>*미선택시 당일 날짜가 초록색으로 표시됨</dd>
-                        <dd>2.희망 시간을 선택합니다. 각 시간대별 예매가능한 표의 수량을 확인하실 수 있습니다.</dd>
-                        <dd>3.날짜와 시간이 올바르게 선택되었다면 가장 하단의 ‘다음단계’를 클릭합니다.</dd>
+                        {{ range .온라인예약안내.body_1 }}
+                            <dd>{{ . }}</dd>
+                        {{ end }}
                     </dl>
                     <div class="w-56 h-56 bg-aa-gray-50 text-center fle">
                         <img class="h-full mx-auto" src="/images/museum-booking01.png" alt="">
@@ -188,10 +187,10 @@
                 <li class="lg:flex justify-between mb-4">
                     <dl class="mb-2">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">2</dt>
-                        <dd>1.예매하고자 하는 표의 수량을 선택합니다. 좌우의 ‘-’와 ‘+’버튼을 클릭하여 수량을 조절할 수 있습니다. <br>*하단의 선택 내역에서 수량에 따른 요금내역을 확인할 수 있습니다. </dd>
-                        <dd>2.예매자 정보를 입력합니다. 예매자, 연락처는 반드시 입력해야 예약이 가능합니다.</dd>
-                        <dd>3.예약을 위한 개인정보 수집, 제공 내역을 확인합니다.</dd>
-                        <dd>4.정보가 바르게 기입되었는지 확인했다면 가장 하단에 있는 ‘예약하기’ 버튼을 클릭합니다.</dd>
+                        {{ range .온라인예약안내.body_2 }}
+                            <dd>{{ . }}</dd>
+                        {{ end }}
+
                     </dl>
                     <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
                         <img class="w-full mx-auto" src="/images/museum-booking02.png" alt="">
@@ -200,8 +199,9 @@
                 <li class="lg:flex justify-between mb-4">
                     <dl class="mb-2">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">3</dt>
-                        <dd>예매가 확정되면 그림과 같은 안내메시지가 뜹니다.<br>
-                            *안내메시지 하단의 알림을 켜두면 관람 예약 전날 안내를 받을 수 있습니다.</dd>
+                        {{ range .온라인예약안내.body_2 }}
+                            <dd>{{ . }}</dd>
+                        {{ end }}
                     </dl>
                     <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
                         <img class="w-full mx-auto" src="/images/museum-booking03.png" alt="">
@@ -210,14 +210,15 @@
             </ul>
         </div>
         <div class="lg:py-14 py-6 lg:px-28 px-4">
-            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">예약 관련 문의</h2>
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">{{ .예약관련문의.title }}</h2>
             <p>
-               현재 온라인 예약은 한국어와 영어 페이지를 제공하고 있습니다. 일어 예약은 가이드를 참조해주시길 부탁드립니다. 예약과 관련하여 추가적으로  궁금한 사항이 있다면  아래 이메일(혹은 연락처)로 문의바랍니다.<br/>
+                {{ .예약관련문의.body }}
                 <a href="mailto:{{ site.Params.footer.이메일 }}">{{ site.Params.footer.이메일 }}</a>
             </p>
         </div>
         <br>
-        <a class="block text-center bg-aa-purple-500 text-white py-3.5" href="{{ site.Params.bookingNaver }}" target="_blank">온라인 예약 이동</a>
+        <a class="block text-center bg-aa-purple-500 text-white py-3.5" href="{{ site.Params.bookingNaver }}" target="_blank">{{ .온라인예약이동 }}</a>
     </div>
 </div>
+{{ end }}
 <!-- //Modal -->

@@ -1,0 +1,85 @@
+en: 
+  관람안내:
+    title: Information for Visitors
+    개관일:
+      title: Opening Hours
+      body: Tue-Sat, 10am-6pm (*Admission closed at 5pm)
+    휴관일:
+      title: Closed
+      body: Sun-Mon, Holidays
+    주소:
+      title: Address
+      body: 20 Worldcupbuk-ro 11-gil Mapo-gu Seoul
+    문의:
+      title: Contact
+      body: 02-392-5252
+    안내:
+      title: Information
+      body:
+      - 1. Due to COVID-19, the War and Women’s Human Rights Museum is accepting visitors on a reservation-only basis. (*You can only enter during the time slot you booked)
+      - 2. You can make a reservation for 1-4 individuals per visit (*Group visits are not allowed)
+      - 3. The maximum number of visitors is limited to 9 people per hour (*first-come, first-serve basis)
+      - 4. Audio guide [Korean, English, Japanese] is provided (*Education programs and guided exhibit tours are not provided)
+
+  온라인예약안내: 
+    title: Online Reservation Information
+    body_1:
+    - 달력에서 관람 희망 날짜를 선택합니다. 선택한 날짜는 초록색으로 표시됩니다. *미선택시 당일 날짜가 초록색으로 표시됨
+    - 관람 희망 시간을 선택합니다. 각 시간대별 예매가능한 표의 수량을 확인하실 수 있습니다. 
+    - 날짜와 시간이 올바르게 선택되었다면 가장 하단의 ‘다음단계’를 클릭합니다.
+    body_2:
+    - 예매하고자 하는 표의 수량을 선택합니다. 좌우의 ‘-’와 ‘+’버튼을 클릭하여 수량을 조절할 수 있습니다. *하단의 선택 내역에서 수량에 따른 요금내역을 확인할 수 있습니다.
+    - 예매자 정보를 입력합니다. 예매자, 연락처는 반드시 입력해야 예약이 가능합니다.
+    - 예약을 위한 개인정보 수집, 제공에 관한 안내를 확인합니다.
+    - 정보가 바르게 기입되었는지 확인했다면 가장 하단에 있는 ‘예약하기’ 버튼을 클릭합니다.
+    body_3:
+    - 예매가 확정되면 그림과 같은 안내메시지가 뜹니다. *안내메시지 하단의 알림을 켜두면 관람 예약 전날 안내를 받을 수 있습니다. 
+  예약관련문의: 
+    title: Contact Us
+    body: The online reservation page is currently available in Korean and English. Please refer to the guide to make reservations in Japanese. If you have any further questions regarding the reservations, please send us an email at 
+  온라인예약이동: Make Online Reservation
+jp: 
+  관람안내:
+    title: 来館案内
+    개관일:
+      title: 開館日
+      body: 火-土、午前10時から午後6時まで  (*入館は閉館の1時間前まで)
+    휴관일:
+      title: 休館日
+      body: 日-月、祝日
+    주소:
+      title: 住  所
+      body: ソウル市 麻浦区 ワールドカップ北路 11ギル 20
+    문의:
+      title: お問い合わせ
+      body: 02-392-5252
+    안내:
+      title: 案    内
+      body:
+      - 1. 戦争と女性の人権博物館は新型コロナウィルスにより、事前予約制で運営しております。
+        (* ご予約時に指定された時間帯のみ入場可能です。)
+      - 2. 1回あたりに予約可能な人数は最大4名様までとなります。（団体のご利用は受け付けておりません。）
+      - 3.各時間帯の観覧人数を9名までに制限しております。(*先着順締め切り)
+      - 4.音声ガイド[韓国語、英語、日本語]提供
+        (*感染症対策のため教育や解説・説明は行っておりません。)
+  온라인예약안내: 
+    title: オンライン予約のご案内
+    body_1: 
+    - 1. カレンダーからご希望の観覧日を選択してください。
+      * 未選択の場合、本日の日付が緑色に表示されます。
+    - 2. ご希望の観覧時間をお選びください。各時間帯のチケット残数をご確認いただけます。
+    - 3. 日時をもう一度ご確認の後、「次の段階」のボタンを押してください。 
+    body_2:
+    - 1. ご希望のチケット枚数をお選びください。左右の「-」「+」ボタンをクリックし、枚数を指定してください。
+      ＊下段の方で枚数による料金をご確認いただけます。
+    - 2. お申込み者の詳細情報を記入してください。お名前と連絡先は必須項目です。
+    - 3. 予約のための個人情報収集・提供に関する案内文をご確認ください。
+    - 4. ご記入の情報をもう一度ご確認の後、「予約する」のボタンを押してください。
+    body_3:
+    - 1. 予約が確定したら、画像のような案内メッセージが出てきます。
+      ＊案内メッセージの下にある通知の設定をONにすると、予約日の前日に案内の通知が表示されます。
+
+  예약관련문의: 
+    title: 예약관련문의 
+    body: 現在、オンライン予約は韓国語と英語のページのみ提供しております。日本語の予約はガイドをご参照ください。予約に関するご質問などは下記の連絡先にてお問い合わせください。
+  온라인예약이동: オンライン予約

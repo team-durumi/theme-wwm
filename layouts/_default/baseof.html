@@ -35,7 +35,7 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>    
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </head>
-  <body class="{{ if .IsHome }}front{{ else }} page{{ delimit (split .Page.RelPermalink "/") "--" "" }}{{ end }}" x-data="{ 'showModal': false }">
+  <body class="{{ if .IsHome }}front{{ else }} page{{ delimit (split .Page.RelPermalink "/") "--" "" }}{{ end }}" x-data="{ 'showModal': false , 'enModal': false , 'jpModal': false }">
   {{/* @see https://github.com/team-durumi/tailwind-aa-theme/tree/master/layouts/partials/basic */}}
     {{- block "header" . }}{{ partial "base/header.html" . }}{{- end }}
     {{- block "main" . }}{{- end }}
