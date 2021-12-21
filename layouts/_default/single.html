@@ -7,12 +7,58 @@
         <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
             <div class="mb-8">
                 <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
-                <span class="block text-sm">
-                    {{ .Date.Format "2006년 1월 2일" }}
-                    <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
-                </span>
+                    {{ if eq .Parent.RelPermalink "/research-and-learning/courses/" }}
+                    <div class="flex">
+                        <div class="overflow-hidden w-5/12 mr-7">
+                            <img class="w-full rounded-lg " src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+                        </div>
+                        <div>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">교육기간</dt>
+                                <dd><time>{{ .Date.Format "2006년 1월 2일" }}</time></dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">접수기간</dt>
+                                <dd>{{ .Params.application_end_date }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">접수/선정</dt>
+                                <dd>{{ .Params.contact_type }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">대상</dt>
+                                <dd>{{ .Params.course_target }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">교육시간</dt>
+                                <dd>{{ .Params.course_time }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">모집인원</dt>
+                                <dd>{{ .Params.course_member }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">문의처</dt>
+                                <dd>{{ .Params.course_contact }}</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">첨부파일</dt>
+                                <dd><a class="text-aa-purple-500 hover:underline" href="{{ .Params.course_materials | absURL }}" download>{{ .Params.course_materials }}</a></dd>
+                            </dl>
+                            <div class="flex mb-2 w-full text-center">
+                                <a class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" href="{{ .Params.apply_link }}" target="_blank" >
+                                    프로그램 신청 접수(폼)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{ else }}
+                    <span class="block text-sm">
+                        {{ .Date.Format "2006년 1월 2일" }}
+                        <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
+                    </span>
+                    {{ end }}
             </div>
-            <p class="mb-8">{{ .Summary }}</p>
         </div>
         <div class="mb-8">
             <img class="w-full" src="/images/banner-archive-main.png" alt="이달의 기록">
