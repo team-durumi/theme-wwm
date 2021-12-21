@@ -36,9 +36,9 @@
             </ol>
         </div>
     </div>
-
     <div class="mb-10">
         <h2 class="text-aa-gray-900 font-bold text-3xl mb-4">자원활동 신청</h2>
+        {{ if eq .Params.Status "open"}}
         <form class="text-base" x-data="contactForm()" @submit.prevent="submit">
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="name">이름</label>
@@ -78,9 +78,15 @@
                 <button type="submit" x-text="buttonText" class="h-10 px-6 bg-aa-purple-500 text-white hover:bg-black">신청</button>
             </div>
         </form>
+        {{ else }}
+        <div class="mb-10">
+            <div class="mb-3 p-3 bg-aa-gray-100 items-center">
+               현재는 신청을 받고 있지 않습니다 <br/>          
+             </div>
+        </div>
+        {{ end }}
     </div>
 </div>
-
 <script>
   const FIREBASE_ACTION_URL = "https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAFdHxQd06rDHUxkHu80WVOQC7fYNh4UuYYYJ-590/volunteers.json";
 
@@ -119,4 +125,4 @@
       },
     };
   }
-</script>   
+</script>  
