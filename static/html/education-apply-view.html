@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전쟁과 여성 인권 박물관</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/style-build.css">
+    <link rel="stylesheet" href="../assets/css/style-custom.css">
+</head>
+<body>
+<div id="main-wrap" class="overflow-x-hidden relative">
+	<div id="skip-link">
+	    <a class="block w-full h-10 leading-10 text-center absolute -top-10 left-0 bg-white z-50" href="#main-content">컨텐츠 바로가기</a>
+	</div>
+    <header class="header-sub bg-white text-gray-700" x-data="{ megaMenu: false }">
+        <div class="absolute top-0 left-0 bg-white w-full z-10 transition-all duration-300"  x-on:mouseleave="megaMenu = false"  :style="{ 'height' : (megaMenu ? '22rem' : '0') }"></div>
+        <div class="mx-auto lg:px-8 px-4 lg:flex justify-between items-center h-20 z-10 relative" x-data="{ 'showMobileMenu': false }">
+            <a href="/" class="logo flex-shrink-0 z-20 absolute top-4 lg:static" style="background-image :url(../images/logo.png)">전쟁과 여성 인권 박물관</a>
+            <a href="#" class="absolute right-4 top-6 lg:hidden" @click="showMobileMenu = !showMobileMenu">
+                <span class="burger flex" x-show="!showMobileMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <span class="ml-2">메뉴</span>
+                </span>
+                <span class="close flex" x-show="showMobileMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="ml-2">닫기</span>
+                </span>
+            </a>
+            <ul class="menu-main lg:flex justify-end items-center whitespace-nowrap absolute left-0 top-16 lg:static w-full lg:w-auto px-4 lg:px-0 max-h-0 lg:max-h-full overflow-hidden lg:overflow-visible">
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">박물관 이용</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">관람예약 및 안내</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">오시는 길</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">뮤지엄샵</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">박물관 소개</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">전시</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">상설전시</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">특별전시</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">온라인 투어</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">아카이브</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">이달의 기록</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기록물 이용</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기록물 기증</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">연구/교육</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">교육신청</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">교육자료</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">학술행사</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">소식/참여</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">공지사항</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">뉴스레터</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">자원활동신청</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">박물관 후원</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-14 lg:mr-11">
+                    <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">박물관 소개</a>
+                    <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu }" x-on:mouseover="megaMenu = true">
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">인사말</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">미션비전</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">연혁</a></li>
+                        <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="#">기부자의 벽</a></li>
+                    </ul>
+                </li>
+                <li class="relative xl:mr-7 lg:mr-5">
+                    <a class="text-center text-lg leading-7 py-4 px-0 flex" href="#">
+                        검색
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="buttons xl:block hidden">
+                    <a class="inline-block border px-7 py-3.5 rounded-sm text-center box-border" href="#">후원하기</a>
+                </li>
+            </ul>
+            <!-- mobile menu -->
+            <div class="mobile-menu mx-h-0 absolute left-0 w-full px-4 bg-white max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-screen': showMobileMenu }" style="top:70px">
+                <div class="flex -mx-2 mt-4">
+                    <div class="mx-2 w-1/2">
+                        <a class="block border border-aa-gray-500 text-aa-gray-500 px-7 py-3.5 text-center" href="#">검색</a>
+                    </div>
+                    <div class="mx-2 w-1/2">
+                        <a class="block border border-aa-purple-500 text-aa-purple-500 px-7 py-3.5 text-center" href="#">후원하기</a>
+                    </div>
+                </div>
+                <ul class="text-aa-gray-900 text-lg">
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">박물관 이용</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">관람예약 및 안내</a></li>
+                            <li><a class="block mb-4" href="#">오시는 길</a></li>
+                            <li><a class="block mb-4" href="#">뮤지엄샵</a></li>
+                            <li><a class="block mb-4" href="#">박물관 소개</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">전시</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">상설전시</a></li>
+                            <li><a class="block mb-4" href="#">특별전시</a></li>
+                            <li><a class="block mb-4" href="#">온라인 투어</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">아카이브</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">이달의 기록</a></li>
+                            <li><a class="block mb-4" href="#">기록물 이용</a></li>
+                            <li><a class="block mb-4" href="#">기록물 기증</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">연구/교육</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">교육신청</a></li>
+                            <li><a class="block mb-4" href="#">교육자료</a></li>
+                            <li><a class="block mb-4" href="#">학술행사</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">소식/참여</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">공지사항</a></li>
+                            <li><a class="block mb-4" href="#">뉴스레터</a></li>
+                            <li><a class="block mb-4" href="#">자원활동신청</a></li>
+                            <li><a class="block mb-4" href="#">박물관 후원</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-aa-gray-300" x-data="{ childMenu: false }">
+                        <div class="flex justify-between items-center">
+                            <a class="block text-lg leading-6 py-4" href="#">박물관 소개</a>
+                            <a class="h-11 w-11 flex justify-center items-center" @click="childMenu = !childMenu" :class="{ 'transform rotate-180': childMenu }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="text-aa-gray-700 text-base max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-96': childMenu }">
+                            <li><a class="block mb-4" href="#">인사말</a></li>
+                            <li><a class="block mb-4" href="#">미션비전</a></li>
+                            <li><a class="block mb-4" href="#">연혁</a></li>
+                            <li><a class="block mb-4" href="#">기부자의 벽</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- //mobile menu -->
+        </div>
+    </header>
+    <!-- contents-area -->
+    <div class="contents-area" id="main-content">
+         <!-- submenu -->
+        <div class="bg-aa-gray-50 hidden lg:block">
+            <dl class="container flex items-center py-3.5">
+                <dt class="text-lg pr-8 border-r border-aa-gray-200 mr-8">연구/교육</dt>
+                <dd>
+                    <ul class="flex text-aa-gray-500">
+                        <li class="mr-6 text-aa-purple-500"><a href="#">교육신청</a></li>
+                        <li class="mr-6"><a href="#">교육자료</a></li>
+                        <li class="mr-6"><a href="#">학술행사</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <!-- //submenu -->
+        <!-- contents -->
+        <div class="container pt-12 pb-28">
+            <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+                <div class="mb-8">
+                    <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">나비더하기</h1>
+                    <div class="flex">
+                        <div class="overflow-hidden w-5/12 mr-7">
+                            <img class="w-full rounded-lg " src="../images/@education-program.png" alt="">
+                        </div>
+                        <div>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">교육기간</dt>
+                                <dd>2021-11-02</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">접수기간</dt>
+                                <dd>2021-11-02</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">접수/선정</dt>
+                                <dd>온라인 / 추첨</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">신청방법</dt>
+                                <dd>인터넷 신청 후 추첨</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">대상</dt>
+                                <dd>유아(5세~7세) 및 가족동반</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">교육시간</dt>
+                                <dd>14:00 ~ 16:00</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">모집인원</dt>
+                                <dd>20명</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">문의처</dt>
+                                <dd>02-2286-3452</dd>
+                            </dl>
+                            <dl class="flex mb-2">
+                                <dt class="w-32 text-aa-gray-900 font-bold">첨부파일</dt>
+                                <dd>02-2286-3452</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="mb-8">불어 우리는 품으며, 천고에 풍부하게 석가는 때문이다. 때에, 반짝이는 희망의 안고, 바이며, 스며들어 목숨을 있으며, 길을 아름다우냐? 소리다.이것은 인생에 인생에 바로 운다. 열락의 아니더면, 방황하여도, 청춘은 귀는 있으랴? 풍부하게 있는 열락의 싹이 위하여서, 위하여 것은 풀밭에 고행을 약동하다. 기관과 따뜻한 되려니와, 방황하였으며, 거선의 이성은 약동하다. 착목한는 이 그들의 부패뿐이다. 노래하며 피가 스며들어 이는 우리의 뼈 그들은 운다. 보내는 일월과 청춘에서만 찾아다녀도, 봄바람이다.</p>
+            </div>
+            <div class="mb-8">
+                <img class="w-full" src="../images/banner-archive-main.png" alt="이달의 기록">
+            </div>
+            <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+                <p class="mb-8">그들의 노년에게서 우리의 사라지지 눈이 따뜻한 대한 봄바람이다. 인도하겠다는 이상의 옷을 끓는 대한 반짝이는 앞이 이것이다. 반짝이는 우리 찾아다녀도, 힘있다. 커다란 앞이 보배를 불러 미인을 꾸며 청춘 황금시대다. 만천하의 무한한 창공에 청춘은 봄바람이다. 인간이 수 보배를 이상은 있음으로써 없는 황금시대의 하는 얼음과 사막이다. 청춘을 어디 가는 하는 거친 이상은 있다. 동산에는 인류의 우는 그와 물방아 사랑의 두기 끓는다. 인생에 그들은 뜨거운지라, 힘있다.</p>
+                <p class="mb-8">가는 목숨을 구하지 철환하였는가? 있으며, 찾아 품에 우는 긴지라 같이, 새 것이다. 열매를 않는 것은 같으며, 이것을 가는 있는가? 풀이 그들에게 구하지 이상이 같이 피다. 청춘을 그들은 같은 속에서 아니한 부패뿐이다. 넣는 트고, 미인을 영락과 있는 인생에 있는 사막이다. 찾아 얼음 인생에 설산에서 사람은 얼마나 보내는 힘차게 듣는다. 평화스러운 이상은 보내는 눈이 청춘 행복스럽고 가지에 황금시대다. 찬미를 주는 충분히 있으랴? 투명하되 꽃 피부가 사막이다.</p>
+            </div>
+        </div>
+        <!-- //contents -->
+
+    </div>
+    <!-- //contents-area -->
+    <footer class="bg-aa-gray-100">
+        <div class="container pt-8 lg:pt-20">
+            <div class="justify-between mb-16 leading-normal hidden lg:flex">
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">박물관 이용</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">관람예약 및 안내</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">오시는 길</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">뮤지엄샵</a></li>
+                        </ul>
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">전시</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">상설전시</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">특별전시</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">온라인 교육</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">소장품</a></li>
+                        </ul>
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">아카이브</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">이달의 기록</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">기록물 이용</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">기록물 기증</a></li>
+                        </ul>
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">연구/교육</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">교육신청</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">교육자료</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">학술행사</a></li>
+                        </ul>
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">소식/참여</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">공지사항</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">뉴스레터</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">자원활동신청</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">박물관 후원</a></li>
+                        </ul>
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-bold mb-2 text-aa-gray-900">박물관 소개</dt>
+                    <dd>
+                        <ul>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">인사말</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">미션비전</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">연혁</a></li>
+                            <li class="text-aa-gray-600 mb-2"><a href="#">기부자의 벽</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <a class="flex h-10 justify-center items-center px-6 bg-aa-purple-500 text-white hover:bg-black" href="#"><span class="mr-2">통합 검색</span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg></a>
+            </div>
+            <div class="lg:flex justify-between mb-14">
+                <div><a href="/" class="logo flex-shrink-0 z-20 mb-8 lg:mb-0" style="background-image : url(../images/logo.png)">전쟁과 여성 인권 박물관</a></div>
+                <address class="text-aa-gray-600">
+                    <span class="block mb-3">
+                        <em class="not-italic mr-4 block lg:inline">기관명: 전쟁과여성인권박물관</em>
+                        <em class="not-italic">주소: 서울특별시 마포구 월드컵북로 11길 20</em>
+                    </span>
+                    <span class="block mb-3">
+                        <em class="not-italic mr-4 block lg:inline">이메일: <a href="mailto:museum@womenandwar.net">museum@womenandwar.net</a></em>
+                        <em class="not-italic mr-4 block lg:inline">전화: 02-392-5252</em>
+                        <em class="not-italic">팩스: 02-332-5256</em>
+                    </span>
+                    <span class="block mb-3">
+                        <em class="not-italic">사업자등록번호: 219-82-61946</em>
+                    </span>
+                </address>
+            </div>
+            <div class="py-3 border-t border-aa-gray-200 text-center text-aa-gray-500 -mx-4 lg:mx-0">
+                전쟁과여성인권박물관 ©All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</body>
+</html>
