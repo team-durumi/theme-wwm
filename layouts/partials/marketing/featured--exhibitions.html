@@ -2,48 +2,44 @@
     <div class="container lg:flex lg:justify-between lg:py-20 py-16">
         <div class="lg:w-1/2 lg:pr-4 mb-14 lg:mb-0">
             <h2 class="text-4xl text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">상설전시</h2>
-            <ul class="">
+            <ul>
+                {{ with .Site.GetPage "section" "exhibition" }}
+                {{ range where .Pages ".Params.Type" "permanent" }}
                 <li class="flex py-6 border-b border-aa-gray-200">
-                    <a href="#" class="lg:flex items-center">
-                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem">
-                            <img class="w-full" src="/images/@content-01.png" alt="">
+                    <a href="{ .Permalink }}" class="lg:flex items-center">
+                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem;height: 11.815rem">
+                            <img class="object-cover" src="{{ .Params.Image }}" alt="{{ .Title }}">
                         </span>
                         <span>
                             <em class="block text-sm not-italic text-aa-purple-500 mb-1">상설전시</em>
-                            <b class="block text-black text-2xl font-normal mb-5">과거, 그 무거웠던 시간들</b>
-                            <span class="block line-clamp-3 text-aa-gray-500 leading-7">'그날의 목소리'에서는 일본군성노예제 피해자로 숨죽여 살아왔던 김학순의 시간, 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 , 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 </span>
+                            <b class="block text-black text-2xl font-normal mb-5">{{ .Title }}</b>
+                            <span class="block line-clamp-3 text-aa-gray-500 leading-7">{{ .Summary }}</span>
                         </span>
                     </a>
                 </li>
-                <li class="flex pt-6">
-                    <a href="#" class="lg:flex items-center">
-                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem">
-                            <img class="w-full" src="/images/@content-01.png" alt="">
-                        </span>
-                        <span>
-                            <em class="block text-sm not-italic text-aa-purple-500 mb-1">상설전시</em>
-                            <b class="block text-black text-2xl font-normal mb-5">과거, 그 무거웠던 시간들</b>
-                            <span class="block line-clamp-3 text-aa-gray-500 leading-7">'그날의 목소리'에서는 일본군성노예제 피해자로 숨죽여 살아왔던 김학순의 시간, 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 , 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 </span>
-                        </span>
-                    </a>
-                </li>
+                {{ end }}
+                {{ end }}
             </ul>
         </div>
         <div class="lg:w-1/2 lg:pl-4 relative">
             <h2 class="text-4xl text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">특별전시</h2>
-            <ul class="">
+            <ul>
+                {{ with .Site.GetPage "section" "exhibition" }}
+                {{ range where .Pages ".Params.Type" "special" }}
                 <li class="flex py-6 border-aa-gray-200">
-                    <a href="#" class="lg:flex items-center">
-                        <span class="overflow-hidden flex-shrink-0 mr-6" style="width:16.8125rem">
-                            <img class="w-full" src="/images/@content-01.png" alt="">
+                    <a href="{{ .Permalink }}" class="lg:flex items-center">
+                        <span class="flex-shrink-0 mr-6" style="width:16.8125rem;height: 11.815rem">
+                            <img class="object-cover" src="{{ .Params.Image }}" alt="{{ .Title }}">
                         </span>
                         <span>
                             <em class="block text-sm not-italic text-aa-purple-500 mb-1">상설전시</em>
-                            <b class="block text-black text-2xl font-normal mb-5">과거, 그 무거웠던 시간들</b>
-                            <span class="block line-clamp-3 text-aa-gray-500 leading-7">'그날의 목소리'에서는 일본군성노예제 피해자로 숨죽여 살아왔던 김학순의 시간, 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 , 용기 있는 첫 발걸음이 나오기까지 국내외 사회적 </span>
+                            <b class="block text-black text-2xl font-normal mb-5">{{ .Title }}</b>
+                            <span class="block line-clamp-3 text-aa-gray-500 leading-7">{{ .Summary }} </span>
                         </span>
                     </a>
                 </li>
+                {{ end }}
+                {{ end }}
             </ul>
         </div>
     </div>

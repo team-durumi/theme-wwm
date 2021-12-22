@@ -8,7 +8,7 @@
     "tags" .Params.tags
   -}}
   {{- with .Params.components -}}
-    {{- $image := partial "basic/cf-image.html" (dict
+    {{- $image := partial "base/cf-image.html" (dict
       "style" "thumb"
       "src" (index . 0)
       "settings" $settings

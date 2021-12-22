@@ -1,0 +1,7 @@
+{{ $item := index ( . ) 0 }}
+<div class="mb-24">
+  <div class="mb-4">
+      <img class="w-full" src="{{ $item.src }}" alt="">
+  </div>
+  <p class="text-center text-sm text-black">{{ $item.description }}</p>
+</div>

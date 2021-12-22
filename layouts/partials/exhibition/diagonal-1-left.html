@@ -1,0 +1,13 @@
+<div class="mb-24">
+  <div class="lg:flex justify-between items-end -mx-2 mb-8">
+  {{ $firstItem := index ( . ) 0}}
+      <div class="px-2 lg:w-1/2 mb-4 lg:mb-0">
+          <div class="overflow-hidden relative" style="padding-bottom:84%">
+              <img class="absolute h-full w-full object-cover" src="{{ $firstItem.src }}" alt="">
+          </div>
+      </div>
+      <div class="px-2 lg:w-1/2 pb-3">
+          <p class="w-1/2 text-sm text-black">{{ $firstItem.description }}</p>
+      </div>
+  </div>
+</div>

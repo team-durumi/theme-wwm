@@ -3,9 +3,9 @@ hugoVersion:
   min: "0.55.0"
 
 imports:
-- path: github.com/team-durumi/hugo-theme-tw
+- path: github.com/team-durumi/theme-wwm
 - path: github.com/bep/hugo-starter-tailwind-basic/v2
 - path: github.com/team-durumi/tailwind-aa-theme
 - path: github.com/team-durumi/hugo-search-fuse-js-aa
 
-replacements: "github.com/team-durumi/hugo-theme-tw -> ../.."
+replacements: "github.com/team-durumi/theme-wwm -> ../.."

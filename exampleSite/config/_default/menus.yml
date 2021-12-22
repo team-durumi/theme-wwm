@@ -11,7 +11,7 @@ main:
     weight: 2
     parent: 박물관이용
   - name: 뮤지엄 샵
-    url: /guide/store
+    url: /guide/stores
     weight: 3
     parent: 박물관이용
 
@@ -19,21 +19,17 @@ main:
     url: /exhibition
     weight: -100
   - name: 상설전시
-    url: /exhibition/permanent
+    url: /exhibition
     weight: 1
     parent: 전시
   - name: 특별전시
-    url: /exhibition/special
+    url: exhibition/ex-04/
     weight: 2
     parent: 전시
-  - name: 온라인교육
-    url: /exhibition/elearning
-    weight: 3
-    parent: 전시
   - name: 소장품
-    url: /exhibition/collections
+    url: /items
     weight: 4
-    parent: 전시
+    parent: 전시    
 
   - name: 아카이브
     url: /archive
@@ -54,17 +50,21 @@ main:
   - name: 연구/교육
     url: /research-and-learning
     weight: -90
+  - name: 온라인교육
+    url: /research-and-learning/e-learning
+    weight: 1
+    parent: 연구/교육   
   - name: 교육신청
     url: /research-and-learning/courses
-    weight: 1
+    weight: 2
     parent: 연구/교육
   - name: 교육자료
     url: /research-and-learning/resources
-    weight: 2
+    weight: 3
     parent: 연구/교육
   - name: 학술행사
     url: /research-and-learning/events
-    weight: 3
+    weight: 4
     parent: 연구/교육            
 
   - name: 소식/참여

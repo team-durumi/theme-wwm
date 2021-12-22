@@ -1,6 +1,6 @@
 <!-- submenu -->
 <div class="bg-aa-gray-50">
-    <dl class="container flex items-center py-3.5">
+    <dl class="container flex items-center md:px-8 sm:px-8 py-3.5">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }} 
             {{ if eq (print .URL "/") $currentPage.Parent.RelPermalink }}
@@ -8,7 +8,7 @@
                 <dd>
                     <ul class="flex text-aa-gray-500">
                         {{ range .Children }}
-                            <li class="mr-6 {{ if eq (print .URL "/") $currentPage.RelPermalink }}text-aa-purple-500{{ end }}"><a href="{{.URL}}">{{ .Name }}</a></li>
+                            <li class="mr-6 {{ if eq (print .URL "/") $currentPage.RelPermalink }}text-aa-purple-500{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
                         {{ end }}
                     </ul>
                 </dd>

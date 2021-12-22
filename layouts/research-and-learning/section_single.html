@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <div class="contents-area" id="main-content">
+        {{ partial "base/breadcrumb" . }}
+        <div class="container pt-12 pb-28 relative">
+            <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
+            {{ partial "marketing/sharingbutton" . }}
+            <!-- 온라인 교육 세부 -->
+        </div>
+    </div>  
+{{ end }}

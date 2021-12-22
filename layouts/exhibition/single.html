@@ -1,34 +1,94 @@
 {{ define "main" }}
-{{- `<!-- _default/single.html  -->` | safeHTML -}}
-<section id="main" class="post layout-single container-prose">
-  <article id="content">
-    <header class="my-5">
-      <h1 id="title">{{ .Title }}</h1>
-    </header>
-    {{ .Content }}
-    {{ if .Params.components }}
-      {{ range .Params.Components }}
-        {{ $extension := index (last 1 (split  . "." )) 0 }}
-        {{ if eq $extension "pdf" }}
-          <embed src="{{ . }}" width="100%;" height="800px;" alt="pdf">
+    <!-- contents-area -->
+    <div class="contents-area" id="main-content">
+        <!-- contents -->
+        {{ if eq .Params.layout "view01" }}
+        <div class="container pt-20 pb-28 relative">
+            <div class="mb-20">
+                <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}<br/>
+                    <span class="text-aa-gray-500">{{ .Params.Subtitle }}</span>
+                </h1>
+                <p class="text-lg text-aa-gray-700 leading-loose w-1/2">{{ .Summary }}</p>
+                <!-- <p class="text-lg text-aa-gray-700 leading-loose">전쟁의 포화소리와 함께 펼쳐지는 거친 돌길을 걸으며 <br/>
+                    피해자들이 겪어야 했던 전쟁과 고통의 시기로 들어선다. <br/>
+                    양쪽 벽면에 걸려있는 피해자들의 그림에 따라 어두운 지하로 향한다.</p> -->
+            </div>
+            {{ range $index, $element := .Params.Resources }}
+                {{ if ne .partial_layout nil }}
+                    {{ $partial := (print "exhibition/" .partial_layout ".html") }}
+                    {{ partial $partial .components }}
+                {{ end }}
+            {{ end }}
+        </div>
         {{ else }}
-          <img class="h-1/2 rounded w-1/2 object-cover object-center mb-6" src="{{ .| absURL }}" alt="item object">
+
+        <div class="container pt-20 pb-28 relative">
+            <div class="mb-14">
+                <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}</h1>
+                <p class="text-lg text-aa-gray-700 leading-loose">{{ .Params.Subtitle }}</p>
+                <!-- <p class="text-lg text-aa-gray-700 leading-loose">전쟁의 포화소리와 함께 펼쳐지는 거친 돌길을 걸으며 <br/>
+                    피해자들이 겪어야 했던 전쟁과 고통의 시기로 들어선다.  <br/>
+                    양쪽 벽면에 걸려있는 피해자들의 그림에 따라 어두운 지하로 향한다.</p> -->
+            </div>
+            <!-- swiper -->
+            
+            
+            <div class="flex justify-between -mx-2.5">
+                <div class="w-8/12 px-2.5">
+                    <div 
+                        x-data="{swiper: null}"
+                        x-init="swiper = new Swiper($refs.container, {
+                        })"
+                        class="relative overflow-hidden mb-4"
+                    >
+                        <div class="absolute right-14 bottom-0 z-20">
+                            <button @click="swiper.slidePrev(); console.log($refs)"
+                                    class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+                                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+
+                        <div class="swiper-container exhibit-slider" x-ref="container">
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                {{ range .Params.Resources }}
+                                <div class="swiper-slide">
+                                    <div class="overflow-hidden">
+                                        <img class="object-cover w-full h-full" src="{{ .src }}" alt="">
+                                    </div>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+
+                        <div class="absolute right-0 bottom-0 z-20">
+                            <button @click="swiper.slideNext();console.log(swiper.activeIndex)"
+                                    class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="pager-thumb01 flex -mx-2">
+                        {{ range $index, $element := .Params.Resources }}
+                        <li class="px-2 {{ if eq $index 0 }}current{{ end }}">
+                            <a href="#" class="block w-20 h-20 overflow-hidden">
+                                <img class="object-cover w-full h-full" src="{{ .src }}" alt="">
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+
+                </div>
+                <div class="w-4/12 px-2.5">
+                    {{ range $index, $element := .Params.Resources }}
+                    <h3 class="text-aa-gray-900 font-bold text-4xl mb-4">{{ .name }}</h3>
+                    <p class="text-aa-gray-700 mb-6">{{ .description }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            <!-- //swiper -->
+        </div>
         {{ end }}
-      {{ end }}
-    {{ else }}
-      <img class="h-full rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/462x384" alt="item object">
-    {{ end }}
-    
-    <!-- 옆 아이템으로 이동 -->
-    <div>
-        {{ with .Prev }}
-          [이전 아아템]<a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .Next }}
-          [이후 아이템]<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
+        <!-- //contents -->
     </div>
-  </article>
-</section>
-{{- `<!-- _default/single.html  -->` | safeHTML -}}
 {{ end }}
