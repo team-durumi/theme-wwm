@@ -12,8 +12,8 @@ resources:
   - name: item-01
     params:
       icon: photo
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s4-item1.png
+    description: 
     target: /items/exhibition/exbition01/s0-item1
   - name: item-02
     params:
