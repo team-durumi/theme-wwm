@@ -35,7 +35,6 @@
         </ul>
       </li>
       {{ end }}
-      {{ if not .IsHome }}
       <li class="relative xl:mr-7 lg:mr-5">
         <a class="text-center text-lg leading-7 py-4 px-0 flex" href="/search">
           검색
@@ -44,22 +43,18 @@
           </svg>
         </a>
       </li>
-      {{ end }}
       <li class="buttons xl:block hidden">
-        {{ if .IsHome }}
-          <a class="bg-aa-purple-500 inline-block px-7 py-3.5 text-white rounded-sm text-center mr-2" href="/guide/admission/">관람예약</a>
-        {{ end }}
-        <a class="inline-block border px-7 py-3.5 rounded-sm text-center box-border" href="#">후원하기</a>
+        <a class="inline-block border px-7 py-3.5 rounded-sm text-center box-border" href="/connect/support/">후원하기</a>
       </li>
     </ul>
     <!-- mobile menu -->
     <div class="mobile-menu mx-h-0 absolute left-0 w-full px-4 bg-white max-h-0 overflow-hidden transition-all duration-300" :class="{ 'max-h-screen': showMobileMenu }" style="top:70px">
       <div class="flex -mx-2 mt-4">
         <div class="mx-2 w-1/2">
-          <a class="block border border-aa-gray-500 text-aa-gray-500 px-7 py-3.5 text-center" href="#">검색</a>
+          <a class="block border border-aa-gray-500 text-aa-gray-500 px-7 py-3.5 text-center" href="/search">검색</a>
         </div>
         <div class="mx-2 w-1/2">
-          <a class="block border border-aa-purple-500 text-aa-purple-500 px-7 py-3.5 text-center" href="#">후원하기</a>
+          <a class="block border border-aa-purple-500 text-aa-purple-500 px-7 py-3.5 text-center" href="/connect/support/">후원하기</a>
         </div>
       </div>
       <ul class="text-aa-gray-900 text-lg">
