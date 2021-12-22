@@ -43,4 +43,4 @@ stibee:
   listIdDev: 152880
   listIdProd: 112752
   endpointEmailList: 'https://stibee.com/api/v1.0/feeds'
-  enpointSubscribe: 'https://stibee.com/api/v1.0/lists/{{ listId }}/subscribers'
+  enpointSubscribe: 'https://page.stibee.com/api/v1.0/lists'

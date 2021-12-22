@@ -24,11 +24,10 @@ function processForm() {
       iodine.setErrorMessage("email", "이메일 주소 형식이 올바르지 않습니다.");
       iodine.setErrorMessage("required", "입력해야 합니다.");
     },
-    api: 'https://stibee.com/api/v1.0/lists/152880/subscribers',
+    api: '{{ .Site.Params.stibee.enpointSubscribe }}/{{ .Site.Params.stibee.listIdDev }}',
     payloads: {
-      "eventOccuredBy": "MANUAL",
-      "confirmEmailYN": "N",
-      "subscribers": []
+      "email": "",
+      "termsOfServiceAgreed": false,
     },
     emailAddress: '',
     isLoading: false,
@@ -62,20 +61,22 @@ function processForm() {
       this.requestSubscription()
     },
     requestSubscription: function () {
-      this.payloads.subscribers.push({"email": this.emailAddress})
-      let options = {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'AccessToken': '7d1ff526c66a518ebc58a95df2cbf7a5a8b2adc3341ec2f0b89e00c5c4342b7e056862b08cdb5014a806dc61063addc92fce5c66c1fc40b222add479f220853a'
-        },
-        body: JSON.stringify(this.payloads, null, 2)
-      }
-      fetch(this.api, options)
+      this.payloads.email = this.emailAddress
+      fetch(this.api, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.payloads)
+        })
         .then(res => res.json())
-        .then(data => { this.isLoading = false; console.log(data) })
-        .catch(error => console.error(error))
+        .then(data => {
+          this.isLoading = false;
+          document.querySelector('#subscribe-newsletter').reset();
+          alert(data.message);
+        })
+        .catch(error => alert(data.message))
     }
   }
 }

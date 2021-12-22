@@ -1,27 +1,30 @@
 # 스티비 API https://api.stibee.com/docs/
 # @install humao.rest-client
 
-### 구독자
-POST https://stibee.com/api/v1.0/lists/152880/subscribers HTTP/1.1
+# 구독 폼 화면 https://page.stibee.com/subscriptions/152880
+### 특정 주소록에 구독자 추가
+POST https://page.stibee.com/api/v1.0/lists/152880 HTTP/1.1
 accept: application/json
 content-type: application/json
-accesstoken: 7d1ff526c66a518ebc58a95df2cbf7a5a8b2adc3341ec2f0b89e00c5c4342b7e056862b08cdb5014a806dc61063addc92fce5c66c1fc40b222add479f220853a
 
 {
-  "eventOccuredBy": "MANUAL",
-  "confirmEmailYN": "N",
-  "subscribers": [
-    {
-      "email": "team@durumi.io"
-    }
-  ]
+  "email": "dev@mozo.kr",
+  "termsOfServiceAgreed": true
 }
+
+## response
+# {
+#   "code": "Succeed.List.Confirm.NonPaid",
+#   "httpStatusCode": 200,
+#   "message": " 입력하신 이메일 주소(dev@mozo.kr)로 확인 메일을 보내드렸습니다.",
+#   "listName": "dev"
+# }
 
 ### 구독 발송 메일 목록 받아오기
 GET https://stibee.com/api/v1.0/feeds HTTP/1.1
 accept: application/json
 content-type: application/json
-accesstoken: 7d1ff526c66a518ebc58a95df2cbf7a5a8b2adc3341ec2f0b89e00c5c4342b7e056862b08cdb5014a806dc61063addc92fce5c66c1fc40b222add479f220853a
+accesstoken: {{ stbAccessToken }}
 
 listId=112752&opts=statistics&sortBy=created_time&offset=0&limit=10
 
