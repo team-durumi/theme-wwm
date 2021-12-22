@@ -57,7 +57,7 @@ module.exports = {
     },
   },
 	purge: {
-		enabled: true,
+		enabled: false,
     content: [
 			'./hugo_stats.json',
 			'./layouts/**/*.html',

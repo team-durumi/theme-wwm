@@ -32,7 +32,9 @@
       "budparr.language-hugo-vscode",
       "eliostruyf.vscode-hugo-themer",
       "bradlc.vscode-tailwindcss",
-      "csstools.postcss"
+      "csstools.postcss",
+      "humao.rest-client",
+      "nextfaze.json-parse-stringify"
     ]
   }
 }

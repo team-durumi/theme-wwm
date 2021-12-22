@@ -1,9 +1,13 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../exampleSite/tailwind.config.js'
 import Alpine from 'alpinejs'
+import { Iodine } from '@kingshott/iodine'
+import * as params from '@params';
 
+window.params = params;
+window.iodine = new Iodine();
 window.Alpine = Alpine
-Alpine.start()
+window.Alpine.start()
 
 const twConfig = resolveConfig(tailwindConfig)
 const twScreens = twConfig.theme.screens
@@ -32,5 +36,5 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('domready!', twScreens, getScreenName(), getScreenBreakpoint('md'))
+  console.log('domready!', twScreens, getScreenName(), params)
 })

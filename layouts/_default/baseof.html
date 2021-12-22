@@ -26,11 +26,11 @@
     {{- if .Site.Params.themeNoPipe }}
     <script src="/assets/index.min.js" defer></script>
     {{ else -}}
-      {{- $js := resources.Get "index.js" | js.Build (dict "targetPath" "assets/index.js") -}}
+      {{- $js := resources.Get "index.js" | js.Build (dict "targetPath" "assets/index.js" "params" .Site.Params.stibee) -}}
       {{- if hugo.IsProduction }}{{ $js = $js | minify }}{{ end -}}
     <script src="{{ $js.RelPermalink }}" defer></script>
     {{ end -}}
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>

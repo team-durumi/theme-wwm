@@ -1,0 +1,9 @@
+{
+  "eventOccuredBy": "MANUAL",
+  "confirmEmailYN": "N",
+  "subscribers": [
+    {
+      "email": "team@durumi.io"
+    }
+  ]
+}
