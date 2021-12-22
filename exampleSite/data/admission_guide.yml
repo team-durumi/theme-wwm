@@ -35,7 +35,7 @@ en:
     body_3:
     - 1. When the reservation is confirmed, you will see the following confirmation message. * If you turn on the ‘Notification’ button below, you can receive a push notification one day before your reserved date.  
   예약관련문의: 
-    title: Contact Us
+    title: Reservation Inquiry
     body: The online reservation page is currently available in Korean and English. Please refer to the guide to make reservations in Japanese. If you have any further questions regarding the reservations, please send us an email at 
   온라인예약이동: Make Online Reservation
 jp: 
@@ -80,6 +80,6 @@ jp:
       ＊案内メッセージの下にある通知の設定をONにすると、予約日の前日に案内の通知が表示されます。
 
   예약관련문의: 
-    title: 예약관련문의 
+    title: お問い合わせ 
     body: 現在、オンライン予約は韓国語と英語のページのみ提供しております。日本語の予約はガイドをご参照ください。予約に関するご質問などは下記の連絡先にてお問い合わせください。
   온라인예약이동: オンライン予約
