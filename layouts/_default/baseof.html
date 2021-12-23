@@ -30,15 +30,15 @@
       {{- if hugo.IsProduction }}{{ $js = $js | minify }}{{ end -}}
     <script src="{{ $js.RelPermalink }}" defer></script>
     {{ end -}}
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>    
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    {{- if .IsHome }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {{ end -}}
   </head>
   <body class="{{ if .IsHome }}front{{ else }} page{{ delimit (split .Page.RelPermalink "/") "--" "" }}{{ end }}" x-data="{ 'showModal': false , 'enModal': false , 'jpModal': false }">
   {{/* @see https://github.com/team-durumi/tailwind-aa-theme/tree/master/layouts/partials/basic */}}
     {{- block "header" . }}{{ partial "base/header.html" . }}{{- end }}
     {{- block "main" . }}{{- end }}
     {{- block "footer" . }}{{ partial "base/footer.html" . }}{{- end }}
+    {{- block "bottomJs" . }}{{ end -}}
   </body>
 </html>

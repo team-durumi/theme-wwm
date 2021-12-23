@@ -1,48 +1,44 @@
 {{ define "main" }}
 <div class="contents-area" id="main-content">
-    <!-- submenu -->
-
-    <!-- //submenu -->
-    <div>
-        <div class="relative bg-cover" style="height:37.5rem;background-image:url({{ .Params.Image }})"></div>
-        <div class="relative mx-auto lg:p-10 py-10 px-4 lg:-mt-11 bg-white" style="max-width:51.25rem">
-            <dl class="mb-8">
-                <dt class="text-4xl mb-8 font-bold text-black leading-snug">{{ .Title }}<br/>
-                    {{ .Params.Subtitle }}
-                    <span class="block w-24 h-0.5 bg-black mt-8"></span>
-                </dt>
-                <dd class="text-aa-gray-600 leading-relaxed">
-                    {{ .Summary }}
-                </dd>
-            </dl>
-            {{ partial "marketing/sharingbutton" . }}
-        </div>
+  {{/* submenu  */}}
+  <div>
+    <div class="relative bg-cover" style="height:37.5rem;background-image:url({{ .Params.Image }})"></div>
+    <div class="relative mx-auto lg:p-10 py-10 px-4 lg:-mt-11 bg-white" style="max-width:51.25rem">
+      <dl class="mb-8">
+        <dt class="text-4xl mb-8 font-bold text-black leading-snug">{{ .Title }}<br/>
+          {{ .Params.Subtitle }}
+          <span class="block w-24 h-0.5 bg-black mt-8"></span>
+        </dt>
+        <dd class="text-aa-gray-600 leading-relaxed">
+          {{ .Summary }}
+        </dd>
+      </dl>
+      {{ partial "marketing/sharingbutton" . }}
     </div>
-
-    <!-- contents -->
-    <div class="container pt-12 pb-28 relative">
-       <ul>
-           {{ range .Pages }}
-            <li class="mb-12">
-                <a href="{{ .RelPermalink }}" class="lg:flex lg:items-center lg:justify-between">
-                    <span class="block lg:w-1/4 flex-shrink-0 mb-3 lg:mb-0">
-                        <span class="block overflow-hidden relative" style="padding-bottom:67.8%">
-                            <img class="absolute h-full w-full object-cover" src="{{ .Params.Image }}" alt="">
-                        </span>
-                    </span>
-                    <span class="lg:w-3/4 text-aa-gray-500 flex-shrink-0 lg:pl-5">
-                        <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
-                        <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
-                        <span class="block text-sm">
-                            2020.01.01
-                            <em class="text-aa-purple-500 not-italic ml-2">작성자</em>
-                        </span>
-                    </span>
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
-    <!-- //contents -->
+  </div>
+  {{/* contents */}}
+  <div class="container pt-12 pb-28 relative">
+    <ul>
+      {{ range .Pages }}
+      <li class="mb-12">
+        <a href="{{ .RelPermalink }}" class="lg:flex lg:items-center lg:justify-between">
+          <span class="block lg:w-1/4 flex-shrink-0 mb-3 lg:mb-0">
+            <span class="block overflow-hidden relative" style="padding-bottom:67.8%">
+              <img class="absolute h-full w-full object-cover" src="{{ .Params.Image }}" alt="">
+            </span>
+          </span>
+          <span class="lg:w-3/4 text-aa-gray-500 flex-shrink-0 lg:pl-5">
+            <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
+            <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
+            <span class="block text-sm">
+              2020.01.01
+              <em class="text-aa-purple-500 not-italic ml-2">작성자</em>
+            </span>
+          </span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </div>
 {{ end }}
