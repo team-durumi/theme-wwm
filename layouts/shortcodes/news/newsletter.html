@@ -1,12 +1,35 @@
 <div class="flex text-sm text-aa-700 py-2 border-aa-purple-500 border-b-2">
-    <span class="w-5/6 text-center">뉴스레터</span>
-    <span class="w-1/6 text-center">날짜</span>
+  <span class="w-5/6 text-center">뉴스레터</span>
+  <span class="w-1/6 text-center">날짜</span>
 </div>
+
+{{/* from stibee api */}}
+{{ $stb := .Site.Params.stibee }}
+{{ $params := querify (slice
+  "AccessToken" $stb.accessToken "listId" $stb.listIdDev
+  "opts" "statistics" "sortBy" "created_time"
+  "offset" "0" "limit" "10"
+)}}
+{{/* @see https://gohugo.io/hugo-pipes/introduction/#get-resource-with-resourcesget-and-resourcesgetremote  */}}
+{{- with resources.GetRemote (printf "%s?%s" $stb.endpointEmailList $params) }}
+  {{ $page := .Content | transform.Unmarshal }}
+  {{ with $page.items }}<ul class="mb-20">{{ range . }}
+  <li class="flex py-6 border-b border-aa-gray-200 text-aa-gray-600">
+    <a class="w-5/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .emailPermanentLink }}" target="_blank">
+      {{ replace .emailSubject "$%name%$님," "" }}
+    </a>
+    <span class="w-1/6 text-center">{{ (time .createdTime).Format "2006. 01. 02." }}</span>
+  </li>
+  {{ end }}</ul>{{ end }}
+  <a href="https://page.stibee.com/archives/{{ $stb.listIdDev }}" target="_blank">전체 보기</a>
+{{ else }}
+{{/* from data/newsletter.yml  */}}
 <ul class="mb-20">
-    {{ range $.Site.Data.newsletter.lists }}
+  {{- range $.Site.Data.newsletter.lists }}
     <li class="flex py-6 border-b border-aa-gray-200 text-aa-gray-600">
-        <a class="w-5/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .url }}">{{ .title }}</a>
-        <span class="w-1/6 text-center">{{ .date }}</span>
+      <a class="w-5/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .url }}">{{ .title }}</a>
+      <span class="w-1/6 text-center">{{ .date }}</span>
     </li>
-    {{ end }}
+  {{ end -}}
 </ul>
+{{ end -}}

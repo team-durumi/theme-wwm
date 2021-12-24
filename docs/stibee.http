@@ -24,7 +24,7 @@ content-type: application/json
 GET https://stibee.com/api/v1.0/feeds HTTP/1.1
 accept: application/json
 content-type: application/json
-accesstoken: {{ stbAccessToken }}
+AccessToken: {{ stbAccessToken }}
 
 listId=112752&opts=statistics&sortBy=created_time&offset=0&limit=10
 

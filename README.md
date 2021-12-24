@@ -24,3 +24,13 @@ src: assets/index.js => build: /static/assets/index.min.js
 
 items
 https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAFdHxQd06rDHUxkHu80WVOQC7fYNh4UuYYYJ-590/items.json
+
+## env
+
+<https://gohugo.io/getting-started/configuration/#configure-with-environment-variables>
+
+- HUGO_PARAMS_STBACCESSTOKEN => config/_default/params.yml > stbAccessToken
+
+```
+$ env HUGO_PARAMS_STIBEE_ACCESSTOKEN={{ token }} hugo serve
+```

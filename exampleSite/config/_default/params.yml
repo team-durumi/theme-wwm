@@ -40,7 +40,8 @@ cfImageStyles:
   full: 'fit=scale-down,width=1920'
 
 stibee:
-  listIdDev: 152880
+  accessToken: DONTCOMMIT
+  listIdDev: 105093
   listIdProd: 112752
   endpointEmailList: 'https://stibee.com/api/v1.0/feeds'
   enpointSubscribe: 'https://page.stibee.com/api/v1.0/lists'
