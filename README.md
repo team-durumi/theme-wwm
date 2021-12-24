@@ -29,7 +29,7 @@ https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAF
 
 <https://gohugo.io/getting-started/configuration/#configure-with-environment-variables>
 
-- HUGO_PARAMS_STBACCESSTOKEN => config/_default/params.yml > stbAccessToken
+- HUGO_PARAMS_STIBEE_ACCESSTOKEN => config/_default/params.yml > stibee.accessToken
 
 ```
 $ env HUGO_PARAMS_STIBEE_ACCESSTOKEN={{ token }} hugo serve
