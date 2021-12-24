@@ -1,5 +1,5 @@
 <header x-data="{ megaMenu: false }" class="{{if .IsHome }}header-main bg-transparent absolute left-0 top-0 w-full text-white z-50{{ else }}header-sub bg-white text-gray-700{{ end }}" {{ if .IsHome }} :class="{ 'bg-white text-gray-700': megaMenu }"{{ end }}>
-  <div class="absolute top-0 left-0 bg-white w-full z-10 transition-all duration-300" x-on:mouseleave="megaMenu = false"  :style="{ 'height' : (megaMenu ? '22rem' : '0') }"></div>
+  <div class="absolute top-0 left-0 bg-white w-full z-10 transition-all duration-100 ease-linear" x-on:mouseleave="megaMenu = false"  :style="{ 'height' : (megaMenu ? '22rem' : '0') }"></div>
   <div class="mx-auto lg:px-8 px-4 lg:flex justify-between items-center h-20 z-10 relative" x-data="{ 'showMobileMenu': false }">
     <a href="/" class="logo flex-shrink-0 z-20 absolute top-4 lg:static"
       {{ if .IsHome }}
@@ -30,7 +30,7 @@
         <a class="block text-center text-lg leading-7 py-4 px-0" x-on:mouseover="megaMenu = true" href="#">{{ .Name }}</a>
         <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu, 'hidden': !megaMenu }" x-on:mouseover="megaMenu = true">
           {{ range .Children }}
-          <li><a class="block py-3 text-center hover:bg-aa-gray-100" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+          <li><a class="block py-3 text-center" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </li>
