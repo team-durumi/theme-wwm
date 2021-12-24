@@ -12,6 +12,7 @@
 )}}
 {{/* @see https://gohugo.io/hugo-pipes/introduction/#get-resource-with-resourcesget-and-resourcesgetremote  */}}
 {{- with resources.GetRemote (printf "%s?%s" $stb.endpointEmailList $params) }}
+  {{- with .Err }}{{ warnf "%s" . }}{{ else }}
   {{ $page := .Content | transform.Unmarshal }}
   {{ with $page.items }}<ul class="mb-20">{{ range . }}
   <li class="flex py-6 border-b border-aa-gray-200 text-aa-gray-600">
@@ -22,6 +23,7 @@
   </li>
   {{ end }}</ul>{{ end }}
   <a href="https://page.stibee.com/archives/{{ $stb.listIdDev }}" target="_blank">전체 보기</a>
+  {{ end }}
 {{ else }}
 {{/* from data/newsletter.yml  */}}
 <ul class="mb-20">
