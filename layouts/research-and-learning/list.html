@@ -6,7 +6,7 @@
     <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
     {{ partial "marketing/sharingbutton" . }}
     {{ partial "marketing/banner--section-single" . }} 
-    {{ if eq .RelPermalink "/research-and-learning/courses/" }}
+    {{ if eq .RelPermalink "/research-and-learning/programs/" }}
     <div class="mb-20">
         <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">상시교육</h2>
         <ul class="list-gallary01 flex flex-wrap mb-20"> 
@@ -24,7 +24,7 @@
     <div class="mb-20">
         <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">전체 목록</h2>
         {{ $paginator := .Paginate .RegularPages }}
-        <ul class="{{ if eq .RelPermalink "/research-and-learning/courses/" }} list-gallary01 flex flex-wrap mb-20{{ else }}list-board01{{ end }}">
+        <ul class="{{ if eq .RelPermalink "/research-and-learning/programs/" }} list-gallary01 flex flex-wrap mb-20{{ else }}list-board01{{ end }}">
           {{ range $paginator.Pages }}
             {{ .Render "li" }}
           {{ end }}

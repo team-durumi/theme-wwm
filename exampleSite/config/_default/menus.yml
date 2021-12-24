@@ -54,8 +54,8 @@ main:
     url: /research-and-learning/e-learning
     weight: 1
     parent: 연구/교육   
-  - name: 교육신청
-    url: /research-and-learning/courses
+  - name: 프로그램
+    url: /research-and-learning/programs
     weight: 2
     parent: 연구/교육
   - name: 교육자료
