@@ -4,7 +4,7 @@ baseURL: https://stage.womenandwarmuseum.net
 languageCode: ko-kr
 defaultContentLanguage: ko
 hasCJKLanguage: true
-paginate: 10
+paginate: 50
 
 build:
   writeStats: true
