@@ -31,21 +31,21 @@ main:
     weight: 4
     parent: 전시    
 
-  - name: 아카이브
+  - name: 자료실
     url: /archive
     weight: -90
   - name: 이달의 기록
     url: /archive/featured
     weight: 1
-    parent: 아카이브
+    parent: 자료실    
   - name: 기록물 이용
     url: /archive/usage
     weight: 2
-    parent: 아카이브
+    parent: 자료실
   - name: 기록물 기증
     url: /archive/donate
     weight: 3
-    parent: 아카이브
+    parent: 자료실
 
   - name: 연구/교육
     url: /research-and-learning
@@ -58,7 +58,7 @@ main:
     url: /research-and-learning/programs
     weight: 2
     parent: 연구/교육
-  - name: 교육자료
+  - name: 연구자료
     url: /research-and-learning/resources
     weight: 3
     parent: 연구/교육
