@@ -1,7 +1,5 @@
 {{ define "main" }}
-    <!-- contents-area -->
-    <div class="contents-area" id="main-content">
-        <!-- contents -->
+    <div class="contents-area {{ if eq .Params.layout "special-1" }}bg-aa-gray-600{{ else if eq .Params.layout "special-2"}}bg-aa-special{{ else if eq .Params.layout "special-3"}}bg-aa-gray-600{{ else if eq .Params.layout "special-4"}}bg-aa-special{{ end }}" id="main-content">
         {{ if eq .Params.layout "view01" }}
         <div class="container pt-20 pb-28 relative">
             <div class="mb-20">
@@ -20,8 +18,7 @@
                 {{ end }}
             {{ end }}
         </div>
-        {{ else }}
-
+        {{ else if eq .Params.layout "view02" }}
         <div class="container pt-20 pb-28 relative">
             <div class="mb-14">
                 <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}</h1>
@@ -88,7 +85,14 @@
             </div>
             <!-- //swiper -->
         </div>
+        {{ else if eq .Params.layout "special-1" }}
+          {{ partial "exhibition/special-section-1" . }}
+        {{ else if eq .Params.layout "special-2" }}
+          {{ partial "exhibition/special-section-2" . }}
+        {{ else if eq .Params.layout "special-3" }}
+          {{ partial "exhibition/special-section-3" . }}
+        {{ else if eq .Params.layout "special-4" }}
+          {{ partial "exhibition/special-section-4" . }}                    
         {{ end }}
-        <!-- //contents -->
     </div>
 {{ end }}
