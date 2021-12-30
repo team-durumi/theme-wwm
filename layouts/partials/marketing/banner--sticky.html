@@ -18,12 +18,6 @@
                         {{ range $index, $element := $homeNotices }}
                             <a href="{{ .RelPermalink }}"  
                                 x-show="active == {{ add $index 1 }}"
-                                x-transition:enter="transition duration-1000"
-                                x-transition:enter-start="transform translate-x-full"
-                                x-transition:enter-end="transform translate-x-0"
-                                x-transition:leave="transition duration-1000"
-                                x-transition:leave-start="transform"
-                                x-transition:leave-end="transform -translate-x-full"
                             >{{ .Title }}</a>
                         {{ end }}
                         </div>
