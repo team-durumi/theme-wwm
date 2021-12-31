@@ -2,104 +2,104 @@
 {{- `<!-- _default/single.html  -->` | safeHTML -}}
 <!-- contents-area -->
 <div class="contents-area" id="main-content">
-     <!-- submenu -->
-     <div class="bg-aa-gray-50 hidden lg:block">
-        <dl class="container flex items-center py-3.5">
-            <dt class="text-lg pr-8 border-r border-aa-gray-200 mr-8">전시</dt>
-            <dd>
-                <ul class="flex text-aa-gray-500">
-                    <li class="mr-6"><a href="#">상설전시</a></li>
-                    <li class="mr-6"><a href="#">특별전시</a></li>
-                    <li class="mr-6"><a href="#">온라인 교육</a></li>
-                    <li class="mr-6 text-aa-purple-500"><a href="#">소장품</a></li>
-                </ul>
-            </dd>
-        </dl>
-     </div>
-     <!-- //submenu -->
-     <!-- contents -->
-     <div class="container pt-12 pb-28 relative">
-        <!-- swiper -->
-        <div x-data="{swiper: null}"
-        x-init="swiper = new Swiper($refs.container, {
-            loop: false,
-            slidesPerView: 1,
-            spaceBetween: 40,
-            })"
-        class="relative mb-8"
-        >
-            <div class="absolute right-14 bottom-0 z-20">
-                <button @click="swiper.slidePrev()"
-                        class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
-                        <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
+  {{ partial "base/breadcrumb" . }}
+  <div class="container pt-12 pb-28 relative">
+    <!-- swiper -->
+    <div x-data="{swiper: null}"
+    x-init="swiper = new Swiper($refs.container, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        })"
+    class="relative mb-8"
+    >
+      <div class="absolute right-14 bottom-0 z-20">
+        <button @click="swiper.slidePrev()"
+                class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+          <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </button>
+      </div>
 
-            <div class="swiper-container item-slider bg-aa-gray-50" x-ref="container">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="overflow-hidden flex justify-center">
-                            {{ $settings := .Site.Params }}
-                            {{ range .Params.Components }}
-                                {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
-                                <img class="object-cover h-full" src="{{ $src }}" alt="{{ $.Title }}">
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
+      <div class="swiper-container item-slider bg-aa-gray-50" x-ref="container">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="overflow-hidden flex justify-center">
+              {{ $settings := .Site.Params }}
+              {{ range .Params.Components }}
+                {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
+                <img class="object-cover h-full" src="{{ $src }}" alt="{{ $.Title }}">
+              {{ end }}
             </div>
-            <div class="absolute right-0 bottom-0 z-20">
-                <button @click="swiper.slideNext()"
-                        class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
-                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
+          </div>
         </div>
-        <!-- //swiper -->
-        <div class="mb-14">
-            {{ if .Params.Tags }}
-            {{ range .Params.Tags }}
-                <b class="block text-aa-purple-500 text-sm mb-4"><a href="/tags/{{ . }}">{{ . }}</a></b>
-            {{ end }}    
-            {{ end }}
-            <h1 class="text-aa-gray-900 font-bold text-4xl leading-tight mb-4">{{ .Title }}</h1>
-            <p class="text-aa-gray-700 leading-relaxed">{{ .Params.description }}</p>
-        </div>
-        <div class="mb-20">
-            <div class="mb-6 border-b border-aa-gray-900 pb-6">
-                <h2 class="text-2xl text-aa-gray-900 leading-none">연관된 소장품</h2>
-            </div>
-            <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-            <ul class="masonry01 mb-20" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer", "percentPosition": "true"}'>
-                <li class="grid-sizer"></li>
-                <li class="gutter-sizer"></li>
-                {{ $relatives := .Parent.RegularPagesRecursive | shuffle | first 4 }}
-                {{ range $relatives}}
-                <a href="{{ .Permalink }}">
-                    <li class="mb-10 grid-item">
-                        <span class="overflow-hidden mr-7">
-                            {{ $settings := .Site.Params }}
-                            {{ range .Params.Components }}
-                              {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-                                {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
-                                <img class="" src="{{ $src }}" alt="{{ $.Title }}">
-                            {{ end }}
-                        </span>
-                        <span class="block">
-                            <b class="text-aa-gray-900 text-xl font-normal mb-2 block">{{ .Title }}</b>
-                            <span class="block text-sm line-clamp-2 text-aa-gray-700 leading-6">{{ .Params.description }}</span>
-                        </span>
-                    </li>
-                </a>    
-                {{ end }}
-            </ul>
-        </div>
+      </div>
+      <div class="absolute right-0 bottom-0 z-20">
+        <button @click="swiper.slideNext()"
+                class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-     <!-- //contents -->
+    <!-- //swiper -->
+    <div class="mb-14">
+      {{ if .Params.Tags }}
+      {{ range .Params.Tags }}
+        <b class="block text-aa-purple-500 text-sm mb-4"><a href="/tags/{{ . }}">{{ . }}</a></b>
+      {{ end }}    
+      {{ end }}
+      <h1 class="text-aa-gray-900 font-bold text-4xl leading-tight mb-4">{{ .Title }}</h1>
+      <p class="text-aa-gray-700 leading-relaxed">{{ .Params.description }}</p>
+    </div>
+    <div class="mb-20">
+      <div class="mb-6 border-b border-aa-gray-900 pb-6">
+        <h2 class="text-2xl text-aa-gray-900 leading-none">연관된 소장품</h2>
+      </div>
+    <ul class="masonry01 mb-20" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer", "percentPosition": "true"}'>
+        <li class="grid-sizer"></li>
+        <li class="gutter-sizer"></li>
+        {{ $relatives := .Parent.RegularPagesRecursive | shuffle | first 4 }}
+        {{ range $relatives}}
+        <a href="{{ .Permalink }}">
+          <li class="mb-10 grid-item">
+            <span class="overflow-hidden mr-7">
+              {{ $settings := .Site.Params }}
+              {{ range .Params.Components }}
+                {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                  {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+                  <img class="" src="{{ $src }}" alt="{{ $.Title }}">
+              {{ end }}
+            </span>
+            <span class="block">
+              <b class="text-aa-gray-900 text-xl font-normal mb-2 block">{{ .Title }}</b>
+              <span class="block text-sm line-clamp-2 text-aa-gray-700 leading-6">{{ .Params.description }}</span>
+            </span>
+          </li>
+        </a>    
+        {{ end }}
+      </ul>
+    </div>
+  </div>
 </div>
-<!-- //contents-area -->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  imagesLoaded( '.masonry01', function() {
+    new Masonry( '.masonry01', {
+      "itemSelector": ".grid-item",
+      "columnWidth": ".grid-sizer",
+      "gutter": ".gutter-sizer",
+      "percentPosition": "true"
+    })
+  })
+})
+</script>
 {{- `<!-- _default/single.html  -->` | safeHTML -}}
 {{ end }}
 
