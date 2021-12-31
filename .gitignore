@@ -8,3 +8,6 @@ hugo_stats.json
 
 *static/html
 
+
+# Local Netlify folder
+.netlify
