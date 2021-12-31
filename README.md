@@ -32,6 +32,7 @@ https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAF
 - HUGO_PARAMS_STIBEE_ACCESSTOKEN => config/_default/params.yml > stibee.accessToken
 
 ```
+$ netlify login
 $ cd exampleSite
 $ env HUGO_PARAMS_STIBEE_ACCESSTOKEN={{ token }} hugo serve
 $ env HUGO_PARAMS_STIBEE_ACCESSTOKEN={{ token }} hugo --gc --minify
