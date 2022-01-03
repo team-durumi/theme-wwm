@@ -41,6 +41,9 @@
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
+    margin: 1em 0;
+  }
+  .type02 .cd-timeline-block {
     margin: -4em 0;
   }
   .cd-timeline-block:first-child {
@@ -206,13 +209,17 @@
   border: 7px solid transparent;
   border-right: 7px solid #F85D35;
 }
-.cd-timeline-block:nth-child(odd) .cd-timeline-content::before {
-  border-right-color: #525252;
+.cd-timeline-block .cd-timeline-content::before {
+  border-right-color: #F85D35;
 }
-.cd-timeline-block:nth-child(even) .cd-timeline-content {
+.cd-timeline-block .cd-timeline-content {
   background-color:#F85D35;
 }
-.cd-timeline-block:nth-child(odd) .cd-timeline-content {
+
+.type01 .cd-timeline-block.leftItem .cd-timeline-content::before {
+  border-right-color: #525252;
+}
+.type01 .cd-timeline-block.leftItem .cd-timeline-content {
   background-color:#525252;
 }
 @media only screen and (min-width: 768px) {
@@ -228,7 +235,7 @@
     font-size: 14px;
     font-size: 0.875rem;
   }
-  .cd-timeline-block:nth-child(odd) .cd-timeline-content::before {
+  .cd-timeline-block.rightItem .cd-timeline-content::before {
     border-right-color:transparent;
   }
 }
@@ -242,6 +249,13 @@
     top: 24px;
     left: 100%;
     border-color: transparent;
+    border-left-color: #F85D35;
+  }
+  .cd-timeline-block.leftItem .cd-timeline-content::before {
+    border-right-color: transparent;
+  }
+  .type01 .cd-timeline-block.leftItem .cd-timeline-content::before {
+    border-right-color: transparent;
     border-left-color: #525252;
   }
   .cd-timeline-content .cd-read-more {
@@ -255,20 +269,20 @@
     font-size: 16px;
     font-size: 1rem;
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+  .cd-timeline-block.rightItem .cd-timeline-content {
     float: right;
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+  .cd-timeline-block.rightItem .cd-timeline-content::before {
     top: 24px;
     left: auto;
     right: 100%;
     border-color: transparent;
     border-right-color: #F85D35;
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+  .cd-timeline-block.rightItem .cd-timeline-content .cd-read-more {
     float: right;
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+  .cd-timeline-block.rightItem .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;
@@ -286,7 +300,7 @@
 
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+  .cssanimations .cd-timeline-block.rightItem .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s;
