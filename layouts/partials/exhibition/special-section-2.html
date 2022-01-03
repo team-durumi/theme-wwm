@@ -21,11 +21,12 @@
 <div class="bg-aa-gray-700">
     <div class="container relative">
         <div class="lg:w-3/5 mx-auto">
-          <section id="cd-timeline" class="cd-container cssanimations">
+          <section id="cd-timeline" class="cd-container cssanimations type02">
               {{ range $element := .Params.Resources }}
               {{ if eq .part "part-1" }}
               {{ range $element.components }}
-                  <div class="cd-timeline-block">
+                  {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }}
+                  <div class="cd-timeline-block {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }} lg:mb-12 mb-2">
                       <div class="cd-timeline-img">
                           <b>{{ .year }}</b>
                       </div>
@@ -82,11 +83,11 @@
 <div class="bg-aa-gray-700">
     <div class="container relative">
         <div class="lg:w-3/5 mx-auto">
-          <section id="cd-timeline" class="cd-container cssanimations">
+          <section id="cd-timeline" class="cd-container cssanimations type02">
               {{ range $element := .Params.Resources }}
               {{ if eq .part "part-2" }}
               {{ range $element.components }}
-                  <div class="cd-timeline-block">
+                  <div class="cd-timeline-block {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }} lg:mb-12 mb-2">
                       <div class="cd-timeline-img">
                           <b>{{ .year }}</b>
                       </div>
@@ -144,11 +145,11 @@
 <div class="bg-aa-gray-700">
     <div class="container relative">
         <div class="lg:w-3/5 mx-auto">
-          <section id="cd-timeline" class="cd-container cssanimations">
+          <section id="cd-timeline" class="cd-container cssanimations type02">
               {{ range $element := .Params.Resources }}
               {{ if eq .part "part-3" }}
               {{ range $element.components }}
-                  <div class="cd-timeline-block">
+                  <div class="cd-timeline-block {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }} lg:mb-12 mb-2">
                       <div class="cd-timeline-img">
                           <b>{{ .year }}</b>
                       </div>

@@ -35,113 +35,35 @@
             <h2 class="text-2xl text-aa-special font-bold mb-12">시민운동의 변화</h2>
 
         </div>
-        <div class="lg:w-3/5 mx-auto">
-            <section id="cd-timeline" class="cd-container cssanimations type01">
-                <div class="cd-timeline-block leftItem">
+        <section id="cd-timeline" class="cd-container cssanimations type01">
+            {{ range $element := .Params.Resources }}
+            {{ if eq .part "part-1" }}
+            {{ range $element.components }}
+                <div class="cd-timeline-block {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }} lg:mb-12 mb-2">
                     <div class="cd-timeline-img">
-                        <b>1945</b>
+                        <b>{{ .year }}</b>
                     </div>
-
                     <div class="cd-timeline-content">
-                        <h2>1945</h2>
-                        <p>광복</p>
-                        <div class="w-56"><img src="/images/@content-03.png" alt=""></div>
+                      <h2>{{ .eventDate }}</h2>
+                      <p>{{ .description }}</p>
+                      <div class="w-56"><img src="{{ .src }}" alt="{{ .target_title }}"></div>
+                      <p class="text-sm">
+                        <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
+                      </p>
                     </div>
                 </div>
-
-                <div class="cd-timeline-block leftItem">
-                    <div class="cd-timeline-img">
-                    </div>
-
-                    <div class="cd-timeline-content">
-                        <h2>1945</h2>
-                        <p>
-                            건국부녀동맹 결성<br/>
-                            조선부녀총동맹 결성
-                        </p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block rightItem">
-                    <div class="cd-timeline-img">
-                        <b>1948</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>1948</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores </p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block leftItem">
-                    <div class="cd-timeline-img">
-                    </div>
-                    <div class="cd-timeline-content">
-                        <h2>1948</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        <div class="w-56 mb-2"><img src="/images/@content-01.png" alt=""></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block leftItem">
-                    <div class="cd-timeline-img">
-                        <b>1950</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>Title of section 5</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block rightItem">
-                    <div class="cd-timeline-img">
-                        <b>1955</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>Final Section</h2>
-                        <p>This is the content of the last section</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-            </section> <!-- cd-timeline -->
-            <link rel="stylesheet" href="/assets/css/special.css">
-            <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script>
-                jQuery(document).ready(function($){
-                    var $timeline_block = $('.cd-timeline-block');
-
-                    //hide timeline blocks which are outside the viewport
-                    $timeline_block.each(function(){
-                        if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-                            $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-                        }
-                    });
-
-                    //on scolling, show/animate timeline blocks when enter the viewport
-                    $(window).on('scroll', function(){
-                        $timeline_block.each(function(){
-                            if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-                                $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-                            }
-                        });
-                    });
-                });
-            </script>
-        </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </section> <!-- cd-timeline -->
     </div>
 </div>
 
 <div class="container py-20">
     <h2 class="text-5xl text-aa-special font-bold mb-12">세상밖으로</h2>
     <div class="-mx-7 lg:flex justify-between">
-        <p class="px-7 lg:w-1/2 text-white text-lg">군영과 같으며, 이것은 얼음이 온갖 있는 그리하였는가? 눈에 보내는 있을 발휘하기 구하지 인생을 이것이다. 눈이 어디 길을 청춘의 바로 놀이 얼마나 우리 듣기만 사막이다. 든 살 것은 눈이 그들은 봄날의 보내는 사막이다. 품고 만물은 황금시대를 두기 것이다. 청춘의 실로 광야에서 동력은 청춘은 보내는 얼음에 싸인 예수는 것이다. 고동을 얼마나 오아이스도 철환하였는가? 사랑의 안고, 그들은 하는 못할 그들을 튼튼하며, 인생에 것이다. 힘차게 때에, 같지 피가 때까지 사라지지 바로 끓는 칼이다. 찬미를 뜨고, 밝은 주는 실현에 하는 봄바람이다.<br/>
-            <br/>
-            산야에 품에 뜨거운지라, 발휘하기 있으랴? 지혜는 얼마나 유소년에게서 이것이다. 그들은 천고에 작고 것이다. 내려온 무엇을 주는 용감하고 크고 목숨을 과실이 황금시대를 이것이다. 내는 우는 튼튼하며, 그들의 청춘에서만 때문이다. 같이 위하여 평화스러운 반짝이는 갑 웅대한 청춘에서만 얼마나 할지라도 뿐이다. 인생을 더운지라 고행을 갑 같이, 쓸쓸하랴? 투명하되 아니더면, 인생을 소금이라 뿐이다. 우리 곳으로 그들의 따뜻한 피어나기 있으며, 그들에게 그들은 것이다.</p>
-        <p class="px-7 lg:w-1/2 text-white  text-lg">군영과 같으며, 이것은 얼음이 온갖 있는 그리하였는가? 눈에 보내는 있을 발휘하기 구하지 인생을 이것이다. 눈이 어디 길을 청춘의 바로 놀이 얼마나 우리 듣기만 사막이다. 든 살 것은 눈이 그들은 봄날의 보내는 사막이다. 품고 만물은 황금시대를 두기 것이다. 청춘의 실로 광야에서 동력은 청춘은 보내는 얼음에 싸인 예수는 것이다. 고동을 얼마나 오아이스도 철환하였는가? 사랑의 안고, 그들은 하는 못할 그들을 튼튼하며, 인생에 것이다. 힘차게 때에, 같지 피가 때까지 사라지지 바로 끓는 칼이다. 찬미를 뜨고, 밝은 주는 실현에 하는 봄바람이다.<br/>
-            <br/>
-            산야에 품에 뜨거운지라, 발휘하기 있으랴? 지혜는 얼마나 유소년에게서 이것이다. 그들은 천고에 작고 것이다. 내려온 무엇을 주는 용감하고 크고 목숨을 과실이 황금시대를 이것이다. 내는 우는 튼튼하며, 그들의 청춘에서만 때문이다. 같이 위하여 평화스러운 반짝이는 갑 웅대한 청춘에서만 얼마나 할지라도 뿐이다. 인생을 더운지라 고행을 갑 같이, 쓸쓸하랴? 투명하되 아니더면, 인생을 소금이라 뿐이다. 우리 곳으로 그들의 따뜻한 피어나기 있으며, 그들에게 그들은 것이다.</p>
+        <p class="px-7 lg:w-1/2 text-white text-lg">〈정대협〉이 결성되고 난 이후에도 ‘군의 관여’나 ‘위안부’ 강제 동원에 대한 ‘증거가 없다’는 등 일본 정부의 부인이 계속되자, 분노한 관계자들은 〈한교여연〉이 오랫동안 지원했던 원폭 피해자들을 통해 피해자를 수소문하기 시작한다. 마침내 원폭 피해자 1세 이맹희의 소개로 나타난 생존자 김학순을 만나게 된다. 김학순은 “당시 당했던 일이 하도 기가 막히고 끔찍해 평생 가슴 속에만 묻어두고 살아왔지만... 국민모두가과거를잊은채일본에만매달리는것을보니도저히참을 수가 없다”고 말했다. ‘살아 있는 증거’가 세상에 당당히 얼굴을 드러내고 말을 하기 시작하자 억눌러져 있던 다른 여성들이 침묵의 협곡을 건너 비로소 피해생존자라는 사회적 형체를 입고 하나둘 드러나게 된다.</p>
+        <p class="px-7 lg:w-1/2 text-white  text-lg">당시 국제 정세 또한 요동치고 있었다. 히로히토 일왕의 사망(1989)으로 식민지와 전쟁에 대한 자성과 관심이 증폭했고, 오랜 냉전체제가 붕괴되었다. 남북한도 UN에 동시 가입(1991)하게 된다. 오랜 군사독재체제의 붕괴와 절차적 민주주의가 진행되던 국내 상황과 더불어 일본군‘위안부’ 문제가 세상에 드러날 수 있는 여지가 마련된 것이다.</p>
     </div>
 </div>
 
@@ -150,117 +72,53 @@
         <div class="lg:flex justify-between absolute top-5 lg:left-0 right-4 lg:w-full">
             <h2 class="text-2xl text-white font-bold lg:mb-12">정치적 변동</h2>
             <h2 class="text-2xl text-aa-special font-bold mb-12">시민운동의 변화</h2>
-
         </div>
-        <div class="lg:w-3/5 mx-auto">
-            <section id="cd-timeline" class="cd-container cssanimations">
-                <div class="cd-timeline-block">
+        <section id="cd-timeline" class="cd-container cssanimations type01">
+            {{ range $element := .Params.Resources }}
+            {{ if eq .part "part-2" }}
+            {{ range $element.components }}
+                <div class="cd-timeline-block {{ if eq .vertical "right"}}rightItem{{ else }}leftItem{{ end }} lg:mb-12 mb-2">
                     <div class="cd-timeline-img">
-                        <b>1945</b>
+                        <b>{{ .year }}</b>
                     </div>
-
                     <div class="cd-timeline-content">
-                        <h2>1945</h2>
-                        <p>광복</p>
+                      <h2>{{ .eventDate }}</h2>
+                      <p>{{ .description }}</p>
+                      <div class="w-56"><img src="{{ .src }}" alt="{{ .target_title }}"></div>
+                      <p class="text-sm">
+                        <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
+                      </p>
                     </div>
                 </div>
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                    </div>
-
-                    <div class="cd-timeline-content">
-                        <h2>1945</h2>
-                        <p>
-                            건국부녀동맹 결성<br/>
-                            조선부녀총동맹 결성
-                        </p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                    </div>
-
-                    <div class="cd-timeline-content">
-                        <h2>1946</h2>
-                        <p>
-                            건국부녀동맹 결성<br/>
-                            조선부녀총동맹 결성
-                        </p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->                
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                        <b>1948</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>1948</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores </p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                    </div>
-                    <div class="cd-timeline-content">
-                        <h2>1948</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        <!-- <div class="w-56 mb-2"><img src="/images/@content-01.png" alt=""></div> -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                        <b>1950</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>Title of section 5</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img">
-                        <b>1955</b>
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content">
-                        <h2>Final Section</h2>
-                        <p>This is the content of the last section</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-            </section> <!-- cd-timeline -->
-            <link rel="stylesheet" href="/assets/css/special.css">
-            <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script>
-                jQuery(document).ready(function($){
-                    var $timeline_block = $('.cd-timeline-block');
-
-                    //hide timeline blocks which are outside the viewport
-                    $timeline_block.each(function(){
-                        if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-                            $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-                        }
-                    });
-
-                    //on scolling, show/animate timeline blocks when enter the viewport
-                    $(window).on('scroll', function(){
-                        $timeline_block.each(function(){
-                            if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-                                $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-                            }
-                        });
-                    });
-                });
-            </script>
-        </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </section> <!-- cd-timeline -->
     </div>
 </div>
+<link rel="stylesheet" href="/assets/css/special.css">
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+    jQuery(document).ready(function($){
+        var $timeline_block = $('.cd-timeline-block');
+
+        //hide timeline blocks which are outside the viewport
+        $timeline_block.each(function(){
+            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+            }
+        });
+
+        //on scolling, show/animate timeline blocks when enter the viewport
+        $(window).on('scroll', function(){
+            $timeline_block.each(function(){
+                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                }
+            });
+        });
+    });
+</script>
 
 
  <!-- //contents -->
