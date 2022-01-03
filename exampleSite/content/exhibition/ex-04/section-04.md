@@ -1,10 +1,11 @@
 ---
 title: 김학순의 용기를 계승하여
 subtitle: 섹션04설명입니다.
-date: 2021-12-21
-summary: 불어 우리는 품으며, 천고에 풍부하게 석가는 때문이다. 때에, 반짝이는 희망의 안고, 바이며, 스며들어 목숨을 있으며, 길을 아름다우냐? 소리다.이것은 인생에 인생에 바로 운다. 열락의 아니더면, 방황하여도, 청춘은 귀는 있으랴?
-weight: 6
-image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
+date: 2021-08-21
+author: 작성자
+summary: 우리의눈과귀를활짝열고뜨거운마음으로힘껏손잡고소리치게했던김학순.김학순 공개증언 이후 제2, 제3의 김학순이 등장했다. 김학순들은 무기력한 피해자에 머물러 있지 않았다. 같은 일을 미래세대가 겪어서는 안 된다는 결연한 의지는 다른 전시성폭력 피해자들을 돕는 ‘나비기금’이 되어 날아올랐고, 평화의 소녀상은 전시 성폭력을 알리고 여성인권의 메시지를 담은 상징물로 세계 곳곳에 굳건히 세워지고 있다.
+weight: 4
+image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-03/박물관/19911207_오사카+증언집회(2).jpg
 layout: special-4
 bg: aa-special
 resources:
