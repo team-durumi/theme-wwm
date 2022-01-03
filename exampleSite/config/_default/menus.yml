@@ -23,7 +23,7 @@ main:
     weight: 1
     parent: 전시
   - name: 특별전시
-    url: exhibition/ex-04/
+    url: /exhibition/ex-04/section-01/
     weight: 2
     parent: 전시
   - name: 소장품

@@ -1,0 +1,42 @@
+<section id="cd-timeline" class="cd-container cssanimations">
+    {{ range $element := .Params.Resources }}
+    {{ range $element.components }}
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img">
+                <b>{{ .year }}</b>
+            </div>
+            <div class="cd-timeline-content">
+              <h2>{{ .age }}</h2>
+              <p>{{ .description }}</p>
+              <div class="w-56"><img src="{{ .src }}" alt="{{ .target_title }}"></div>
+              <p class="text-sm">
+                <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
+              </p>
+            </div>
+        </div>
+    {{ end }}
+    {{ end }}
+</section> <!-- cd-timeline -->
+<link rel="stylesheet" href="/assets/css/special.css">
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+    jQuery(document).ready(function($){
+        var $timeline_block = $('.cd-timeline-block');
+
+        //hide timeline blocks which are outside the viewport
+        $timeline_block.each(function(){
+            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+            }
+        });
+
+        //on scolling, show/animate timeline blocks when enter the viewport
+        $(window).on('scroll', function(){
+            $timeline_block.each(function(){
+                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                }
+            });
+        });
+    });
+</script>
