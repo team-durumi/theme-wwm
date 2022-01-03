@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-{{ range $index, $element := .Parent.Pages }}
+{{ range $index, $element := .Parent.RegularPages }}
   {{ if eq $currentPage $element }}
     {{ .Scratch.Set "currentIndex" $index}}
   {{ end }}
@@ -9,8 +9,8 @@
 {{ $prevIndex := sub $currentIndex 1 }}
 {{ $nextIndex := add $currentIndex 1 }}
 
-{{ $prev := index .Parent.Pages $prevIndex }}
-{{ $next := index .Parent.Pages $nextIndex }}
+{{ $prev := index .Parent.RegularPages $prevIndex }}
+{{ $next := index .Parent.RegularPages $nextIndex }}
 
 {{ if or ( $prev ) ( $next )}}
   <div class="bg-aa-purple-500 text-white py-4">
