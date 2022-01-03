@@ -27,4 +27,7 @@
       {{ partial "exhibition/special-section-4" . }}                    
     {{ end }}
   </div>
+  {{ if not ( in .Params.layout "special" ) }}
+    {{ partial "exhibition/pager" . }}
+  {{ end }}
 {{ end }}

@@ -1,0 +1,40 @@
+{{ $currentPage := . }}
+{{ range $index, $element := .Parent.Pages }}
+  {{ if eq $currentPage $element }}
+    {{ .Scratch.Set "currentIndex" $index}}
+  {{ end }}
+{{ end }}
+
+{{ $currentIndex := .Scratch.Get "currentIndex" }}
+{{ $prevIndex := sub $currentIndex 1 }}
+{{ $nextIndex := add $currentIndex 1 }}
+
+{{ $prev := index .Parent.Pages $prevIndex }}
+{{ $next := index .Parent.Pages $nextIndex }}
+
+{{ if or ( $prev ) ( $next )}}
+  <div class="bg-aa-purple-500 text-white py-4">
+    <div class="container lg:flex justify-between items-center">
+      {{ with $prev }}
+      <a href="{{ .RelPermalink }}" class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>{{ .Title }}</span>
+      </a>
+      {{ end }}
+
+      {{ with $next }}
+        {{ if not $prev }}
+          <a href="" disable></a>
+        {{ end }}
+      <a href="{{ .RelPermalink }}" class="flex justify-end">
+        <span>{{ .Title }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
