@@ -4,7 +4,7 @@ subtitle: ": 그녀의 일생"
 date: 2021-12-21
 summary: 전쟁터와 위안소를 배경으로 할머니들의 고통스런 삶이 녹아있는 지하 전시관에 들어선다. 그 곳에서는 티켓으로 인연을 맺은 할머니를 영상으로 만난다. 어둡고 좁은 공간을 통해 피해자들이 겪어야 했던 세상과의 단절, 역사의 무게감을 느낀다.
 weight: 4
-image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s3-item1.png
+image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-01/s3-item1.png
 layout: view01
 resources:
 - partial_layout: full-1
@@ -12,7 +12,7 @@ resources:
     - name: item-03
       params:
         icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s3-item1.png
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-01/s3-item1.png
       description:
       target:
 - partial_layout: full-1
