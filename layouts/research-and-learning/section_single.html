@@ -99,19 +99,20 @@
 			                          </button>
 			                      </div>
 			                      <div class="h-full absolute bg-white top-0 z-10" style="width:9999px;left:-9999px;"></div>
-
 			                      <div class="swiper-container item-slider" x-ref="container">
 			                          <div class="swiper-wrapper">
 			                              <!-- Slides -->
+			                              {{ with .Site.GetPage "section" "exhibition" }}
+                										{{ range where .Pages ".Params.Type" "permanent" }}
 			                              <div class="swiper-slide">
-			                                  <a href="#" class="text-white hover:text-aa-purple-50 block relative">
+			                                  <a href="{{ .Permalink }}" class="text-white hover:text-aa-purple-50 block relative">
 			                                      <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-			                                          <img class="w-full h-full absolute object-cover" src="/images/@content-08.png" alt="">
+			                                          <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
 			                                          <span class="block absolute w-full h-full bg-black opacity-40"></span>
 			                                      </span>
 			                                      <span class="absolute w-full left-0 bottom-6 px-6">
 			                                          <span class="block pb-4 border-b border-white mb-4">상설전시 <b class="ml-4">1부</b></span>
-			                                          <strong class="block text-2xl pr-8">과거, 그 무거웠던 시간들</strong>
+			                                          <strong class="block text-2xl pr-8">{{ .Title }}</strong>
 			                                          <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 			                                              <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			                                              <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,15 +120,19 @@
 			                                      </span>
 			                                  </a>
 			                              </div>
+			                              {{ end }}
+                										{{ end }}
+                										{{ with .Site.GetPage "section" "exhibition" }}
+                										{{ range where .Pages ".Params.Type" "special" }}
 			                              <div class="swiper-slide">
-			                                  <a href="#" class="text-white hover:text-aa-purple-50 block relative">
+			                                  <a href="/exhibition/ex-04/section-01/" class="text-white hover:text-aa-purple-50 block relative">
 			                                      <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-			                                          <img class="w-full h-full absolute object-cover" src="/images/@content-08.png" alt="">
+			                                          <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
 			                                          <span class="block absolute w-full h-full bg-black opacity-40"></span>
 			                                      </span>
 			                                      <span class="absolute w-full left-0 bottom-6 px-6">
-			                                          <span class="block pb-4 border-b border-white mb-4">상설전시 <b class="ml-4">1부</b></span>
-			                                          <strong class="block text-2xl pr-8">과거, 그 무거웠던 시간들</strong>
+			                                          <span class="block pb-4 border-b border-white mb-4"> <b class="ml-4">1부</b></span>
+			                                          <strong class="block text-2xl pr-8">{{ .Title }}</strong>
 			                                          <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 			                                              <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			                                              <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -135,22 +140,8 @@
 			                                      </span>
 			                                  </a>
 			                              </div>
-			                              <div class="swiper-slide">
-			                                  <a href="#" class="text-white hover:text-aa-purple-50 block relative">
-			                                      <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-			                                          <img class="w-full h-full absolute object-cover" src="/images/@content-08.png" alt="">
-			                                          <span class="block absolute w-full h-full bg-black opacity-40"></span>
-			                                      </span>
-			                                      <span class="absolute w-full left-0 bottom-6 px-6">
-			                                          <span class="block pb-4 border-b border-white mb-4">상설전시 <b class="ml-4">1부</b></span>
-			                                          <strong class="block text-2xl pr-8">과거, 그 무거웠던 시간들</strong>
-			                                          <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-			                                              <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-			                                              <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-			                                          </svg>
-			                                      </span>
-			                                  </a>
-			                              </div>
+			                              {{ end }}
+			                              {{ end }}
 			                          </div>
 			                      </div>
 
