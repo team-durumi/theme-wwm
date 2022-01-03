@@ -37,6 +37,7 @@ googleFonts:
 cfImagePrefix: 'https://durumi.io/cdn-cgi/image'
 cfImageStyles:
   thumb: 'fit=scale-down,width=300'
+  thumbStores: 'fit=scale-down,width=800'  
   full: 'fit=scale-down,width=1920'
 
 stibee:

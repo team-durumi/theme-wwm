@@ -4,8 +4,8 @@
       {{ $settings := .Site.Params }}
       {{ with (.Params.featured ) }}
           {{ $fileExtension := index (last 1 (split . ".")) 0 }}
-          {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
-       <img class="h-full w-full object-cover" src="{{ $src }}">
+          {{ $src := partial "base/cf-image.html" (dict "style" "thumbStores" "src" . "settings" $settings) }}
+       <img class="object-cover h-60 w-full" src="{{ $src }}">
       {{ end }}
     </span>
     <span class="block">
