@@ -42,7 +42,7 @@ cfImageStyles:
 
 stibee:
   accessToken: DONTCOMMIT
-  listIdDev: 105093
-  listIdProd: 112752
+  listIdSubscribe: 112752
+  listIdArchive: 105093
   endpointEmailList: 'https://stibee.com/api/v1.0/feeds'
   enpointSubscribe: 'https://page.stibee.com/api/v1.0/lists'

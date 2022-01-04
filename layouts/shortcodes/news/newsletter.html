@@ -6,7 +6,7 @@
 {{/* from stibee api */}}
 {{ $stb := .Site.Params.stibee }}
 {{ $params := querify (slice
-  "AccessToken" $stb.accessToken "listId" $stb.listIdDev
+  "AccessToken" $stb.accessToken "listId" $stb.listIdArchive
   "opts" "statistics" "sortBy" "created_time"
   "offset" "0" "limit" "10"
 )}}

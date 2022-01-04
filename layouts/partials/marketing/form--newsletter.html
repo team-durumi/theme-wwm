@@ -25,7 +25,7 @@ function processForm() {
       iodine.setErrorMessage("email", "이메일 주소 형식이 올바르지 않습니다.");
       iodine.setErrorMessage("required", "입력해야 합니다.");
     },
-    api: '{{ .Site.Params.stibee.enpointSubscribe }}/{{ .Site.Params.stibee.listIdDev }}',
+    api: '{{ .Site.Params.stibee.enpointSubscribe }}/{{ .Site.Params.stibee.listIdSubscribe }}',
     payloads: {
       "email": "",
       "termsOfServiceAgreed": false,
