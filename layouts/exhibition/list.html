@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="contents-area" id="main-content">
-  {{/* submenu  */}}
+  {{ partial "base/breadcrumb" . }}
   <div>
     <div class="relative bg-cover" style="height:37.5rem;background-image:url({{ .Params.Image }})"></div>
     <div class="relative mx-auto lg:p-10 py-10 px-4 lg:-mt-11 bg-white" style="max-width:51.25rem">

@@ -6,7 +6,7 @@
                 <dd>
                     <ul class="flex text-aa-gray-500">
                         {{ range .Children }}
-                            <li class="mr-6 {{ if in $.RelPermalink (print .URL "/") }}text-aa-purple-500{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            <li class="mr-6 {{ if in $.RelPermalink (print .URL "/") }}text-aa-purple-500{{ end }}"><a href="{{ .URL }}" {{ if eq .Name "특별전시"}} target="_blank" {{ end }}>{{ .Name }}</a></li>
                         {{ end }}
                     </ul>
                 </dd>
