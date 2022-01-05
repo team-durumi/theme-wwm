@@ -1,6 +1,6 @@
 hugoVersion:
   extended: true
-  min: "0.55.0"
+  min: "0.91.2"
 
 imports:
 - path: github.com/team-durumi/theme-wwm
