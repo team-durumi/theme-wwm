@@ -8,12 +8,15 @@
     <ul class="masonry01 mb-20">
       <li class="grid-sizer"></li>
       <li class="gutter-sizer"></li>
-      {{ range last 10 (where site.RegularPages "Type" "items").ByTitle }}
+      {{ $settings := .Site.Params }}
+      {{ range first 16 (where site.RegularPages "Type" "items") }}
       <li class="mb-10 grid-item">
         <a href="{{ .Permalink }}">
           <span class="overflow-hidden mr-7">
             {{ range .Params.Components }}
-            <img class="w-full" src="{{ . | absURL }}" alt="">
+            {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+            {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+            <img class="w-full" src="{{ $src }}" alt="{{ $.Title }}">
             {{ end }}
           </span>
           <span class="block">
