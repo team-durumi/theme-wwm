@@ -2,8 +2,11 @@
     <div class="mb-2 relative" style="height:20.75rem">
         <img class="object-cover h-full w-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-7xl rounded-xl" src="{{ .Params.banner.imageLink }}" alt="{{ .Params.banner.title }}">
     </div>
-    <div class="text-right text-sm text-aa-gray-500">
+    {{ if .Params.banner.title }}
+	    <div class="text-right text-sm text-aa-gray-500">
         <span>{{ .Params.banner.title }} | {{ .Params.banner.summary }}</span>
         <a class="text-aa-purple-500 ml-2" href="{{ .Params.banner.itemLink | absURL }}">[상세보기]</a>
-    </div>
+	    </div>
+	  {{ else }}&nbsp 
+    {{ end }}
 </div>
