@@ -1,11 +1,11 @@
 <header x-data="{ megaMenu: false }" class="{{if .IsHome }}header-main bg-transparent absolute left-0 top-0 w-full text-white z-50{{ else if eq .Parent.RelPermalink "/exhibition/ex-04/" }}header-sub bg-aa-gray-900 text-aa-special{{ else }}header-sub bg-white text-gray-700{{ end }}" {{ if .IsHome }} :class="{ 'bg-white text-gray-700': megaMenu }"{{ end }}>
   <div class="absolute top-0 left-0 bg-white w-full z-10 transition-all duration-100 ease-linear" x-on:mouseleave="megaMenu = false"  :style="{ 'height' : (megaMenu ? '22rem' : '0') }"></div>
-   <div class="text-right lg:px-8 px-4 pt-2 relative z-10 hidden lg:block">
+  <!-- <div class="text-right lg:px-8 px-4 pt-2 relative z-10 hidden lg:block">
       <ul class="inline-flex">
           <li><a href="#">Information for Visitors</a> <span class="mx-2">|</span></li>
           <li><a href="#">日本語ガイド</a></li>
       </ul>
-  </div>
+  </div> -->
   <div class="mx-auto lg:px-8 px-4 lg:flex justify-between items-center h-20 z-10 relative" x-data="{ 'showMobileMenu': false }">
     <a href="/" class="logo flex-shrink-0 z-20 absolute top-4 lg:static"
       {{ if .IsHome }}
@@ -83,10 +83,10 @@
         </li>
         {{ end }}
       </ul>
-      <ul class="flex justify-center text-aa-gray-600 py-6">
+      <!-- <ul class="flex justify-center text-aa-gray-600 py-6">
           <li><a href="#">Information for Visitors</a> <span class="mx-2">|</span></li>
           <li><a href="#">日本語ガイド</a></li>
-      </ul>
+      </ul> -->
     </div>
     <!-- //mobile menu -->
   </div>
