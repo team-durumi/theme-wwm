@@ -1,5 +1,5 @@
 ---
-title: "1부 | 김학순이 등장하기까지"
+title: "1부 | 정치·사회적인 배경"
 subtitle: subtitle
 date: 2021-08-21
 author: 작성자
