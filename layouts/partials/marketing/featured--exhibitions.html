@@ -27,7 +27,8 @@
                 {{ with .Site.GetPage "section" "exhibition" }}
                 {{ range where .Pages ".Params.Type" "special" }}
                 <li class="flex py-6 border-aa-gray-200">
-                    <a href="{{ .Permalink }}" class="lg:flex items-center">
+                    <!-- 특별전시 섹션1 화면으로 지정합니다. -->
+                    <a href="/exhibition/ex-04/section-01" class="lg:flex items-center">
                         <span class="flex-shrink-0 mr-6" style="width:16.8125rem;height: 11.815rem">
                             <img class="object-cover" src="{{ .Params.Image }}" alt="{{ .Title }}">
                         </span>
