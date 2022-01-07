@@ -34,9 +34,15 @@
                         <h2>{{ .age }}</h2>
                         <p>{{ .description }}</p>
                         <div class="w-56"><img src="{{ .src }}" alt="{{ .target_title }}"></div>
-                        <p class="text-sm">
-                          <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
-                        </p>
+                        {{ if .target }}
+                          <p class="text-sm">
+                            <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
+                          </p>
+                        {{ else }}
+                          <p class="text-sm">
+                            {{ .target_title }}
+                          </p>
+                        {{ end }}
                       </div>
                   </div>
               {{ end }}
@@ -95,9 +101,15 @@
                         <h2>{{ .age }}</h2>
                         <p>{{ .description }}</p>
                         <div class="w-56"><img src="{{ .src }}" alt="{{ .target_title }}"></div>
-                        <p class="text-sm">
-                          <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
-                        </p>
+                        {{ if .target }}
+                          <p class="text-sm">
+                            <a class="hover:underline" href="{{ .target }}">{{ .target_title }}</a>
+                          </p>
+                        {{ else }}
+                          <p class="text-sm">
+                            {{ .target_title }}
+                          </p>
+                        {{ end }}
                       </div>
                   </div>
               {{ end }}
