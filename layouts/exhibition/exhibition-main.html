@@ -40,7 +40,8 @@
             {{ $specialExhibitions := where .Pages ".Params.Type" "special" }}
             {{ range $index, $element := $specialExhibitions }}
                     <li class="mb-5 lg:w-1/2 px-2.5 relative">
-                    <a href="{{ .RelPermalink }}" class="text-white hover:text-aa-purple-50">
+                    <!-- 특별전시 섹션1로 바로 연결합니다. -->
+                    <a href="/exhibition/ex-04/section-01/" class="text-white hover:text-aa-purple-50">
                         <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
                             <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
                             <span class="block absolute w-full h-full bg-black opacity-40"></span>
