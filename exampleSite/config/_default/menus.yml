@@ -58,7 +58,7 @@ main:
     url: /research-and-learning/programs
     weight: 2
     parent: 연구/교육
-  - name: 연구자료
+  - name: 교육자료
     url: /research-and-learning/resources
     weight: 3
     parent: 연구/교육
