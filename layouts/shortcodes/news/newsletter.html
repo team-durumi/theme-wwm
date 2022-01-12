@@ -5,13 +5,8 @@
 
 {{/* from stibee api */}}
 {{ $stb := .Site.Params.stibee }}
-{{ $params := querify (slice
-  "AccessToken" $stb.accessToken "listId" $stb.listIdDev
-  "opts" "statistics" "sortBy" "created_time"
-  "offset" "0" "limit" "10"
-)}}
 {{/* @see https://gohugo.io/hugo-pipes/introduction/#get-resource-with-resourcesget-and-resourcesgetremote  */}}
-{{- with resources.GetRemote (printf "%s?%s" $stb.endpointEmailList $params) }}
+{{- with resources.GetRemote $stb.endpointEmailList }}
   {{- with .Err }}
     {{/* from data/newsletter.yml  */}}
     <ul class="mb-20">
@@ -23,15 +18,15 @@
       {{ end -}}
     </ul>
   {{ else }}
-  {{ $page := .Content | transform.Unmarshal }}
-  {{ with $page.items }}<ul class="mb-20">{{ range . }}
+  {{ $letters := .Content | transform.Unmarshal }}
+  {{ with $letters }}<ul class="mb-20">{{ range . }}
   <li class="flex py-6 border-b border-aa-gray-200 text-aa-gray-600">
-    <a class="w-5/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .emailPermanentLink }}" target="_blank">
-      {{ replace .emailSubject "$%name%$님," "" }}
+    <a class="w-5/6 px-4 text-aa-gray-700 hover:text-aa-purple-500" href="{{ .permanentLink }}" target="_blank">
+      {{ replace .subject "님," "" }}
     </a>
-    <span class="w-1/6 text-center">{{ (time .createdTime).Format "2006. 01. 02." }}</span>
+    <span class="w-1/6 text-center">{{ (time .sentTime).Format "2006. 01. 02." }}</span>
   </li>
   {{ end }}</ul>{{ end }}
-  <a href="https://page.stibee.com/archives/{{ $stb.listIdDev }}" target="_blank">전체 보기</a>
+  <a href="https://page.stibee.com/archives/{{ $stb.listIdPublic }}" target="_blank">전체 보기</a>
   {{ end }}
 {{ end }}

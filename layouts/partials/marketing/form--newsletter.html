@@ -2,7 +2,7 @@
   <div class="container py-24 flex justify-center">
     <div class="form-body text-center" x-data="processForm">
       <h2 class="text-4xl text-white mb-8 leading-none">뉴스레터</h2>
-      <p class="lg:text-lg text-base text-white mb-8">박물관 및 정의기억연대 통합 뉴스레터를 보내드립니다. | 
+      <p class="lg:text-lg text-base text-white mb-8">박물관 및 정의기억연대 통합 뉴스레터를 보내드립니다. |
         <a href="/connect/newsletter/" class="underline hover:underline-offset-8 hover:bg-aa-puple-500">이전 뉴스레터 보기</a></p>
       <form id="subscribe-newsletter" class="flex h-10 items-stretch" @submit.prevent="submit">
         <label class="hidden" for="email">이메일주소</label>
@@ -25,7 +25,7 @@ function processForm() {
       iodine.setErrorMessage("email", "이메일 주소 형식이 올바르지 않습니다.");
       iodine.setErrorMessage("required", "입력해야 합니다.");
     },
-    api: '{{ .Site.Params.stibee.enpointSubscribe }}/{{ .Site.Params.stibee.listIdSubscribe }}',
+    api: '{{ .Site.Params.stibee.endpointSubscribe }}/{{ .Site.Params.stibee.listIdSubscribe }}',
     payloads: {
       "email": "",
       "termsOfServiceAgreed": false,
