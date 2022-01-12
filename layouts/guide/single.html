@@ -16,10 +16,9 @@
                     {{ partial "marketing/sharingbutton" .}}
                 </div>    
                 <div class="mb-8">
-
                     <h1 class="text-4xl mb-4 text-aa-gray-900">{{ .Title }}</h1>
-                    <p class="text-aa-gray-700 leading-relaxed">{{ .Params.Description }}</p>
-                    <p class="text-aa-gray-700 leading-relaxed">가격 : {{ .Params.Price }}</p>
+                    <p class="text-aa-gray-700 leading-relaxed mb-4">가격 : {{ .Params.Price }}</p>
+                    <p class="text-aa-gray-700 leading-relaxed">{{ .Content }}</p>
                 </div>
                 <a class="block bg-aa-purple-500 text-center text-white py-3.5 hover:bg-black" href="{{ .Params.Buying_Link }}" target="_blank">구매 신청하기</a>
             </div>
@@ -64,7 +63,7 @@
                         <a href="{{ .Permalink }}">
                             <span class="block">
                                 <b class="text-aa-gray-900 text-xl mb-2 block">{{ .Title }}</b>
-                                <span class="block text-sm text-aa-gray-700">{{ .Params.description }}</span>
+                                <span class="block text-sm text-aa-gray-700"> {{ .Params.Price }}</span>
                             </span>
                         </a>                        
                     </li>
