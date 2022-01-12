@@ -47,25 +47,25 @@ main:
     weight: 3
     parent: 자료실
 
-  - name: 연구/교육
-    url: /research-and-learning
+  - name: 교육/연구
+    url: /learning-and-research
     weight: -90
   - name: 온라인교육
-    url: /research-and-learning/e-learning
+    url: /learning-and-research/e-learning
     weight: 1
-    parent: 연구/교육   
+    parent: 교육/연구   
   - name: 프로그램
-    url: /research-and-learning/programs
+    url: /learning-and-research/programs
     weight: 2
-    parent: 연구/교육
+    parent: 교육/연구
   - name: 교육자료
-    url: /research-and-learning/resources
+    url: /learning-and-research/resources
     weight: 3
-    parent: 연구/교육
-  - name: 학술행사
-    url: /research-and-learning/events
+    parent: 교육/연구
+  - name: 연구자료
+    url: /learning-and-research/papers
     weight: 4
-    parent: 연구/교육            
+    parent: 교육/연구            
 
   - name: 소식/참여
     url: /connect
