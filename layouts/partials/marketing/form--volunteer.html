@@ -38,7 +38,7 @@
     </div>
     <div class="mb-10">
         <h2 class="text-aa-gray-900 font-bold text-3xl mb-4">자원활동 신청</h2>
-        {{ if eq .Params.Status "open"}}
+        {{ if eq .Params.show_forms "open" }}
         <form class="text-base" x-data="contactForm()" @submit.prevent="submit">
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="name">이름</label>
