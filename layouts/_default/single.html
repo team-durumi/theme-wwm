@@ -27,23 +27,23 @@
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">대상</dt>
-                                <dd>{{ .Params.course_target }}</dd>
+                                <dd>{{ .Params.program_target }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">교육시간</dt>
-                                <dd>{{ .Params.course_time }}</dd>
+                                <dd>{{ .Params.program_time }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">모집인원</dt>
-                                <dd>{{ .Params.course_member }}</dd>
+                                <dd>{{ .Params.program_member }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">문의처</dt>
-                                <dd>{{ .Params.course_contact }}</dd>
+                                <dd>{{ .Params.program_contact }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">첨부파일</dt>
-                                <dd><a class="text-aa-purple-500 hover:underline" href="{{ .Params.course_materials | absURL }}" download>{{ .Params.course_materials }}</a></dd>
+                                <dd><a class="text-aa-purple-500 hover:underline" href="{{ .Params.course_materials | absURL }}" download>{{ .Params.program_materials }}</a></dd>
                             </dl>
                             <div class="flex mb-2 w-full text-center">
                                 <a class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" href="{{ .Params.apply_link }}" target="_blank" >
@@ -69,6 +69,9 @@
         {{ end }}
         <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
             <p class="mb-8">{{ .Content }}</p>
+            <p class="mb-8"><a class="text-aa-purple-500 hover:underline" href="{{ .Params.resource_materials | absURL }}" download>{{ .Params.resource_materials }}</a></p>
+            <p class="mb-8"><a class="text-aa-purple-500 hover:underline" href="{{ .Params.paper_materials | absURL }}" download>{{ .Params.paper_materials }}</a></p>
+
         </div>
         <div class="mx-auto mt-14" style="max-width:38.75rem">
             <a href="{{ .Parent.RelPermalink }}" class="inline-flex items-center text-aa-gray-600 py-2 px-4 bg-aa-gray-100 rounded hover:bg-aa-gray-600 hover:text-white">
