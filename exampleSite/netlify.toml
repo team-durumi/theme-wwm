@@ -1,0 +1,11 @@
+[build]
+  command = "hugo mod get -u ./... && hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.92.0"
+
+[functions]
+  directory = "functions/gsheet"
+  node_bundler = "esbuild"
+  external_node_modules = ["google-spreadsheet"]
