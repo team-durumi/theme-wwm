@@ -1,19 +1,53 @@
 ---
 title: 생애관 1
-subtitle: ":그녀들이 남긴 물건과 흔적들"
+subtitle: ":삶을보다"
 date: 2021-12-21
-summary: 연행 시기와 지역 등 피해 기록이 소개된 패널과 함께 피해자들의 손때 묻은 물건과 유품이 전시되어 있다. 터치스크린을 이용해 사진, 신문기사, 영상증언 등 피해자들의 삶에 대한 기록을 보다 상세히 살펴본다. 터치스크린을 통해 서른 분의 할머니들을 손 끝 하나로 만나볼 수 있다.
 summary: 터치스크린을 이용해 사진, 신문기사, 영상증언 등 피해자들의 삶에 대한 기록을 보다 상세히 살펴본다. 터치스크린을 통해 서른 분의 할머니들을 손 끝 하나로 만나볼 수 있다.
 weight: 3
-image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/스크린샷+2021-10-14+오후+10.33.26.png
+image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/(3)2층/생애관1/LHS_0808.jpg
 layout: view01
 resources:
 - partial_layout: full-1
   components: 
-    - name: item-03
+    - name: 생애관 전경
       params:
         icon: photo
-      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/스크린샷+2021-10-14+오후+10.33.26.png
-      description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. 
-      target: /items/exhibition/exbition01/s2-item1    
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/(3)2층/생애관1/LHS_0808.jpg
+      description:
+      target: /items/ex-02/생애관/할머니들/강덕경/
+- partial_layout: horizontal-4
+  components: 
+    - name: 강덕경
+      subname: Kang Dukkyung, 한국
+      params:
+        icon: photo
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/생애관/할머니들/강덕경.jpg
+      description: 1929년 경상남도 진주 출생 / 16세에 근로정신대 1기생으로 동원되어 일본에 간 후 도망치다 붙잡혀 위안소에서 일본군성노예 생활
+      target: /items/ex-02/생애관/할머니들/강덕경/
+    - name: 강일출
+      subname: Kang Ilchul, 한국
+      params:
+        icon: photo
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/생애관/할머니들/강일출.jpg
+      description: | 
+        1928년 경상북도 상주 출생
+        16세에 연행되어 중국 목단강에서 일본군성노예 생활
+      target: /items/ex-02/생애관/할머니들/강일출/
+    - name: 공점엽
+      subname: Gong Jeomyeop, 한국
+      params:
+        icon: photo
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/생애관/할머니들/공점엽.jpg
+      description: |
+        1920년 전라남도 무안 출생
+        16세에 연행되어 중국 해성, 상해, 하얼빈에서 일본군 성노예 생활 
+      target: /items/ex-02/생애관/할머니들/공점엽/
+    - name: 길원옥
+      params:
+        icon: Gil Wonok, 한국
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-02/생애관/할머니들/길원옥.jpg
+      description: |
+        1928년 평안북도 희천 출생
+        13세에 연행되어 중국 하얼빈, 석가장에서 일본군성노예 생활 
+      target: /items/ex-02/생애관/할머니들/길원옥/
 ---
