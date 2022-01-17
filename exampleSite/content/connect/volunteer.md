@@ -2,7 +2,7 @@
 title: 자원활동신청
 date: 2011-11-17
 layout: section_single
-status: open
+show_forms: open
 banner:
   title: 평화메세지
   summary: 오시는길에 확인할 수 있는 평화 메세지
