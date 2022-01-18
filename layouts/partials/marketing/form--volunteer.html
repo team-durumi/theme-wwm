@@ -39,22 +39,22 @@
     <div class="mb-10">
         <h2 class="text-aa-gray-900 font-bold text-3xl mb-4">자원활동 신청</h2>
         {{ if eq .Params.show_forms "open" }}
-        <form class="text-base" x-data="contactForm()" @submit.prevent="submit">
+        <form id="volunteer-request" class="text-base" x-data="volunteerRequestForm()" @submit.prevent="submit">
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="name">이름</label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="name" id="name" x-model="data.name" placeholder="본인 이름을 작성해주세요">
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="name" id="name" x-model="formData.name" placeholder="본인 이름을 작성해주세요" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="email">이메일</label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="email" name="email" id="email" x-modle="data.email" placeholder="자주 사용하시는 이메일을 남겨주세요">
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="email" name="email" id="email" x-model="formData.email" placeholder="자주 사용하시는 이메일을 남겨주세요" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="phone">전화번호</label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="phone" id="phone" x-modle="data.phone" placeholder="연락가능한 전화번호를 남겨주세요">
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="phone" id="phone" x-model="formData.phone" placeholder="연락가능한 전화번호를 남겨주세요">
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="message">자원활동 영역</label>
-                <textarea class="block w-full bg-aa-gray-100 p-3 h-20" type="text" name="message" id="message" x-modle="data.message" placeholder=" 자원활동 희망 영역을 작성해 주세요"></textarea>
+                <textarea class="block w-full bg-aa-gray-100 p-3 h-20" type="text" name="message" id="message" x-model="formData.message" placeholder=" 자원활동 희망 영역을 작성해 주세요"></textarea>
             </div>
             <div class="mb-3 p-3 bg-aa-gray-100">
                 전쟁과여성인권박물관은 개인정보보호법 등 관련법령상의 개인정보보호 규정을 준수하며, 개인정보 취급에 대한 사항은 다음과 같습니다.<br/><br/>
@@ -66,7 +66,7 @@
                 동의 거부 권리 및 거부할 경우의 불이익: 신청인은 개인정보 수집 및 이용에 동의하지 않을 수 있습니다. 단, 동의 거부 시에는 자료 열람 및 활용에 제한이 있습니다.
             </div>
             <div class="flex items-center mb-10 overflow-hidden" x-data="{ checked: false}">
-                <input class="w-0 absolute -left-96" type="checkbox" name="volunteer_agree" id="volunteer_agree" x-model="checked">
+                <input class="w-0 absolute -left-96" type="checkbox" name="volunteer_agree" id="volunteer_agree" x-model="checked" required>
                 <span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -88,40 +88,41 @@
     </div>
 </div>
 <script>
-  const FIREBASE_ACTION_URL = "https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAFdHxQd06rDHUxkHu80WVOQC7fYNh4UuYYYJ-590/volunteers.json";
-
-  function contactForm() {
+	const FORM_URL = "/.netlify/functions/gsheet";
+  function volunteerRequestForm() {
     return {
-      data: {
+      formData: {
         name: "",
         email: "",
         phone: "",
         message:"",
       },
       buttonText: "신청",
-      loading: false,
       submit() {
         this.buttonText = "접수중입니다.";
-        this.loading = true;
-        fetch(FIREBASE_ACTION_URL, {
+        fetch(FORM_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
           },
-          body: JSON.stringify(this.data),
+          body: JSON.stringify(this.formData),
         })
-          .then(() => {
-            alert("접수가 완료되었습니다.");
-          })
-          .catch(() => {
-            alert("Something went wrong");
-          })
-          .finally(() => {
-            this.data.message = ""
-            this.buttonText = "접수가 완료되었습니다.";
-            this.loading = false;
-          });
+				.then(res => res.json())
+        .then(returnData => {
+          if (confirm("접수가 완료되었습니다. 자원활동 신청을 추가로 진행하시겠습니까?") == true) {
+            document.querySelector('#volunteer-request').reset();
+          } else {
+            location.href = '/';
+          } 
+        })
+        .catch(() => {
+          alert("오류가 있습니다. ");
+          location.href = '/';
+        })
+        .finally(() => {
+          this.buttonText = "접수가 완료되었습니다";
+        });
       },
     };
   }
