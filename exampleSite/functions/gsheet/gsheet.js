@@ -29,9 +29,11 @@ exports.handler = async (event, context) => {
     private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n')
   });
   await doc.loadInfo();
-  
-  const referer_last_element = event.headers.referer.split('/').pop();  
-  const sheet = doc.sheetsByTitle[referer_last_element];
+
+  const pathes = event.headers.referer.split('/');
+  let size = [event.headers.referer.split('/').length - 2];
+  const sheetTitle = pathes[size];
+  const sheet = doc.sheetsByTitle[sheetTitle];
   // console.log('accessing', sheet.title, 'it has ', sheet.rowCount, ' rows');
   const path = event.path.replace(/\.netlify\/functions\/[^/]+/, '');
   const segments = path.split('/').filter((e) => e);
@@ -59,7 +61,7 @@ exports.handler = async (event, context) => {
           message: `POST Success - added row ${addedRow._rowNumber - 1}`,
           rowNumber: addedRow._rowNumber - 1 // minus the header row
         }
-        if ( referer_last_element === 'e-learning' ) {
+        if ( sheetTitle === 'e-learning' ) {
           returnObject.formDataMessage = data.message;
         }
 
