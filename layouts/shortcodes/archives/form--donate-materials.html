@@ -27,26 +27,26 @@
 
     <div class="mb-10">
         <h2 class="text-aa-gray-900 font-bold text-3xl mb-4">기증 신청</h2>
-        <form class="text-base" x-data="contactForm()" @submit.prevent="submit">
+        <form class="text-base" x-data="donationRequestForm()" @submit.prevent="submit" id="donation-request">
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="name">이름<span class="text-aa-purple-500">(필수)</span></label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="name" id="name" x-model="data.name" placeholder="본인 이름을 작성해주세요" required>
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="name" id="name" x-model="formData.name" placeholder="본인 이름을 작성해주세요" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="email">이메일<span class="text-aa-purple-500">(필수)</span></label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="email" name="donation_email" id="donation_email" x-model="data.email" placeholder="자주 사용하시는 이메일을 남겨주세요" required>
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="email" name="donation_email" id="donation_email" x-model="formData.email" placeholder="자주 사용하시는 이메일을 남겨주세요" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="phone">전화번호<span class="text-aa-purple-500">(필수)</span></label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="phone" id="phone" x-model="data.phone" placeholder="연락가능한 전화번호를 남겨주세요" required>
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="phone" id="phone" x-model="formData.phone" placeholder="연락가능한 전화번호를 남겨주세요" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="address">주소(거주하는 곳)<span class="text-aa-purple-500">(필수)</span></label>
-                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="address" id="address" x-model="data.address" placeholder="기록물 인수시에 필요합니다" required>
+                <input class="block w-full h-12 bg-aa-gray-100 px-3" type="text" name="address" id="address" x-model="formData.address" placeholder="기록물 인수시에 필요합니다" required>
             </div>
             <div class="mb-6">
                 <label class="block text-sm mb-1" for="message">기록물의 내용과 분량<span class="text-aa-purple-500">(필수)</span></label>
-                <textarea class="block w-full bg-aa-gray-100 p-3 h-20" type="text" name="message" id="message" x-model="data.message" placeholder="설명을 남겨주세요" required></textarea>
+                <textarea class="block w-full bg-aa-gray-100 p-3 h-20" type="text" name="message" id="message" x-model="formData.message" placeholder="설명을 남겨주세요" required></textarea>
             </div>
             <div class="mb-3 p-3 bg-aa-gray-100">
                 전쟁과여성인권박물관은 개인정보보호법 등 관련법령상의 개인정보보호 규정을 준수하며, 개인정보 취급에 대한 사항은 다음과 같습니다.<br/><br/>
@@ -74,11 +74,10 @@
 </div>
 
 <script>
-  const FIREBASE_ACTION_URL = "https://wwm-items-3711e-default-rtdb.asia-southeast1.firebasedatabase.app/1D1gAFdHxQd06rDHUxkHu80WVOQC7fYNh4UuYYYJ-590/donate-materials.json";
-
-  function contactForm() {
+	const FORM_URL = "/.netlify/functions/gsheet";
+  function donationRequestForm() {
     return {
-      data: {
+      formData: {
         name: "",
         email: "",
         phone: "",        
@@ -86,29 +85,31 @@
         message:"",
       },
       buttonText: "신청",
-      loading: false,
       submit() {
         this.buttonText = "접수중입니다.";
-        this.loading = true;
-        fetch(FIREBASE_ACTION_URL, {
+        fetch(FORM_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
           },
-          body: JSON.stringify(this.data),
+          body: JSON.stringify(this.formData),
         })
-          .then(() => {
-            alert("접수가 완료되었습니다.");
-          })
-          .catch(() => {
-            alert("Something went wrong");
-          })
-          .finally(() => {
-            this.data.message = ""
-            this.buttonText = "접수가 완료되었습니다";
-            this.loading = false;
-          });
+				.then(res => res.json())
+        .then(returnData => {
+          if (confirm("접수가 완료되었습니다. 기증 신청을 추가로 진행하시겠습니까?") == true) {
+            document.querySelector('#donation-request').reset();
+          } else {
+            location.href = '/';
+          } 
+        })
+        .catch(() => {
+          alert("오류가 있습니다. ");
+          location.href = '/';
+        })
+        .finally(() => {
+          this.buttonText = "접수가 완료되었습니다";
+        });
       },
     };
   }
