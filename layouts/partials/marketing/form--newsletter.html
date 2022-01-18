@@ -10,7 +10,6 @@
           placeholder="이메일 주소: user@gmail.com"
           x-model="emailAddress"
           x-bind:class="{'invalid border-red-600 border-2':email.errorMessage && email.blurred}"
-          @input="start" @blur="end"
           data-rules='["required","email"]' />
         <button class="bg-aa-purple-500 text-white flex-shrink-0 w-20">신청</button>
       </form>
@@ -36,7 +35,6 @@ function processForm() {
     start: (event) => {
       let ele = event.target;
       let rules = JSON.parse(ele.dataset.rules)
-      console.log(JSON.stringify(this));
       this[ele.name].errorMessage = this.getErrorMessage(ele.value, rules);
     },
     end: (event) => {
@@ -73,12 +71,24 @@ function processForm() {
         })
         .then(res => res.json())
         .then(data => {
-          this.isLoading = false;
-          document.querySelector('#subscribe-newsletter').reset();
-          alert(data.message);
+          if (data.HTTPStatusCode != '400') {
+            this.isLoading = false;
+            document.querySelector('#subscribe-newsletter').reset();
+            alert(data.message);
+          }
+          else {
+            alert(data.Message);
+          }
+
         })
         .catch(error => alert(data.message))
     }
   }
 }
 </script>
+
+{{/*
+Code: "Errors.List.AlreadyExistEmail"
+HTTPStatusCode: 400
+Message: "이미 존재하는 이메일 입니다."
+*/}}
