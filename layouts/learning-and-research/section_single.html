@@ -148,9 +148,9 @@
 											<dl class="mb-10">
 													<dt class="text-lg font-bold mb-3.5">첫 걸음 영상 시청하기</dt>
 													<dd>
-															<div class="flex items-center overflow-hidden" x-data="{ checked: false}">
-																	<input class="w-0 absolute -left-96" type="checkbox" name="check01" id="check01" x-model="formData.viewedIntro" data-rules='["required"]'>
-																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
+															<div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+																	<input class="w-0 absolute -left-96" type="checkbox" name="watched_intro_video" id="check01" x-model="formData.watched_intro_video" @click="checked = !checked">
+																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }">
 																			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 																					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 																			</svg>
@@ -162,18 +162,18 @@
 											<dl class="mb-10">
 													<dt class="text-lg font-bold mb-3.5">교육자료 읽어보기</dt>
 													<dd>
-															<div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false}">
-																	<input class="w-0 absolute -left-96" type="checkbox" name="check02" id="check02" x-model="formData.whichResourceVersion">
-																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
+															<div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
+																	<input class="w-0 absolute -left-96" type="checkbox" name="viewed_U15_version_resource" id="check02" x-model="formData.viewed_U15_version_resource" @click="checked = !checked">
+																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }">
 																			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 																					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 																			</svg>
 																	</span>
 																	<label for="check02">15세 이하 버전을 읽었습니다</label>
 															</div>
-															<div class="flex items-centeroverflow-hidden" x-data="{ checked: false}">
-																	<input class="w-0 absolute -left-96" type="checkbox" name="check03" id="check03" x-model="formData.whichResourceVersion">
-																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
+															<div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+																	<input class="w-0 absolute -left-96" type="checkbox" name="viewed_general_version_resource" id="check03" x-model="formData.viewed_general_version_resource" @click="checked = !checked">
+																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }">
 																			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 																					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 																			</svg>
@@ -185,18 +185,18 @@
 											<dl class="mb-10">
 													<dt class="text-lg font-bold mb-3.5">온라인 전시</dt>
 													<dd>
-															<div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false}">
-																	<input class="w-0 absolute -left-96" type="checkbox" name="check04" id="check04" x-model="formData.whichExhibition">
-																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
+															<div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
+																	<input class="w-0 absolute -left-96" type="checkbox" name="visited_offline_exhibition" id="check04" x-model="formData.visited_offline_exhibition" @click="checked = !checked">
+																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }">
 																			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 																					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 																			</svg>
 																	</span>
 																	<label for="check04">박물관을 직접 관람했습니다</label>
 															</div>
-															<div class="flex items-centeroverflow-hidden" x-data="{ checked: false}">
-																	<input class="w-0 absolute -left-96" type="checkbox" name="check05" id="check05" x-model="formData.whichExhibition">
-																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }" @click="checked = !checked">
+															<div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+																	<input class="w-0 absolute -left-96" type="checkbox" name="visited_online_exhibition" id="check05" x-model="formData.visited_online_exhibition"  @click="checked = !checked">
+																	<span class="inline-flex items-center mr-3 h-5 w-5 text-center leading-4 border border-aa-gray-200 rounded-sm" :class="{ 'bg-aa-purple-500 border-aa-purple-500': checked }">
 																			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 																					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 																			</svg>
@@ -208,10 +208,10 @@
 											<dl class="mb-32">
 													<dt class="text-sm mb-1">나비 메시지 작성</dt>
 													<dd>
-															<textarea x-model="formData.message" class="h-32 w-full p-4 bg-aa-gray-100" name="" id="" cols="30" rows="10" placeholder="설명을 남겨주세요" data-rules='["required"]'></textarea>
+															<textarea x-model="formData.message" class="h-32 w-full p-4 bg-aa-gray-100" name="" id="" cols="30" rows="10" placeholder="설명을 남겨주세요" required></textarea>
 													</dd>
 											</dl>
-											<button class="inline-block text-white bg-aa-purple-500 py-3.5 px-7 hover:bg-black" href="#">메세지 작성 및 교육을 완료합니다</button>
+											<button x-text="buttonText" class="inline-block text-white bg-aa-purple-500 py-3.5 px-7 hover:bg-black" href="#">메세지 작성 및 교육을 완료합니다</button>
 									</form>
 							</div>
 					</div>
@@ -223,17 +223,16 @@
 	function elearningForm() {
 		return {
 			formData: {
-				// viewedIntro: "",
-				// whichResourceVersion: "",
-				// whichExhibition: "",
+				watched_intro_video: false,
+				viewed_general_version_resource: false,
+				viewed_U15_version_resource: false,
+				visited_offline_exhibition: false,
+				visited_online_exhibition: false,
 				message: "",
 			},
-			// buttonText: "신청",
-			// loading: false,
+			buttonText: "메세지 작성 및 교육을 완료합니다",
 			submit() {
-				// console.log(JSON.stringify(this.formData));
-				this.buttonText = "접수중입니다.";
-				this.loading = true;
+        this.buttonText = "접수중입니다.";
 				fetch(FORM_URL, {
 					method: "POST",
 					headers: {
@@ -244,21 +243,13 @@
 				})
 				.then(res => res.json())
         .then(body => {
-          this.isLoading = false;
-          document.querySelector('#education-complete').reset();
-          // alert(body.message);
-					alert("접수가 완료되었습니다.");
-					// console.log(body.formDataMessage);
+					localStorage.setItem("nabi_message", body.formDataMessage); 
+					location.href = '/learning-and-research/message-complete';
         })
         .catch(error => {
-					alert("Something went wrong");
-					// alert(body.message);
+          alert("오류가 있습니다.");
+					localStorage.removeItem("nabi_message"); 
 				})
-				// .finally(() => {
-				// 	// this.data.message = ""
-				// 	this.buttonText = "접수가 완료되었습니다.";
-				// 	this.loading = false;
-				// });
 			},
 		};
 	}

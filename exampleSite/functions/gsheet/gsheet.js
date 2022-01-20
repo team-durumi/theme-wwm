@@ -30,9 +30,8 @@ exports.handler = async (event, context) => {
   });
   await doc.loadInfo();
 
-  const pathes = event.headers.referer.split('/');
-  let size = [event.headers.referer.split('/').length - 2];
-  const sheetTitle = pathes[size];
+  const paths = event.headers.referer.split("/").filter(entry => entry !== "");
+  const sheetTitle = paths[paths.length - 1];
   const sheet = doc.sheetsByTitle[sheetTitle];
   // console.log('accessing', sheet.title, 'it has ', sheet.rowCount, ' rows');
   const path = event.path.replace(/\.netlify\/functions\/[^/]+/, '');
