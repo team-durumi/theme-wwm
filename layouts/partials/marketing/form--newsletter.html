@@ -1,10 +1,10 @@
-<div class="bg-aa-gray-700 bg-no-repeat bg-cover bg-center" style="background-image: url(/images/bg-main-newsletter.png);">
+<div class="bg-aa-gray-700 bg-no-repeat bg-cover bg-center" style="background-image: url(/images/bg-main-newsletter-wwm.png);">
   <div class="container py-24 flex justify-center">
     <div class="form-body text-center" x-data="processForm">
       <h2 class="text-4xl text-white mb-8 leading-none">뉴스레터</h2>
       <p class="lg:text-lg text-base text-white mb-8">
-        <span>박물관 및 정의기억연대 통합 뉴스레터를 보내드립니다.</span> |
-        <a href="/connect/newsletter/" class="underline hover:underline-offset-8 hover:bg-aa-puple-500">이전 뉴스레터 보기</a>
+        <span>박물관 및 정의기억연대 통합 뉴스레터를 보내드립니다.<br>
+        <a href="/connect/newsletter/" class="underline hover:underline-offset-8 hover:bg-aa-puple-500">이전 뉴스레터 보기</a></span>
       </p>
       <form id="subscribe-newsletter" class="flex h-10 items-stretch" @submit.prevent="requestSubscription" x-init="$watch('message', ()=>{ if(message && messageType){$store.notifications.show(message, messageType); message = ''; messageType = '';} })">
         <input type="hidden" x-model="message" />
