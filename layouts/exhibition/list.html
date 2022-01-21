@@ -1,45 +1,63 @@
 {{ define "main" }}
 <div class="contents-area" id="main-content">
   {{ partial "base/breadcrumb" . }}
-  <div>
-    <div class="relative bg-cover" style="height:37.5rem;background-image:url({{ .Params.Image }})"></div>
-    <div class="relative mx-auto lg:p-10 py-10 px-4 lg:-mt-11 bg-white" style="max-width:51.25rem">
-      <dl class="mb-8">
-        <dt class="text-4xl mb-8 font-bold text-black leading-snug">{{ .Title }}<br/>
-          {{ .Params.Subtitle }}
-          <span class="block w-24 h-0.5 bg-black mt-8"></span>
-        </dt>
-        <dd class="text-aa-gray-600 leading-relaxed">
-          {{ .Summary }}
-        </dd>
-      </dl>
-      {{ partial "marketing/sharingbutton" . }}
+  {{/* 과거전시 메뉴를 추가합니다. */}}
+  {{ if ne .RelPermalink "/exhibition/previous/" }}
+    <div>
+      <div class="relative bg-cover" style="height:37.5rem;background-image:url({{ .Params.Image }})"></div>
+      <div class="relative mx-auto lg:p-10 py-10 px-4 lg:-mt-11 bg-white" style="max-width:51.25rem">
+        <dl class="mb-8">
+          <dt class="text-4xl mb-8 font-bold text-black leading-snug">{{ .Title }}<br/>
+            {{ .Params.Subtitle }}
+            <span class="block w-24 h-0.5 bg-black mt-8"></span>
+          </dt>
+          <dd class="text-aa-gray-600 leading-relaxed">
+            {{ .Summary }}
+          </dd>
+        </dl>
+        {{ partial "marketing/sharingbutton" . }}
+      </div>
     </div>
-  </div>
-  {{/* contents */}}
-  <div class="container pt-12 pb-28 relative">
-    <ul>
-      {{ range .Pages }}
-      <li class="mb-12">
-        <a href="{{ .RelPermalink }}" class="lg:flex lg:items-center lg:justify-between">
-          <span class="block lg:w-1/4 flex-shrink-0 mb-3 lg:mb-0">
-            <span class="block overflow-hidden relative" style="padding-bottom:67.8%">
-              <img class="absolute h-full w-full object-cover" src="{{ .Params.Image }}" alt="">
+    {{/* contents */}}
+    <div class="container pt-12 pb-28 relative">
+      <ul>
+        {{ range .Pages }}
+        <li class="mb-12">
+          <a href="{{ .RelPermalink }}" class="lg:flex lg:items-center lg:justify-between">
+            <span class="block lg:w-1/4 flex-shrink-0 mb-3 lg:mb-0">
+              <span class="block overflow-hidden relative" style="padding-bottom:67.8%">
+                <img class="absolute h-full w-full object-cover" src="{{ .Params.Image }}" alt="">
+              </span>
             </span>
-          </span>
-          <span class="lg:w-3/4 text-aa-gray-500 flex-shrink-0 lg:pl-5">
-            <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
-            <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Params.subtitle }}</b>
-            <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
-            <span class="block text-sm">
-              {{ .Date.Format "2006년 1월 2일" }}
-              <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
+            <span class="lg:w-3/4 text-aa-gray-500 flex-shrink-0 lg:pl-5">
+              <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Title }}</b>
+              <b class="block mb-2 text-2xl text-aa-gray-900">{{ .Params.subtitle }}</b>
+              <span class="block mb-2 leading-7 line-clamp-2">{{ .Summary }}</span>
+              <span class="block text-sm">
+                {{ .Date.Format "2006년 1월 2일" }}
+                <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
+              </span>
             </span>
-          </span>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ else }}
+    <div class="container pt-12 pb-28 relative">
+      <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
+      {{ partial "marketing/banner--section-single" . }} 
+      {{ $paginator := .Paginate .RegularPagesRecursive }}
+       <ul class="list-board01">
+        {{ range where .Pages "Params.pinned" true }}
+          {{ .Render "li" }}
+        {{ end }}
+        {{ range $paginator.Pages }}
+          {{ .Render "li" }}
+        {{ end }}
+      </ul> 
+      {{ partial "app/pagination.html" $paginator }}
+    </div>    
+  {{ end }}  
 </div>
 {{ end }}
