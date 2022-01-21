@@ -46,7 +46,7 @@ module.exports = {
         'aa-red-500': '#ef4444',
         'aa-yellow-400': '#fbbf24',
         'aa-red': '#A22E2E',
-        'aa-special': '#F85D35',        
+        'aa-special': '#F85D35',
       },
       spacing: {
         'aa-1/4': '23.79%',
@@ -59,7 +59,7 @@ module.exports = {
     },
   },
 	purge: {
-		enabled: false,
+		enabled: true,
     content: [
 			'./hugo_stats.json',
 			'./layouts/**/*.html',

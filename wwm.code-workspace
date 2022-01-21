@@ -13,8 +13,8 @@
       "path": "layouts/partials"
     },
     {
-      "name": "site-content",
-      "path": "exampleSite/content"
+      "name": "exampleSite",
+      "path": "exampleSite"
     },
     {
       "name": "project-root",
