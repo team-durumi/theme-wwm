@@ -1,33 +1,65 @@
 {{ define "main" }}
-  <div class="contents-area {{ if eq .Params.layout "special-1" }}bg-aa-gray-600{{ else if eq .Params.layout "special-2"}}bg-aa-special{{ else if eq .Params.layout "special-3"}}bg-aa-gray-600{{ else if eq .Params.layout "special-4"}}bg-aa-special{{ end }}" id="main-content">
-    {{ if eq .Params.layout "view01" }}
-      <div class="container pt-20 pb-28 relative">
-        <div class="mb-20">
-          <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}<br/>
-            <span class="text-aa-gray-500">{{ .Params.Subtitle }}</span>
-          </h1>
-          <p class="text-lg text-aa-gray-700 leading-loose w-1/2">{{ .Summary }}</p>
-        </div>
-        {{ range $index, $element := .Params.Resources }}
-          {{ if ne .partial_layout nil }}
-            {{ $partial := (print "exhibition/" .partial_layout ".html") }}
-            {{ partial $partial .components }}
+  {{/* 과거전시 메뉴를 추가합니다. */}}
+  {{ if ne .Parent.RelPermalink "/exhibition/previous/" }}
+    <div class="contents-area {{ if eq .Params.layout "special-1" }}bg-aa-gray-600{{ else if eq .Params.layout "special-2"}}bg-aa-special{{ else if eq .Params.layout "special-3"}}bg-aa-gray-600{{ else if eq .Params.layout "special-4"}}bg-aa-special{{ end }}" id="main-content">
+      {{ if eq .Params.layout "view01" }}
+        <div class="container pt-20 pb-28 relative">
+          <div class="mb-20">
+            <h1 class="text-6xl text-aa-gray-900 font-bold leading-snug mb-8">{{ .Title }}<br/>
+              <span class="text-aa-gray-500">{{ .Params.Subtitle }}</span>
+            </h1>
+            <p class="text-lg text-aa-gray-700 leading-loose w-1/2">{{ .Summary }}</p>
+          </div>
+          {{ range $index, $element := .Params.Resources }}
+            {{ if ne .partial_layout nil }}
+              {{ $partial := (print "exhibition/" .partial_layout ".html") }}
+              {{ partial $partial .components }}
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </div>
-    {{ else if eq .Params.layout "view02" }}
-      {{ partial "exhibition/section-view-2" . }}
-    {{ else if eq .Params.layout "special-1" }}
-      {{ partial "exhibition/special-section-1" . }}
-    {{ else if eq .Params.layout "special-2" }}
-      {{ partial "exhibition/special-section-2" . }}
-    {{ else if eq .Params.layout "special-3" }}
-      {{ partial "exhibition/special-section-3" . }}
-    {{ else if eq .Params.layout "special-4" }}
-      {{ partial "exhibition/special-section-4" . }}                    
+        </div>
+      {{ else if eq .Params.layout "view02" }}
+        {{ partial "exhibition/section-view-2" . }}
+      {{ else if eq .Params.layout "special-1" }}
+        {{ partial "exhibition/special-section-1" . }}
+      {{ else if eq .Params.layout "special-2" }}
+        {{ partial "exhibition/special-section-2" . }}
+      {{ else if eq .Params.layout "special-3" }}
+        {{ partial "exhibition/special-section-3" . }}
+      {{ else if eq .Params.layout "special-4" }}
+        {{ partial "exhibition/special-section-4" . }}                    
+      {{ end }}
+    </div>
+    {{ if not ( in .Params.layout "special" ) }}
+      {{ partial "exhibition/pager" . }}
     {{ end }}
-  </div>
-  {{ if not ( in .Params.layout "special" ) }}
-    {{ partial "exhibition/pager" . }}
+  {{ else }}
+    <div class="contents-area" id="main-content">
+        <div class="container pt-12 pb-28">
+            <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+                <div class="mb-8">
+                    <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>         
+                    <span class="block text-sm">
+                        {{ .Date.Format "2006년 1월 2일" }}
+                        <em class="text-aa-purple-500 not-italic ml-2">{{ .Params.author }}</em>
+                    </span>
+                </div>
+            </div>
+            <div class="mb-8">
+              {{ if .Params.Image }}
+              <img class="w-full h-1/2" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}대표이미지">
+              {{ end }}
+            </div>
+            <div class="mx-auto text-aa-gray-600 text-lg leading-8" style="max-width:38.75rem">
+              <p class="mb-8">{{ .Content }}</p>
+            <div class="mx-auto mt-14" style="max-width:38.75rem">
+                <a href="{{ .Parent.RelPermalink }}" class="inline-flex items-center text-aa-gray-600 py-2 px-4 bg-aa-gray-100 rounded hover:bg-aa-gray-600 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    목록으로 돌아가기
+                </a>
+            </div>
+        </div>
+    </div>
   {{ end }}
 {{ end }}

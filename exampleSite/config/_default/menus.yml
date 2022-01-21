@@ -26,6 +26,10 @@ main:
     url: /exhibition/ex-04/section-01/
     weight: 2
     parent: 전시
+  - name: 지난 전시
+    url: /exhibition/previous
+    weight: 3
+    parent: 전시    
   - name: 소장품
     url: /items
     weight: 4
