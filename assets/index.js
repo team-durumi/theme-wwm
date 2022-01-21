@@ -32,9 +32,8 @@ const getScreenName = () => {
   return screenName
 }
 
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
-
 window.addEventListener('DOMContentLoaded', () => {
+  const $ = document.querySelector.bind(document)
+  const $$ = document.querySelectorAll.bind(document)
   console.log('domready!', twScreens, getScreenName(), params)
 })

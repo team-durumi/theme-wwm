@@ -83,153 +83,146 @@
         <p>상설전시 1부 / 2부는 박물관의 메세지를 잘
           담고있습니다. 특별전시의 내용은 달라질 수 있지만
           함께 관람하길 추천합니다.</p>
-        </div>
-        <div class="lg:border-t border-aa-gray-200 pt-7 flex-grow">
-          <!-- swiper -->
-          <div x-data="{swiper: null}"
-          x-init="swiper = new Swiper($refs.container, {
-            slidesPerView: 1,
-            spaceBetween: 28,
-          })"
-          class="relative" style="width:25rem;height:25rem"
-          >
+      </div>
+      <div class="lg:border-t border-aa-gray-200 pt-7 flex-grow">
+        <!-- swiper -->
+        <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {slidesPerView: 1, spaceBetween: 28})" class="relative" style="width:25rem;height:25rem">
           <div class="absolute lg:-left-44 lg:bottom-0 z-20 lg:ml-2 top-1/2 lg:top-auto left-0 -mt-2.5 lg:-mt-0">
             <button @click="swiper.slidePrev()"
-            class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-        <div class="h-full absolute bg-white top-0 z-10" style="width:9999px;left:-9999px;"></div>
-        <div class="swiper-container item-slider" x-ref="container">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            {{ with .Site.GetPage "section" "exhibition" }}
-            {{ range $index, $element := where .Pages ".Params.Type" "!=" nil }}
-            <div class="swiper-slide">
-              <a href="{{ if true }}{{ .RelPermalink }}{{ else }}/exhibition/ex-04/section-01/{{ end }}" class="text-white hover:text-aa-purple-50 block relative">
-                <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-                  <img class="w-full h-full absolute object-cover" src="{{ .Params.image }}" alt="">
-                  <span class="block absolute w-full h-full bg-black opacity-40"></span>
-                </span>
-                <span class="absolute w-full left-0 bottom-6 px-6">
-                  <span class="block pb-4 border-b border-white mb-4">{{ if eq .Params.Type "permanent" }}상설전시{{ else }}특별전시{{ end }}<b class="ml-4">{{ if eq .Params.Type "permanent" }}{{ add $index 1 }}{{ else }}1{{ end }}부</b></span>
-                  <strong class="block text-2xl pr-8">{{ .Title }}</strong>
-                  <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
+              class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+          <div class="h-full absolute bg-white top-0 z-10" style="width:9999px;left:-9999px;"></div>
+          <div class="swiper-container item-slider" x-ref="container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              {{ with .Site.GetPage "section" "exhibition" }}
+              {{ range $index, $element := where .Pages ".Params.Type" "!=" nil }}
+              <div class="swiper-slide">
+                <a href="{{ if true }}{{ .RelPermalink }}{{ else }}/exhibition/ex-04/section-01/{{ end }}" class="text-white hover:text-aa-purple-50 block relative">
+                  <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
+                    <img class="w-full h-full absolute object-cover" src="{{ .Params.image }}" alt="">
+                    <span class="block absolute w-full h-full bg-black opacity-40"></span>
+                  </span>
+                  <span class="absolute w-full left-0 bottom-6 px-6">
+                    <span class="block pb-4 border-b border-white mb-4">{{ if eq .Params.Type "permanent" }}상설전시{{ else }}특별전시{{ end }}<b class="ml-4">{{ if eq .Params.Type "permanent" }}{{ add $index 1 }}{{ else }}1{{ end }}부</b></span>
+                    <strong class="block text-2xl pr-8">{{ .Title }}</strong>
+                    <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              {{ end }}
+              {{ end }}
             </div>
-            {{ end }}
-            {{ end }}
+          </div>
+          <div class="absolute lg:-left-28 lg:bottom-0 right-0 top-1/2 lg:top-auto -mt-2.5 lg:-mt-0 z-20">
+            <button @click="swiper.slideNext()"
+            class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </button>
           </div>
         </div>
-
-        <div class="absolute lg:-left-28 lg:bottom-0 right-0 top-1/2 lg:top-auto -mt-2.5 lg:-mt-0 z-20">
-          <button @click="swiper.slideNext()"
-          class="flex justify-center items-center text-white w-14 h-14 hover:text-aa-purple-500" style="background: rgba(0, 0, 0, 0.24);">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        </button>
+        <!-- //swiper -->
       </div>
     </div>
-    <!-- //swiper -->
+    <div class="mb-32 lg:flex">
+      <div class="lg:w-2/6 flex-shrink-0 lg:mr-14 border-t border-aa-gray-200 pt-7">
+        <h2 class="text-4xl text-aa-gray-900 font-bold">
+          <b class="block text-aa-purple-500 mb-1">04</b>
+          나비 메세지 작성하기
+        </h2>
+      </div>
+      <div class="lg:border-t border-aa-gray-200 pt-7 flex-grow">
+        <form id="education-complete" x-data="elearningForm()" @submit.prevent="submit">
+          <dl class="mb-10">
+            <dt class="text-lg font-bold mb-3.5">첫 걸음 영상 시청하기</dt>
+            <dd>
+              <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+                <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="watched_intro_video" id="check01" x-model="formData.watched_intro_video" @click="checked = !checked">
+                <label for="check01">첫 걸음 영상을 시청했습니다</label>
+              </div>
+            </dd>
+          </dl>
+          <dl class="mb-10">
+            <dt class="text-lg font-bold mb-3.5">교육자료 읽어보기</dt>
+            <dd>
+              <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
+                <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_U15_version_resource" id="check02" x-model="formData.viewed_U15_version_resource" @click="checked = !checked">
+                <label for="check02">15세 이하 버전을 읽었습니다</label>
+              </div>
+              <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+                <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_general_version_resource" id="check03" x-model="formData.viewed_general_version_resource" @click="checked = !checked">
+                <label for="check03">일반인 버전을 읽었습니다</label>
+              </div>
+            </dd>
+          </dl>
+          <dl class="mb-10">
+            <dt class="text-lg font-bold mb-3.5">온라인 전시</dt>
+            <dd>
+              <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
+                <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="visited_offline_exhibition" id="check04" x-model="formData.visited_offline_exhibition" @click="checked = !checked">
+                <label for="check04">박물관을 직접 관람했습니다</label>
+              </div>
+              <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
+                <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="visited_online_exhibition" id="check05" x-model="formData.visited_online_exhibition"  @click="checked = !checked">
+                <label for="check05">온라인 전시를 홈페이지로 관람했습니다</label>
+              </div>
+            </dd>
+          </dl>
+          <dl class="mb-32">
+            <dt class="text-sm mb-1">나비 메시지 작성</dt>
+            <dd>
+              <textarea x-model="formData.message" class="h-32 w-full p-4 bg-aa-gray-100" name="" id="" cols="30" rows="10" placeholder="설명을 남겨주세요" required></textarea>
+            </dd>
+          </dl>
+          <button x-text="buttonText" class="inline-block text-white bg-aa-purple-500 py-3.5 px-7 hover:bg-black" href="#">메세지 작성 및 교육을 완료합니다.</button>
+        </form>
+      </div>
+    </div>
   </div>
-</div>
-<div class="mb-32 lg:flex">
-  <div class="lg:w-2/6 flex-shrink-0 lg:mr-14 border-t border-aa-gray-200 pt-7">
-    <h2 class="text-4xl text-aa-gray-900 font-bold">
-      <b class="block text-aa-purple-500 mb-1">04</b>
-      나비 메세지 작성하기
-    </h2>
-  </div>
-  <div class="lg:border-t border-aa-gray-200 pt-7 flex-grow">
-    <form action="" id="education-complete" x-data="elearningForm()" @submit.prevent="submit">
-      <dl class="mb-10">
-        <dt class="text-lg font-bold mb-3.5">첫 걸음 영상 시청하기</dt>
-        <dd>
-          <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
-            <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="watched_intro_video" id="check01" x-model="formData.watched_intro_video" @click="checked = !checked">
-            <label for="check01">첫 걸음 영상을 시청했습니다</label>
-          </div>
-        </dd>
-      </dl>
-      <dl class="mb-10">
-        <dt class="text-lg font-bold mb-3.5">교육자료 읽어보기</dt>
-        <dd>
-          <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
-            <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_U15_version_resource" id="check02" x-model="formData.viewed_U15_version_resource" @click="checked = !checked">
-            <label for="check02">15세 이하 버전을 읽었습니다</label>
-          </div>
-          <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
-            <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_general_version_resource" id="check03" x-model="formData.viewed_general_version_resource" @click="checked = !checked">
-            <label for="check03">일반인 버전을 읽었습니다</label>
-          </div>
-        </dd>
-      </dl>
-      <dl class="mb-10">
-        <dt class="text-lg font-bold mb-3.5">온라인 전시</dt>
-        <dd>
-          <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
-            <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="visited_offline_exhibition" id="check04" x-model="formData.visited_offline_exhibition" @click="checked = !checked">
-            <label for="check04">박물관을 직접 관람했습니다</label>
-          </div>
-          <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
-            <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="visited_online_exhibition" id="check05" x-model="formData.visited_online_exhibition"  @click="checked = !checked">
-            <label for="check05">온라인 전시를 홈페이지로 관람했습니다</label>
-          </div>
-        </dd>
-      </dl>
-      <dl class="mb-32">
-        <dt class="text-sm mb-1">나비 메시지 작성</dt>
-        <dd>
-          <textarea x-model="formData.message" class="h-32 w-full p-4 bg-aa-gray-100" name="" id="" cols="30" rows="10" placeholder="설명을 남겨주세요" required></textarea>
-        </dd>
-      </dl>
-      <button x-text="buttonText" class="inline-block text-white bg-aa-purple-500 py-3.5 px-7 hover:bg-black" href="#">메세지 작성 및 교육을 완료합니다.</button>
-    </form>
-  </div>
-</div>
-</div>
 </div>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script>
-  const FORM_URL = "/.netlify/functions/gsheet";
-  function elearningForm() {
-    return {
-      formData: {
-        watched_intro_video: false,
-        viewed_general_version_resource: false,
-        viewed_U15_version_resource: false,
-        visited_offline_exhibition: false,
-        visited_online_exhibition: false,
-        message: "",
-      },
-      buttonText: "메세지 작성 및 교육을 완료합니다",
-      submit() {
-        this.buttonText = "접수중입니다.";
-        fetch(FORM_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify(this.formData),
-        })
-        .then(res => res.json())
-        .then(body => {
-          localStorage.setItem("nabi_message", body.formDataMessage);
-          location.href = '/learning-and-research/message-complete';
-        })
-        .catch(error => {
-          alert("오류가 있습니다.");
-          localStorage.removeItem("nabi_message");
-        })
-        .finally(() => {
-          this.buttonText = '메세지 작성 및 교육을 완료합니다'
-        })
-      },
-    };
-  }
+const FORM_URL = "/.netlify/functions/gsheet";
+function elearningForm() {
+  return {
+    formData: {
+      watched_intro_video: false,
+      viewed_general_version_resource: false,
+      viewed_U15_version_resource: false,
+      visited_offline_exhibition: false,
+      visited_online_exhibition: false,
+      message: "",
+    },
+    buttonText: "메세지 작성 및 교육을 완료합니다",
+    submit() {
+      this.buttonText = "접수 중...";
+      fetch(FORM_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(this.formData),
+      })
+      .then(res => res.json())
+      .then(body => {
+        localStorage.setItem("nabi_message", body.formDataMessage);
+        location.href = '/learning-and-research/message-complete';
+      })
+      .catch(error => {
+        alert("오류가 있습니다.");
+        localStorage.removeItem("nabi_message");
+      })
+      .finally(() => {
+        this.buttonText = '메세지 작성 및 교육을 완료합니다'
+      })
+    },
+  };
+}
 </script>
 {{ end }}
