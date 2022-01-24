@@ -4,7 +4,7 @@ baseURL: https://wwm-dev.netlify.app
 languageCode: ko-kr
 defaultContentLanguage: ko
 hasCJKLanguage: true
-paginate: 50
+paginate: 12
 
 build:
   writeStats: true
