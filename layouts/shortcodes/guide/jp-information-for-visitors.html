@@ -126,5 +126,36 @@
             </ul>
         </div>
     </div>
+    <div class="flex justify-between items-center mb-6 pb-6 border-b border-aa-gray-200">
+        <h3 class="text-2xl font-bold text-aa-gray-900 leading-none">{{ .박물관소개.연혁.title }}</h3>
+    </div>
+    <h2 class="text-4xl font-bold leading-normal mb-14" style="word-break:keep-all">{{ .박물관소개.연혁.전쟁과여성인권박물관연혁.title }}</h2>
+    <ul class="text-aa-gray-900 mb-14">
+        {{ range .박물관소개.연혁.전쟁과여성인권박물관연혁.목록 }}
+            <li class="lg:flex mb-4">
+                <h3 class="lg:w-2/12 flex-shrink-0 text-aa-purple-500 text-4xl font-bold lg:mb-0">{{ .title }}</h3>
+                <div>
+                    <dl class="flex">
+                        <dt class="w-36 flex-shrink-0">{{ .date }}</dt>
+                        <dd>{{ range .body}}{{ . }}{{ end }}</dd>
+                    </dl>
+                </div>
+            </li>
+        {{ end }}      
+    </ul>
+    <h2 class="text-4xl font-bold leading-normal mb-14" style="word-break:keep-all">{{ .박물관소개.연혁.전쟁과여성인권박물관건립추진연혁.title }}</h2>
+    <ul class="text-aa-gray-900">
+        {{ range .박물관소개.연혁.전쟁과여성인권박물관건립추진연혁.목록 }}
+        <li class="lg:flex mb-4">
+            <h3 class="lg:w-2/12 flex-shrink-0 text-aa-purple-500 text-4xl font-bold mb-6 lg:mb-0">{{ .title }}</h3>
+            <div>
+                <dl class="flex">
+                    <dt class="w-36 flex-shrink-0">{{ .date }}</dt>
+                    <dd>{{ range .body}}{{ . }}{{ end }}</dd>
+                </dl>                               
+            </div>
+        </li>
+        {{ end }}
+    </ul>    
 </div>
 {{ end }}
