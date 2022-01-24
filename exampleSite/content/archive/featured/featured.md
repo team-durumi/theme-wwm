@@ -2,7 +2,7 @@
 title: 반드시 기억해야 하는 주요한 역사
 date: 2021-12-21T15:06:41.018Z
 summary: 1992년 1월 8일, 미야자와 전 일본 총리의 방한을 앞두고 수요시위는 시작되었습니다. 위안부 문제가 해결될 때까지 계속하기로 결의한 수요시위는 어느새 1500차를 맞이하였습니다.
-image: https://durumi.io/cdn-cgi/image/fit=scale-down,width=1920/https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/2%ec%b8%b5+%ec%a0%84%ec%8b%9c/%ec%9a%b4%eb%8f%99%ec%82%ac%ea%b4%80/%ec%b9%a8%eb%ac%b5%ec%9d%84%ea%b9%a8%ed%8a%b8%eb%a6%ac%eb%8b%a4/%ec%9d%bc%eb%b3%b8%ec%a0%95%eb%b6%80%ec%9d%98+%ea%b4%80%ec%97%ac%eb%a5%bc+%eb%93%9c%eb%9f%ac%eb%82%b4%eb%8a%94+%eb%ac%b8%ec%84%9c+%eb%b0%9c%ea%b2%ac+%eb%b3%b4%eb%8f%84.JPG
+image: /images/@content-01.png
 home_sticky: false
 pinned: false
 ---

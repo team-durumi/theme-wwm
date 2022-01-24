@@ -6,9 +6,9 @@
     <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">{{ .Title }}</h1>
     {{ partial "marketing/sharingbutton" . }}
     {{ partial "marketing/banner--section-single" . }} 
-    {{ $paginator := .Paginate .RegularPagesRecursive }}
+    {{ $paginator := .Paginate .RegularPages }}
      <ul class="list-board01">
-      {{ range where .Pages "Params.pinned" true }}
+      {{ range where .RegularPages "Params.pinned" true }}
         {{ .Render "li" }}
       {{ end }}
       {{ range $paginator.Pages }}

@@ -22,8 +22,135 @@
     </div>
     {{ end }}
     <div class="mb-20">
-        <h2 class="text-4xl font-bold text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">전체 목록</h2>
-        {{ $paginator := .Paginate .RegularPages }}
+        <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
+          <h2 class="text-4xl font-bold text-aa-gray-900 leading-none mb-12">전체 목록</h2>
+          {{ if eq .RelPermalink "/learning-and-research/papers/" }}
+            <div class="flex gap-6 mb-12">
+              <div
+                  x-data="{
+                      open: false,
+                      toggle() {
+                          if (this.open) {
+                              return this.close()
+                          }
+               
+                          this.open = true
+                      },
+                      close(focusAfter) {
+                          this.open = false
+               
+                          focusAfter && focusAfter.focus()
+                      }
+                  }"
+                  x-on:keydown.escape.prevent.stop="close($refs.button)"
+                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                  x-id="['dropdown-button']"
+                  class="relative"
+              >
+                  <!-- Button -->
+                  <button
+                      x-ref="button"
+                      x-on:click="toggle()"
+                      :aria-expanded="open"
+                      :aria-controls="$id('dropdown-button')"
+                      type="button"
+                      class="border border-aa-purple-500 px-2 py-2 text-aa-purple-500 focus:outline-none focus:ring-4 focus:ring-aqua-400"
+                  >
+                      <span>분류</span>
+                      <span aria-hidden="true">&darr;</span>
+                  </button>
+               
+                  <!-- Panel -->
+                  <div
+                      x-ref="panel"
+                      x-show="open"
+                      x-transition.origin.top.left
+                      x-on:click.outside="close($refs.button)"
+                      :id="$id('dropdown-button')"
+                      style="display: none;"
+                      class="absolute w- left-0 mt-2 bg-white border border-black"
+                  >
+                      <div>
+               
+                          <a href="/learning-and-research/papers/ko/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                             KO
+                          </a>
+               
+                          <a href="/learning-and-research/papers/en/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                              EN
+                          </a>
+                          <a href="/learning-and-research/papers/jp/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                              JP
+                          </a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          {{ else if eq .Parent.RelPermalink "/learning-and-research/papers/" }}
+            <div class="flex gap-6 mb-12">
+              <div
+                  x-data="{
+                      open: false,
+                      toggle() {
+                          if (this.open) {
+                              return this.close()
+                          }
+               
+                          this.open = true
+                      },
+                      close(focusAfter) {
+                          this.open = false
+               
+                          focusAfter && focusAfter.focus()
+                      }
+                  }"
+                  x-on:keydown.escape.prevent.stop="close($refs.button)"
+                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                  x-id="['dropdown-button']"
+                  class="relative"
+              >
+                  <!-- Button -->
+                  <button
+                      x-ref="button"
+                      x-on:click="toggle()"
+                      :aria-expanded="open"
+                      :aria-controls="$id('dropdown-button')"
+                      type="button"
+                      class="border border-aa-purple-500 px-2 py-2 text-aa-purple-500 focus:outline-none focus:ring-4 focus:ring-aqua-400"
+                  >
+                      <span>분류</span>
+                      <span aria-hidden="true">&darr;</span>
+                  </button>
+               
+                  <!-- Panel -->
+                  <div
+                      x-ref="panel"
+                      x-show="open"
+                      x-transition.origin.top.left
+                      x-on:click.outside="close($refs.button)"
+                      :id="$id('dropdown-button')"
+                      style="display: none;"
+                      class="absolute w- left-0 mt-2 bg-white border border-black"
+                  >
+                      <div>
+               
+                          <a href="/learning-and-research/papers/ko/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                             KO
+                          </a>
+               
+                          <a href="/learning-and-research/papers/en/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                              EN
+                          </a>
+                          <a href="/learning-and-research/papers/jp/" class="block w-full px-4 py-1 text-left text-sm hover:bg-gray-100 focus:outline-none focus:ring focus:ring-aqua-400 disabled:text-gray-500" >
+                              JP
+                          </a>
+                      </div>
+                  </div>
+              </div>
+            </div>          
+          {{ end }}
+        </div>
+        {{ $paginator := .Paginate .RegularPagesRecursive }}
         <ul class="{{ if eq .RelPermalink "/learning-and-research/programs/" }} list-gallary01 flex flex-wrap mb-20{{ else }}list-board01{{ end }}">
           {{ range $paginator.Pages }}
             {{ .Render "li" }}
