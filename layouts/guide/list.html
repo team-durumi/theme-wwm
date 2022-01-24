@@ -20,7 +20,7 @@
 */}}
     </div>
     {{ $paginator := .Paginate .RegularPagesRecursive }}
-    <ul class="list-gallary02 flex flex-wrap justify-between mb-20 gap-y-5">
+    <ul class="list-gallary02 flex flex-wrap justify-start mb-20 gap-y-5">
       {{ range $paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}
