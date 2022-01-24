@@ -1,3 +1,326 @@
+ko:
+  관람안내:
+    title: 관람안내
+    개관일:
+      title: 개관일
+      body: 화-토, 오전 10시부터 오후 6시까지 (*오후 5시 입장 마감)
+    휴관일:
+      title: 휴관일
+      body: 일-월, 1/1
+    주소:
+      title: 주소
+      body: 서울 마포구 월드컵북로 11길 20
+    문의:
+      title: 문의
+      body: 02-392-5252
+    안내:
+      title: 안내
+      body:
+      - 전쟁과여성인권박물관은 코로나19로 인하여 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)
+      - 1회 예약 가능한 인원은 개인 1~4명까지 가능
+      - 시간 당 관람 인원을 30명으로 제한합니다. (*선착순 마감)
+      - 오디오 가이드[한국어, 영어, 일어] 제공 (*별도의 교육이나 전시 설명은 진행하지 않습니다)
+    오시는길:
+      지하철:
+        title: 지하철
+        body:
+        - 홍대입구역2번출구 → 마을버스6번 → 경성고교입구하차
+        - 홍대입구역1번출구 → 7711, 7016, 7737 → 경성중고, 홍대부속여중고입구 하차
+      버스:
+        title: 버스
+        body:
+        - 7013A/B, 7711, 7016, 7737 경성중고, 홍대부속여중고입구 하차
+        - 마포 15, 08 마을버스 → 경성중고사거리 하차
+        - ※별도의 주차장이 없으니 대중교통을 이용해주세요.           
+  소식참여:
+    title: 소식/참여
+    정기후원신청하기:
+      title: 정기후원 신청하기
+      body:
+      - 전쟁과여성인권박물관에 별도로 정기후원을 신청할 수 있습니다. 정기후원 신청시 박물관 선택 옵션을 체크하세요.
+      - 정기후원
+    일시후원신청하기:
+      title: 일시후원 신청하기
+      body:
+      - 신용카드, 실시간계좌이체 등 편한 방식으로 후원하실 수 있습니다.
+      - 일시후원 
+  박물관소개:
+    title: 박물관소개
+    인사말:
+      title: 인사말
+      message: “전쟁과여성인권박물관에 오신 것을 환영합니다.”
+      body:
+      - 전쟁과여성인권박물관은 일본군’위안부’피해생존자들이 겪었던 역사를 기억하고 교육하며, 일본군 성노예제 문제 해결을 위해 활동하는 공간입니다. 지금도 일어나고 있는 전시성폭력 문제에 관심을 가지고 전쟁과 여성폭력 없는 세상을 위해 연대하고 행동하는 박물관입니다.
+      - 안전하고 평화로운 세상에서 아이들이 자라길 바랐던 일본군’위안부’ 피해생존자들의 오랜 염원은 국내외 시민들의 공감을 불러일으켜 모금 활동으로 이어졌습니다. 기나긴 여정을 지나 마침내 2012년 5월 5일 어린이날, 전쟁과여성인권박물관은 미래세대와 시민들에게 특별한 선물이 되어 문을 열었습니다.
+      - 전쟁과여성인권박물관은 다양한 전시와 교육 프로그램을 통해 과거의 역사와 기억을 알리고, ‘여성, 인권, 평화’를 향한 현재의 활동을 기록함으로써 미래세대에게 더 나은 세상을 전하고자 합니다.
+      - 초국적 시민 연대의 통로, 미래세대 교육의 장, 기억과 기록의 국제 플랫폼이 되고자 하는 이곳 전쟁과여성인권박물관에 여러분들의 지속적인 관심과 참여 부탁드립니다.
+      - 감사합니다.
+    미션비전:
+      title: "미션/비전"
+      비전:
+        title: 비전
+        body: 일본군성노예제 문제 및 해결 운동에 관한 기록과 기억의 국제 플랫폼
+      미션:
+        title: 미션
+        message: 
+        - 기억과 기록
+        - 연대와 계승
+        - 계승과 확장
+        body:
+        - 1. 기록의 체계적 수집과 보존
+        - 2. 문제인식 확산과 운동의 재생산
+        - 3. 전시를 통한 운동의 정신과 역사 계승
+        - 4. 국내외 아카이브 연대와 협력
+        - 5. 미래세대 기억·교육의 터전
+    연혁:
+      title: 연혁
+      전쟁과여성인권박물관연혁:
+        title: 1.전쟁과여성인권박물관 연혁
+        목록:
+          - title: 2012
+          - date: 05.05.
+            body:
+            - 전쟁과여성인권박물관 개관 기념 심포지엄      
+          - date: 05.05.
+            body:
+            - 전쟁과여성인권박물관 개관       
+          - date: 06.05.
+            body:
+            - 박물관건립위원회 해단식
+          - title: 2013
+          - date: "01.16."
+            body:
+            - 서울시에 박물관 등록     
+          - date: "01.18."
+            body:
+            - 한국사립박물관협회 가입       
+          - date: "03.08."
+            body:
+            - 3ㆍ8세계여성의날 기념 특별전시 <또 하나의 세계지도-어제와 같은 오늘> 개막식
+          - date: "05.05."
+            body:
+            - 개관 1주년 기념식 및 어린이 날 특별행사 <할머니들의 이야기>, <그림이야기로 배우는 일본군‘위안부’>, <희망의 나비 날리기>, <평화놀이터(평화 읽기, 평화 쓰기, 평화 그리기, 평화 만들기)>            
+          - title: 2014
+          - date: 07.24. - 08.15.
+            body:
+            - "포토저널리스트 정은진 초청 특별전시 <콩고의 눈물 2014 : 끝나지 않은 전쟁, 마르지 않은 눈물>"   
+          - date: 08.02. - 08.08.
+            body:
+            -  <평화가 있는 골목> 벽화 그리기   
+          - date: "08.11."
+            body:
+            -  <평화가 있는 골목> 벽화 공개식
+          - title: 2015
+          - date: "05.23."
+            body:
+            - 광복 70주년 기념 특별전시 <해방을 기다리는 여인들>
+          - title: 2017
+          - date: 03.29.
+            body:            
+            - 김복동·길원옥 동상 제막식
+          - date: 04. - 05.
+            body:
+            - 박물관 개관 5주년 기념 벽화 그리기
+          - date: 03. - 08.
+            body:
+            - 박물관 청소년 기자단 운영
+          - date: "09."
+            body:
+            - 특별전시 <수요일 12시> 
+          - date: "10."
+            body:
+            - 평화기행 실시
+          - date: "11."
+            body:
+            - 한영일 평화맵 제작
+            - 한영일 박물관 도록 제작
+          - title: 2018
+          - date: 07. - 10.
+            body:
+            - 평화마을 만들기 동행 캠페인 <전쟁과여성인권박물관과 함께하는 문화예술프로그램>
+          - date: "10."
+            body:
+            - 평화기행 3회 실시
+          - date: "10."
+            body:
+            - 특별전시 <상하이, 위안소의 시작>                       
+          - title: 2019
+          - date: "05."
+            body:
+            - 여성운동가 김복동 추모와 기억전
+          - date: "10."
+            body: 
+            - 김순옥, 지돌이, 이수단, 이광자 추모전 <그곳에 내가, 우리가 있었다>
+          - title: 2020           
+          - date: "05."
+            body:
+            - 수요시위 아카이브 오픈
+          - date: "08."
+            body:
+            - 일본군'위안부'피해생존자 유품전 <새로운 시작, 길을 찾아가는 여정>
+          - date: "10."
+            body:
+            - 한국정신대문제대책협의회 창설 30주년 기념 특별전시 <길위에서의 30년, 결국은 희망이더라> 
+          - title: 2021
+          - date: 08.17. - 2022. 01.22.
+            body:
+            - 김학순 공개증언 30주년 기념 특별전시 <그날의 목소리>                      
+      전쟁과여성인권박물관건립추진연혁:
+        title: 2.전쟁과여성인권박물관 건립 추진연혁
+        목록:
+          - title: 1994
+          - date: "00."
+            body:
+            - "'여성과 전쟁' 사료관 건립준비위원회 발족"
+          - title: 1999
+          - date: "02."
+            body:
+            - "서대문 한국정신대문제대책협의회 사무실 내 전시 및 교육을 위한 교육관 개관"
+          - title: 2003
+          - date: "12.18."
+            body:
+            - "'일본군'위안부'피해자를 진정으로 추모하는 일은 그들의 고통을 잊지 않고, 다시는 이런 일이 일어나지 않도록 교육하고 활동하는 것'이라는 취지 아래 돌아가신 할머니들을 위한 추모회 및 전쟁과여성인권박물관 건립을 위한 점화식(일본군'위안부'피해자 길원옥, 김분선, 김은례, 백넙데기, 신현순, 이금순, 이용수, 장점돌, 하상숙, 최갑순, 박두리, 황순이, 김상희, 이순덕, 이옥금, 한도순의 박물관 주춧돌기금 후원)"                          
+          - title: 2004
+          - date: "10.22."
+            body:
+            - "국회 통일외교통상위원회의 외교통상위원회 국정감사에 길원옥할머니가 증인으로 출석"
+            - 통일외교통상위원회 소속 국회의원 전원 만장일치로 일본군‘위안부’ 피해자의 명예와 인권회복을 위한 역사관 건립을 위한 결의안 채택, 국회 본회에 상정, 결의안 채택
+          - date: 12.16.
+            body:
+            - 건립위원회 발족식 개최(공동건립위원장단, 공동건립추진위원장단 추대)
+            - 홍보인쇄물․영상물 제작․공식 모금활동 시작
+          - date: 12.27.
+            body:
+            - 제1차 공동건립추진위원장단 회의(박물관 부지마련 대책 본격 논의시작)
+          - title: 2005
+          - date: "01." 
+            body:
+            - 박물관 부지 마련 활동 시작(서울시 내 공원부지, 서울시 및 중앙정부 소유 건물 중 박물관으로 리모델링 가능한 건물 탐색)
+          - date: 05.27.
+            body:
+            - 국회 여성위원회 간담회
+          - date: "06." 
+            body:
+            - 한국여자프로농구 경기에서 박물관 건립기금 마련을 위한 캠페인 진행
+          - date: "08."
+            body:
+            - 서울시에 박물관 부지 기부 요청
+          - date: "10."
+            body:
+            - 서울시, 서대문독립공원 주차장 자리를 박물관 부지로 추진하는 문제 본격 논의 
+          - date: 10.21.
+            body:
+            - 서대문독립공원 주차장 자리가 문화재에 포함되어 있는 사실 확인
+          - date: 10.25.
+            body:
+            - 서대문독립공원 매점 부지에 박물관 건립하는 것으로 서울시와 합의
+            - 이명주 공동건립추진위원장(명지대학교 건축학과), 김희옥 
+            - 공동건립추진위원장(에이텍종합건축사사무소 소장) 건축설계 진행                                                                                    
+          - title: 2006
+          - date: 03.08.
+            body:
+            - 서대문독립공원 매점 부지에 박물관을 건립하는 문제와 관련 현상변경 허가신청서 서대문구청에 제출
+          - date: 04.14.
+            body:
+            - 문화재청 사적과 현상변경심의위원회에서 전쟁 여성인권박물관 건립 허가
+          - date: 06.12.
+            body:
+            - 서울시 도시공원위원회 공원조성계획변경심의를 받기 위해 남산공원관리사업소에 심의안건 제출 
+          - date: 07.18.
+            body:
+            - 서울시도시공원위원회 심의 통과
+          - date: 08.18.
+            body:
+            - 소위원회 2차 회의 심의 통과(최종 허가)
+          - date: 09.21.
+            body:
+            - 박물관 건립 설명회를 위한 국회의원 조찬간담회
+          - date: 10.19.
+            body: 
+            - 전쟁과 여성인권박물관 부지 확정 및 건립 설명회 (국가인권위원회 배움터)
+          - date: "11."
+            body: 
+            - 국회 여성가족위원회 예결산소위원회 개최, 박물관 예산논의, 2007년 예산에 올림            
+          - title: 2007
+          - date: 01.12.
+            body:
+            - 남산공원관리사업소에 사업시행 1년 연장 요청
+          - date: 01.24.
+            body:
+            - <박물관 2007 시민모금 캠페인> 발대식
+          - date: 02.09.
+            body:
+            - 한국정신대문제대책협의회 20개 회원단체장 명의로 여성가족부에 박물관 건립 예산 지원 요청 
+          - date: "04.27. - 04.30."
+            body:
+            - 박물관 건립 모금을 위한 오사카 집회
+          - date: 08.26.
+            body:
+            - 나의 마음은 지지 않았다' 상영회 참석 및 박물관 홍보 활동(일본 동경)
+          - title: 2008  
+          - date: 03.28. - 03.30.
+            body:
+            - 해외 박물관 네트워크 활동(베트남)
+          - date: 04.07. - 04.09.
+            body:
+            - 해외 박물관 네트워크 활동(대만)
+          - date: 03.31.
+            body:
+            - 박물관 홍보대사(농구선수 전주원) 위촉
+          - date: 04.28.
+            body:
+            - 문화재청, 현상변경심의 관련 신축 재허가(2008년 8월 15일에서 2011년 8월 15일까지로 신축허가 연장)
+          - date: 06.21.
+            body:
+            - 전쟁과여성인권박물관 건립기금 마련을 위한 <이정미 콘서트, 이어지는 노래, 이어지는 춤, 이어지는 삶>(일본 오사카)
+          - date: 06.30. - 07.04.
+            body:
+            - 해외 박물관 네트워크 활동(독일)
+          - date: 07.31.
+            body:
+            - 남산공원관리사업소에 도시계획시설사업 실시계획 인가 신청 서류 제출
+          - date: 08.16. 
+            body:
+            - 호주 시드니에서 일본군'위안부' 할머니와 함께하는 호주친구들 주최 "박물관 후원의 밤" 개최
+          - date: 09.08.
+            body:
+            - 남산공원관리사업소, 도시계획시설사업 실시계획 인가 신청에 따른 결과 통보
+          - date: 10.16.
+            body:
+            - 박물관 사업실시계획 인가 통보 및 인가증(건축허가) 교부
+          - date: 10.17.
+            body:
+            - 전쟁과여성인권박물관 건립을 위한 일본 동경 학습회
+          - date: 10.24. - 10.27.
+            body:
+            - 해외 박물관 네트워크 활동(중국 상해, 무한)
+          - date: 11.03.
+            body:
+            - 광복회 박물관 건축허가 철회를 위한 기자회견에 관한 정대협 입장 기자회견)
+          - title: 2009 
+          - date: 02.07.
+            body:
+            - 전쟁과 여성인권박물관 일본 건설위원회 발족 집회
+          - date: 02.28.
+            body:
+            - 전쟁과여성인권박물관 건립기금 마련을 위한 <이정미 콘서트>(일본 동경)
+          - date: 03.08.
+            body:
+            - 전쟁과여성인권박물관 착공식 <희망의 터 다지기>
+          - date: 03.11. ~ 03.15.
+            body:
+            - 서울메트로미술관 내 <전쟁과여성인권 국제전>
+          - title: 2011
+          - date: "02."
+            body:
+            - 서대문독립공원 부지를 보류하고 기존의 건물을 매입해서 리모델링하기로 결의, (독립운동의 성지에 ‘위안부’ 박물관을 세울 수 없다며 광복회와 순국선열유족회 등 독립운동단체들의 공개적인 반대와 서을시의 미온적인 태도로 인해) 새로운 부지를 물색하기 시작
+          - date: "08."
+            body:
+            - 성미산 자락의 2층 주택 매입 (서울시 마포구 성산동 39-13) 건축 설계 및 시공, 자료수집, 모금 활동 전개
+          - title: 2012
+          - date: 01.26.
+            body:
+            - 건물 리모델링 공사 착공식                                                                                                                                                                 
 en: 
   관람안내:
     title: Information for Visitors
@@ -20,6 +343,18 @@ en:
       - 2. You can make a reservation for 1-4 individuals per visit (*Group visits are not allowed)
       - 3. The maximum number of visitors is limited to 9 people per hour (*first-come, first-serve basis)
       - 4. Audio guide [Korean, English, Japanese] is provided (*Education programs and guided exhibit tours are not provided)
+    오시는길:
+      지하철:
+        title: Subway
+        body:
+        - Hongdae Station Exit 2 → Mapo Local Bus Number 6 → Get off at Gyeongseong High School intersection
+        - Hongdae Station Exit 1 → Bus 7711, 7016, 7737 → Get off at Gyeongseong High School intersection
+      버스:
+        title: Bus
+        body:
+        - 7013A/B, 7711, 7016, 7737 → Get off at Gyeongseong High School intersection
+        - Mapo Local Bus Number 15, 08 → Get off at Gyeongseong High School intersection
+        - ※ The museum does not have a parking space. Please use public transportation.
 
   온라인예약안내: 
     title: Online Reservation Information
@@ -34,10 +369,303 @@ en:
     - 4. Make sure the form is filled out correctly. Click the “Make a reservation” button on the bottom of the page.
     body_3:
     - 1. When the reservation is confirmed, you will see the following confirmation message. * If you turn on the ‘Notification’ button below, you can receive a push notification one day before your reserved date.  
+
   예약관련문의: 
     title: Reservation Inquiry
     body: The online reservation page is currently available in Korean and English. Please refer to the guide to make reservations in Japanese. If you have any further questions regarding the reservations, please send us an email at 
   온라인예약이동: Make Online Reservation
+
+  소식참여:
+    title: Support Us!
+    일시후원신청하기:
+      title: Support Us!
+      body:
+      - Donate to the Korean Council via bank wire transfer! (You can use money transfer sites such as wise.com)
+      - "Account number: 069137-04-01419"
+      - "Account holder: The Korean Council for Justice and Remembrance for the Issues of Military Sexual Slavery by Japan"
+      - "Address: 12, World Cup buk-ro 11-gil, Mapo-gu, Seoul, Republic of Korea"
+      - "Bank name: KOOKMIN BANK"
+      - "Bank address: 26, Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, Korea"
+      - "SWIFT code: CZNBKRSEXXX"
+
+  박물관소개:
+    title: Introductions
+    인사말:
+      title: Welcome Message
+      message: “Welcome to the War and Women’s Human Rights Museum.”
+      body:
+      - The War and Women’s Human Rights Museum remembers and educates the history of Japanese military “comfort women” and works towards just resolution of the Japanese military sexual slavery issue. It is also an active museum that attends to ongoing issues of sexual violence in armed conflicts and stands in solidarity for a world without war and violence against women.
+      - Japanese military “comfort women” victim-survivors’ longstanding hope for children to grow up in a safe and peaceful world resonated with citizens around the globe and sparked fundraising efforts. After a long journey, the War and Women’s Human Rights Museum opened on Childrens’ Day, May 5th, 2012 as a space for future generations and citizens.
+      - The War and Women’s Human Rights Museum strives to create a better world for future generations by raising awareness of past history and memory through various exhibitions and educational programs and recording ongoing activism for women, human rights, and peace.
+      - We ask for your continuous interest and participation in the War and Women’s Human Rights Museum, which aims to be an international platform for transnational citizens’ solidarity, education of future generations, memory and archiving.
+      - Thank you.
+    미션비전:
+      title: Mission & Vision
+      비전:
+        title: Vision      
+        body: International platform for archiving and remembering the Japanese military sexual slavery issue and movement for resolution
+      미션:
+        title: Mission
+        message:
+        - Remembrance and Archiving
+        - Solidarity and Inheritance
+        - Inheritance and Expansion
+        body:
+        - 1. Systemic collection and preservation of archival materials
+        - 2. Raising awareness of the issue and the movement
+        - 3. Inheritance of the spirit and history of the movement through exhibitions
+        - 4. Solidarity and cooperation with archives around the world
+        - 5. Foundation for remembrance and education of future generations
+    연혁:
+      title: Timeline(번역)
+      전쟁과여성인권박물관연혁:
+        title: 1.전쟁과여성인권박물관 Timeline of(번역)
+        목록:
+          - title: 2012
+          - date: 05.05.
+            body:
+            - The opening symposium at the War and Women’s Human Rights Museum      
+          - date: 05.05.
+            body:
+            - The War and Women’s Human Rights Museum opened.     
+          - date: 06.05.
+            body:
+            - The Museum Establishment Committee was disbanded.
+          - title: 2013
+          - date: "01.16."
+            body:
+            - The Museum registered with the Seoul metropolitan government.    
+          - date: "01.18."
+            body:
+            -  The Museum joined the Korean Private Museum Association.      
+          - date: "03.08."
+            body:
+            - "Special Exhibition Today Same as Yesterday: Another World Map opened in celebration of International Women’s Day."
+          - date: "05.05."
+            body:
+            - 1st anniversary and Children’s Day celebration at the museum with events Halmonis’ stories, Learning about Japanese Military “Comfort Women” through Picture Stories, Flying Butterflies of Hope, Peace Playground (Reading, Writing, Drawing, Making Peace)            
+          - title: 2014
+          - date: 07.24. - 08.15.
+            body:
+            - "Special Exhibit Tears of Congo: Wars not Finished, Tears not Dried with photographer Jeong Eun-jin"   
+          - date: 08.02. - 08.08.
+            body:
+            -  "Wall painting event: painting <Alley of Peace>"   
+          - date: "08.11."
+            body:
+            -  <Alley of Peace> wall painting opening ceremony
+          - title: 2015
+          - date: "05.23."
+            body:
+            - Special Exhibit <Women Waiting for Their Own Liberation> opened for the 70th anniversary of Korean independence
+          - title: 2017
+          - date: 03.29.
+            body:            
+            - Opening ceremony of the statue Kim Bok-dong and Gil Won-ok are Peace!
+          - date: 04. - 05.
+            body:
+            - Wall painting renewal event in celebration of the 5th anniversary of the museum
+          - date: 03. - 08.
+            body:
+            - Museum Youth Reporters program held
+          - date: "09."
+            body:
+            - Special Exhibit <Wednesday Noons> held
+          - date: "10."
+            body:
+            - Peace Tour held
+          - date: "11."
+            body:
+            - Peace Map created in Korean, English, and Japanese
+            - Museum Catalogue created in Korean, English, and Japanese
+          - title: 2018
+          - date: 07. - 10.
+            body:
+            - Peace Village Campaign Arts and Culture Programs with The War and Women’s Human Rights Museum
+          - date: "10."
+            body:
+            - Peace Tour held 3 times
+          - date: "10."
+            body:
+            - "Special Exhibit Shanghai, Where the <Comfort Stations> Started: Records in Japanese Military War Diaries"                       
+          - title: 2019
+          - date: "05."
+            body:
+            - Special Exhibit Remembering Kim Bokdong Women’s Human Rights Activist
+          - date: "10."
+            body: 
+            - "Special Exhibit I Was There. And There We Are: Stories of Kim Sunok, Ji Doli, Yi Sunda, Yi Gwangja and Other Women Who Could Not Come Back"
+          - title: 2020           
+          - date: "05."
+            body:
+            - Wednesday Archive opened
+          - date: "08."
+            body:
+            - "Special Exhibit of Japanese military “comfort women” belongings, Another New Beginning, Finding Another Road"
+          - date: "10."
+            body:
+            - Special Exhibit of the 30th anniversary of the Korean Council 30 Years on the Road. In the End, It was Hope. 
+          - title: 2021
+          - date: 08.17. - 2022. 01.22.
+            body:
+            - "Special Exhibit Voice of August 14: Kim Hak-soon’s Testimony 30th Anniversary Commemorative Exhibition held"                     
+      전쟁과여성인권박물관건립추진연혁:
+        title: 2.Timeline of the campaign to establish the War and Women’s Human Rights Museum
+        목록:
+          - title: 1994
+          - date: "00."
+            body:
+            - "The Establishment Committee of Women and War Archives started"
+          - title: 1999
+          - date: "02."
+            body:
+            - "Education & Exhibition Hall opened in the Seodaemun office of the Korean Council for the Women drafted for Military Sexual Slavery by Japan"
+          - title: 2003
+          - date: "12.18."
+            body:
+            - "Memorial service for deceased halmonis and launch event for the establishment of War and Women’s Human Rights Museum"
+            - "This event was shaped by the understanding that commemorating the Japanese military “comfort women” victims signifies not forgetting their pain, educating and taking action to prevent recurrence."
+            - "(Japanese military “comfort women” victims Gil Won-ok, Kim Bun-seon, Kim Eun-rye, Baek Neobdegi, Shin Hyeon-sun, Lee Geum-soon, Lee Yong-soo, Jang Jeom-dol, Ha Sang-suk, Choi Gap-sun, Park Du-ri, Hwang Sun-i, Kim Sang-hee, Lee Sun-deok, Lee Ok-geum, Han Do-sun contributed to the museum fundraising campaign)"                         
+          - title: 2004
+          - date: "10.22."
+            body:
+            - "Gil Won-ok halmoni attended parliamentary inspection held by Foreign Affairs and Trade Board, National Assembly Unification, Foreign Affairs, and Trade Committee as a witness. The Board unanimously adopted the Resolution for Establishment of History Museum for Redress and Human Rights of Japanese Military “Comfort Women” Victims. The resolution was adopted in the plenary session of the National Assembly."
+            - The Board unanimously adopted the Resolution for Establishment of History Museum for Redress and Human Rights of Japanese Military “Comfort Women” Victims. The resolution was adopted in the plenary session of the National Assembly.
+          - date: 12.16.
+            body:
+            - The Establishment Committee launched (Chairpersons of the Establishment Committee elected).
+            - Fundraising campaign launched, campaign pamphlets published, and videos released.
+          - date: 12.27.
+            body:
+            - 1st Establishment Committee Chairperson meeting (Started discussing museum building site)
+          - title: 2005
+          - date: "01." 
+            body:
+            - Campaigns for museum building site started (Explored buildings that could be remodeled into museums among park sites and government-owned buildings in Seoul)
+          - date: 05.27.
+            body:
+            - Meeting with National Assembly Gender Equality and Family Committee
+          - date: "06." 
+            body:
+            - Fundraising events held during the Women’s Korean Basketball League games
+          - date: "08."
+            body:
+            - Request to donate museum site made to the Seoul metropolitan government 
+          - date: "10."
+            body:
+            - The Seoul metropolitan government started discussions to use the parking space of Seodaemun Independence Park as the museum site. 
+          - date: 10.21.
+            body:
+            - Confirmed that parking space at Seodaemun Independence Park is designated as a cultural heritage site.
+          - date: 10.25.
+            body:
+            - Agreement reached with the Seoul metropolitan government to establish the museum at the cafeteria site in Seodaemun Independence Park. 
+            - Chairperson of the Establishment Committee, Yi Myeongju (Professor of Architecture at Myeongji University) and Kim Hui-ok (CEO of ATEC) proceeded with the architectural design.                                                                                   
+          - title: 2006
+          - date: 03.08.
+            body:
+            - Permission request for alteration of the present condition of the cafeteria of Seodaemun Independence Park for establishment of War and Women’s Human Rights Committee submitted to Seodaemun-gu Office.
+          - date: 04.14.
+            body:
+            - The Inspection Board for Alteration of the Present Condition at the Department of Historical Site in the Cultural Heritage Administration gave permission for the establishment of the War and Women’s Human Rights Museum. 
+          - date: 06.12.
+            body:
+            - Deliberation bill submitted to Namsan Park Management Office for deliberation of park construction plan alteration by Seoul City Park Committee.
+          - date: 07.18.
+            body:
+            - The Seoul City Park Committee passed the deliberation bill.
+          - date: 08.18.
+            body:
+            - Final deliberation passed by the 2nd session of the Committee.
+          - date: 09.21.
+            body:
+            - Brunch and presentation on establishment of the museum with National Assembly members 
+          - date: 10.19.
+            body: 
+            - Presentation for the site confirmation and establishment of the War and Women’s Human Rights Museum at the Education Hall in the National Human Rights Commission.
+          - date: "11."
+            body: 
+            - The Budgets and Accounts Board of the National Assembly Gender Equality and Family Committee discussed and included budget for the museum in the 2007 government budget.           
+          - title: 2007
+          - date: 01.12.
+            body:
+            - Request made to Namsan Park Management Office to extend the establishment project by 1 year
+          - date: 01.24.
+            body:
+            - Museum 2007 Public Fundraising Campaign launched
+          - date: 02.09.
+            body:
+            - Request made in the name of 20 member organizations of the Korean Council to the Ministry of Gender Equality and Family to financially support the budget for museum construction.
+          - date: "04.27. - 04.30."
+            body:
+            - A rally was held in Osaka to support the museum fundraising campaign.
+          - date: 08.26.
+            body:
+            - "Participated in screening of “My Heart Is Not Broken Yet” and promoted the museum in Tokyo, Japan"
+          - title: 2008  
+          - date: 03.28. - 03.30.
+            body:
+            - Networking activities with overseas museums (Vietnam)
+          - date: 04.07. - 04.09.
+            body:
+            - Networking activities with overseas museums (Taiwan)
+          - date: 03.31.
+            body:
+            - Basketball player Jeon Ju-won appointed as museum ambassador
+          - date: 04.28.
+            body:
+            - The Cultural Heritage Administration re-allowed the construction project (construction permission extended from August 15, 2008 to August 15, 2011)
+          - date: 06.21.
+            body:
+            - Lee Jeongmi Concert, connected songs, connected dances, and connected lives held to fundraise for the museum (Osaka, Japan)
+          - date: 06.30. - 07.04.
+            body:
+            - Networking activities with overseas museums (Germany)
+          - date: 07.31.
+            body:
+            - Application submitted for permission of city plan facilities establishment project to the Namsan Park Management Office
+          - date: 08.16. 
+            body:
+            - "Museum Fundraising Night held by Friends of “Comfort women” in Australia in Sydney, Australia"
+          - date: 09.08.
+            body:
+            - Namsan Park Management Office notified results of the application for permission of city plan facilities establishment project
+          - date: 10.16.
+            body:
+            - Permit for museum construction project notified and issued
+          - date: 10.17.
+            body:
+            - Learning program for the War and Women’s Human Rights Museum construction in Tokyo, Japan
+          - date: 10.24. - 10.27.
+            body:
+            -  Networking activities with overseas museums (Shanghai and Wuhan, China)
+          - date: 11.03.
+            body:
+            - The Korean Council’s press conference on the Korea Liberation Association’s press conference for withdrawal of the museum construction permit
+          - title: 2009 
+          - date: 02.07.
+            body:
+            - Japanese Committee for Construction of War and Women’s Human Rights Museum launched
+          - date: 02.28.
+            body:
+            -  Lee Jeongmi Concert held to fundraise for the museum (Tokyo, Japan)
+          - date: 03.08.
+            body:
+            - Making the Site of Hope commencement ceremony of the construction of War and Women’s Human Rights Museum
+          - date: 03.11. ~ 03.15.
+            body:
+            - International Exhibit on War and Women’s Human Rights opened in Seoul Metro Art Center
+          - title: 2011
+          - date: "02."
+            body:
+            - The construction plan on the site in Seodaemun Independence Park was put on hold, and search for a new site commenced based on the decision to find an existing building that could be purchased and remodeled. (Organizations related to the Liberation Movement such as Korea Liberation Association and the Liberation Martyrs’ Families strongly opposed the construction of the “comfort women” museum in the ‘sacred’ space of liberation movement, and the Seoul metropolitan government remained detached on the issue.)
+          - date: "08."
+            body:
+            - A two-storied house near Seongmi-san (39-13, Seongsan-dong, Mapo-gu, Seoul) was purchased. Design, construction, archiving, and fundraising efforts continued.
+          - title: 2012
+          - date: 01.26.
+            body:
+            - Remodeling started          
 jp: 
   관람안내:
     title: 来館案内
@@ -62,6 +690,18 @@ jp:
       - 3.各時間帯の観覧人数を9名までに制限しております。(*先着順締め切り)
       - 4.音声ガイド[韓国語、英語、日本語]提供
         (*感染症対策のため教育や解説・説明は行っておりません。)
+    오시는길:
+      지하철:
+        title: アクセス
+        body:
+        - 弘大入口駅2番出口 → マウルバス<マポ(麻浦)06> → 景城(キョンソン)高校入口下車
+        - 弘大入口駅1番出口 → 7711、7016、7737番バス → 景城(キョンソン)中高・弘大付属女子中高入口下車
+      버스:
+        title: バス
+        body:
+        - 7013A/B、7711、7016、7737番バス →  景城(キョンソン)中高・弘大付属女子中高入口下車
+        - マウルバス<マポ(麻浦)15><マポ(麻浦)08> → 景城(キョンソン)中高サゴリ(交差点)下車
+        - ※専用駐車場はありませんので公共交通機関をご利用ください。        
   온라인예약안내: 
     title: オンライン予約のご案内
     body_1: 
@@ -83,3 +723,289 @@ jp:
     title: お問い合わせ 
     body: 現在、オンライン予約は韓国語と英語のページのみ提供しております。日本語の予約はガイドをご参照ください。予約に関するご質問などは下記の連絡先にてお問い合わせください。
   온라인예약이동: オンライン予約
+
+  소식참여:
+    title: 博物館支援
+    일시후원신청하기:
+      title: 博物館支援
+      body:
+      - "日本口座：郵便振替 00170-6-266644 (名義：女性人権博物館）"
+      - "韓国口座：国民銀行 069101-04-194282 (名義：戦争と女性の人権博物館）"  
+
+  박물관소개:
+    title: ごあいさつ
+    인사말:
+      title: ごあいさつ
+      body:
+      - “戦争と女性の人権博物館へようこそ” n\
+      - 戦争と女性の人権博物館は、日本軍「慰安婦」サバイバーが経験した歴史を記憶し、教育するとともに、日本軍性奴隷制問題解決のために活動している空間です。現在も起きている戦時性暴力問題に関心を持ち、戦争や女性に対する暴力のない世の中のために連帯し、行動している博物館です。
+      - 子どもたちが安全で平和な世界で育つことを望んでいた日本軍「慰安婦」被害生存者の長年の願いは、韓国内外の市民の共感を呼び、募金活動につながりました。 長い旅路を経て2012年5月5日こどもの日、戦争と女性の人権博物館は未来世代と市民たちへの特別なプレゼントとなり開館しました。
+      - 戦争と女性の人権博物館は、様々な展示や教育プログラムを通じて過去の歴史と記憶を伝え、「女性・人権・平和」に向けた現在の活動を記録することで、未来世代により良い世界を受け継いでいきたいと思います。
+      - 国境を超えた市民連帯の通路、未来世代の教育の場、記憶と記録の国際的プラットフォームになることを目指しているここ「戦争と女性人権博物館」に、皆様の持続的なご関心とご参加をお願いいたします。
+      - ありがとうございます。
+    미션비전:
+      title: ミッション/ビジョン
+      비전:
+        title: ビジョン
+        body: 日本軍性奴隷制問題および解決運動に関する記録と記憶の国際的プラットフォーム
+      미션:
+        title: ミッション
+        message: 
+        - 記憶と記録
+        - 連帯と継承
+        - 継承と拡張
+        body:
+        - 1. 記録の体系的な収集と保存
+        - 2. 問題認識の拡散と運動の再生産
+        - 3. 運動の精神と歴史を展示を通じて継承
+        - 4. 国内外アーカイブの連帯と協力
+        - 5. 未来世代の記憶・教育の場
+    연혁:
+      title: 연혁
+      전쟁과여성인권박물관연혁:
+        title: 1.전쟁과여성인권박물관 연혁
+        목록:
+          - title: 2012
+          - date: 05.05.
+            body:
+            - 전쟁과여성인권박물관 개관 기념 심포지엄      
+          - date: 05.05.
+            body:
+            - 전쟁과여성인권박물관 개관       
+          - date: 05.05.
+            body:
+            - 전쟁과여성인권박물관 개관
+          - title: 2013
+          - date: "01.16."
+            body:
+            - 서울시에 박물관 등록     
+          - date: "01.18."
+            body:
+            - 한국사립박물관협회 가입       
+          - date: "03.08."
+            body:
+            - 3ㆍ8세계여성의날 기념 특별전시 <또 하나의 세계지도-어제와 같은 오늘> 개막식
+          - date: "05.05."
+            body:
+            - 개관 1주년 기념식 및 어린이 날 특별행사 <할머니들의 이야기>, <그림이야기로 배우는 일본군‘위안부’>, <희망의 나비 날리기>, <평화놀이터(평화 읽기, 평화 쓰기, 평화 그리기, 평화 만들기)>            
+          - title: 2014
+          - date: 07.24. - 08.15.
+            body:
+            - "포토저널리스트 정은진 초청 특별전시 <콩고의 눈물 2014 : 끝나지 않은 전쟁, 마르지 않은 눈물>"   
+          - date: 08.02. - 08.08.
+            body:
+            -  <평화가 있는 골목> 벽화 그리기   
+          - date: "08.11."
+            body:
+            -  <평화가 있는 골목> 벽화 공개식
+          - title: 2015
+          - date: "05.23."
+            body:
+            - 광복 70주년 기념 특별전시 <해방을 기다리는 여인들>
+          - title: 2017
+          - date: 03.29.
+            body:            
+            - 김복동·길원옥 동상 제막식
+          - date: 04. - 05.
+            body:
+            - 박물관 개관 5주년 기념 벽화 그리기
+          - date: 03. - 08.
+            body:
+            - 박물관 청소년 기자단 운영
+          - date: "09."
+            body:
+            - 특별전시 <수요일 12시> 
+          - date: "10."
+            body:
+            - 평화기행 실시
+          - date: "11."
+            body:
+            - 한영일 평화맵 제작
+            - 한영일 박물관 도록 제작
+          - title: 2018
+          - date: 07. - 10.
+            body:
+            - 평화마을 만들기 동행 캠페인 <전쟁과여성인권박물관과 함께하는 문화예술프로그램>
+          - date: "10."
+            body:
+            - 평화기행 3회 실시
+          - date: "10."
+            body:
+            - 특별전시 <상하이, 위안소의 시작>                       
+          - title: 2019
+          - date: "05."
+            body:
+            - 여성운동가 김복동 추모와 기억전
+          - date: "10."
+            body: 
+            - 김순옥, 지돌이, 이수단, 이광자 추모전 <그곳에 내가, 우리가 있었다>
+          - title: 2020           
+          - date: "05."
+            body:
+            - 수요시위 아카이브 오픈
+          - date: "08."
+            body:
+            - 일본군'위안부'피해생존자 유품전 <새로운 시작, 길을 찾아가는 여정>
+          - date: "10."
+            body:
+            - 한국정신대문제대책협의회 창설 30주년 기념 특별전시 <길위에서의 30년, 결국은 희망이더라> 
+          - title: 2021
+          - date: 08.17. - 2022. 01.22.
+            body:
+            - 김학순 공개증언 30주년 기념 특별전시 <그날의 목소리>                      
+      전쟁과여성인권박물관건립추진연혁:
+        title: 2.전쟁과여성인권박물관 건립 추진연혁
+        목록:
+          - title: 1994
+          - date: "00."
+            body:
+            - "'여성과 전쟁' 사료관 건립준비위원회 발족"
+          - title: 1999
+          - date: "02."
+            body:
+            - "서대문 한국정신대문제대책협의회 사무실 내 전시 및 교육을 위한 교육관 개관"
+          - title: 2003
+          - date: "12.18."
+            body:
+            - "'일본군'위안부'피해자를 진정으로 추모하는 일은 그들의 고통을 잊지 않고, 다시는 이런 일이 일어나지 않도록 교육하고 활동하는 것'이라는 취지 아래 돌아가신 할머니들을 위한 추모회 및 전쟁과여성인권박물관 건립을 위한 점화식(일본군'위안부'피해자 길원옥, 김분선, 김은례, 백넙데기, 신현순, 이금순, 이용수, 장점돌, 하상숙, 최갑순, 박두리, 황순이, 김상희, 이순덕, 이옥금, 한도순의 박물관 주춧돌기금 후원)"                          
+          - title: 2004
+          - date: "10.22."
+            body:
+            - "국회 통일외교통상위원회의 외교통상위원회 국정감사에 길원옥할머니가 증인으로 출석"
+            - 통일외교통상위원회 소속 국회의원 전원 만장일치로 일본군‘위안부’ 피해자의 명예와 인권회복을 위한 역사관 건립을 위한 결의안 채택, 국회 본회에 상정, 결의안 채택
+          - date: 12.16.
+            body:
+            - 건립위원회 발족식 개최(공동건립위원장단, 공동건립추진위원장단 추대)
+            - 홍보인쇄물․영상물 제작․공식 모금활동 시작
+          - date: 12.27.
+            body:
+            - 제1차 공동건립추진위원장단 회의(박물관 부지마련 대책 본격 논의시작)
+          - title: 2005
+          - date: "01." 
+            body:
+            - 박물관 부지 마련 활동 시작(서울시 내 공원부지, 서울시 및 중앙정부 소유 건물 중 박물관으로 리모델링 가능한 건물 탐색)
+          - date: 05.27.
+            body:
+            - 국회 여성위원회 간담회
+          - date: "06." 
+            body:
+            - 한국여자프로농구 경기에서 박물관 건립기금 마련을 위한 캠페인 진행
+          - date: "08."
+            body:
+            - 서울시에 박물관 부지 기부 요청
+          - date: "10."
+            body:
+            - 서울시, 서대문독립공원 주차장 자리를 박물관 부지로 추진하는 문제 본격 논의 
+          - date: 10.21.
+            body:
+            - 서대문독립공원 주차장 자리가 문화재에 포함되어 있는 사실 확인
+          - date: 10.25.
+            body:
+            - 서대문독립공원 매점 부지에 박물관 건립하는 것으로 서울시와 합의
+            - 이명주 공동건립추진위원장(명지대학교 건축학과), 김희옥 
+            - 공동건립추진위원장(에이텍종합건축사사무소 소장) 건축설계 진행                                                                                    
+          - title: 2006
+          - date: 03.08.
+            body:
+            - 서대문독립공원 매점 부지에 박물관을 건립하는 문제와 관련 현상변경 허가신청서 서대문구청에 제출
+          - date: 04.14.
+            body:
+            - 문화재청 사적과 현상변경심의위원회에서 전쟁 여성인권박물관 건립 허가
+          - date: 06.12.
+            body:
+            - 서울시 도시공원위원회 공원조성계획변경심의를 받기 위해 남산공원관리사업소에 심의안건 제출 
+          - date: 07.18.
+            body:
+            - 서울시도시공원위원회 심의 통과
+          - date: 08.18.
+            body:
+            - 소위원회 2차 회의 심의 통과(최종 허가)
+          - date: 09.21.
+            body:
+            - 박물관 건립 설명회를 위한 국회의원 조찬간담회
+          - date: 10.19.
+            body: 
+            - 전쟁과 여성인권박물관 부지 확정 및 건립 설명회 (국가인권위원회 배움터)
+          - date: "11."
+            body: 
+            - 국회 여성가족위원회 예결산소위원회 개최, 박물관 예산논의, 2007년 예산에 올림            
+          - title: 2007
+          - date: 01.12.
+            body:
+            - 남산공원관리사업소에 사업시행 1년 연장 요청
+          - date: 01.24.
+            body:
+            - <박물관 2007 시민모금 캠페인> 발대식
+          - date: 02.09.
+            body:
+            - 한국정신대문제대책협의회 20개 회원단체장 명의로 여성가족부에 박물관 건립 예산 지원 요청 
+          - date: "04.27. - 04.30."
+            body:
+            - 박물관 건립 모금을 위한 오사카 집회
+          - date: 08.26.
+            body:
+            - 나의 마음은 지지 않았다' 상영회 참석 및 박물관 홍보 활동(일본 동경)
+          - title: 2008  
+          - date: 03.28. - 03.30.
+            body:
+            - 해외 박물관 네트워크 활동(베트남)
+          - date: 04.07. - 04.09.
+            body:
+            - 해외 박물관 네트워크 활동(대만)
+          - date: 03.31.
+            body:
+            - 박물관 홍보대사(농구선수 전주원) 위촉
+          - date: 04.28.
+            body:
+            - 문화재청, 현상변경심의 관련 신축 재허가(2008년 8월 15일에서 2011년 8월 15일까지로 신축허가 연장)
+          - date: 06.21.
+            body:
+            - 전쟁과여성인권박물관 건립기금 마련을 위한 <이정미 콘서트, 이어지는 노래, 이어지는 춤, 이어지는 삶>(일본 오사카)
+          - date: 06.30. - 07.04.
+            body:
+            - 해외 박물관 네트워크 활동(독일)
+          - date: 07.31.
+            body:
+            - 남산공원관리사업소에 도시계획시설사업 실시계획 인가 신청 서류 제출
+          - date: 08.16. 
+            body:
+            - 호주 시드니에서 일본군'위안부' 할머니와 함께하는 호주친구들 주최 "박물관 후원의 밤" 개최
+          - date: 09.08.
+            body:
+            - 남산공원관리사업소, 도시계획시설사업 실시계획 인가 신청에 따른 결과 통보
+          - date: 10.16.
+            body:
+            - 박물관 사업실시계획 인가 통보 및 인가증(건축허가) 교부
+          - date: 10.17.
+            body:
+            - 전쟁과여성인권박물관 건립을 위한 일본 동경 학습회
+          - date: 10.24. - 10.27.
+            body:
+            - 해외 박물관 네트워크 활동(중국 상해, 무한)
+          - date: 11.03.
+            body:
+            - 광복회 박물관 건축허가 철회를 위한 기자회견에 관한 정대협 입장 기자회견)
+          - title: 2009 
+          - date: 02.07.
+            body:
+            - 전쟁과 여성인권박물관 일본 건설위원회 발족 집회
+          - date: 02.28.
+            body:
+            - 전쟁과여성인권박물관 건립기금 마련을 위한 <이정미 콘서트>(일본 동경)
+          - date: 03.08.
+            body:
+            - 전쟁과여성인권박물관 착공식 <희망의 터 다지기>
+          - date: 03.11. ~ 03.15.
+            body:
+            - 서울메트로미술관 내 <전쟁과여성인권 국제전>
+          - title: 2011
+          - date: "02."
+            body:
+            - 서대문독립공원 부지를 보류하고 기존의 건물을 매입해서 리모델링하기로 결의, (독립운동의 성지에 ‘위안부’ 박물관을 세울 수 없다며 광복회와 순국선열유족회 등 독립운동단체들의 공개적인 반대와 서을시의 미온적인 태도로 인해) 새로운 부지를 물색하기 시작
+          - date: "08."
+            body:
+            - 성미산 자락의 2층 주택 매입 (서울시 마포구 성산동 39-13) 건축 설계 및 시공, 자료수집, 모금 활동 전개
+          - title: 2012
+          - date: 01.26.
+            body:
+            - 건물 리모델링 공사 착공식           
