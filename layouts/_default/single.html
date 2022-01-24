@@ -12,7 +12,7 @@
                         </div>
                         <div>
                             <dl class="flex mb-2">
-                                <dt class="w-32 text-aa-gray-900 font-bold">교육기간</dt>
+                                <dt class="w-32 text-aa-gray-900 font-bold">일시</dt>
                                 <dd><time>{{ .Date.Format "2006년 1월 2일" }}</time></dd>
                             </dl>
                             <dl class="flex mb-2">
@@ -20,16 +20,12 @@
                                 <dd>{{ .Params.application_end_date }}</dd>
                             </dl>
                             <dl class="flex mb-2">
-                                <dt class="w-32 text-aa-gray-900 font-bold">접수/선정</dt>
+                                <dt class="w-32 text-aa-gray-900 font-bold">접수</dt>
                                 <dd>{{ .Params.contact_type }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">대상</dt>
                                 <dd>{{ .Params.program_target }}</dd>
-                            </dl>
-                            <dl class="flex mb-2">
-                                <dt class="w-32 text-aa-gray-900 font-bold">교육시간</dt>
-                                <dd>{{ .Params.program_time }}</dd>
                             </dl>
                             <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">모집인원</dt>
@@ -43,11 +39,13 @@
                                 <dt class="w-32 text-aa-gray-900 font-bold">첨부파일</dt>
                                 <dd><a class="text-aa-purple-500 hover:underline" href="{{ .Params.course_materials | absURL }}" download>{{ .Params.program_materials }}</a></dd>
                             </dl>
+                            {{ if .Params.apply_link }}
                             <div class="flex mb-2 w-full text-center">
                                 <a class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" href="{{ .Params.apply_link }}" target="_blank" >
                                     프로그램 신청 접수(폼)
                                 </a>
                             </div>
+                            {{ end }}
                         </div>
                     </div>
                     {{ else }}
