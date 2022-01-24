@@ -20,10 +20,6 @@
                                 <dd>{{ .Params.application_end_date }}</dd>
                             </dl>
                             <dl class="flex mb-2">
-                                <dt class="w-32 text-aa-gray-900 font-bold">접수</dt>
-                                <dd>{{ .Params.contact_type }}</dd>
-                            </dl>
-                            <dl class="flex mb-2">
                                 <dt class="w-32 text-aa-gray-900 font-bold">대상</dt>
                                 <dd>{{ .Params.program_target }}</dd>
                             </dl>
@@ -42,7 +38,7 @@
                             {{ if .Params.apply_link }}
                             <div class="flex mb-2 w-full text-center">
                                 <a class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" href="{{ .Params.apply_link }}" target="_blank" >
-                                    프로그램 신청 접수(폼)
+                                    프로그램 신청 접수
                                 </a>
                             </div>
                             {{ end }}
