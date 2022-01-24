@@ -2,7 +2,7 @@
 title: "1부 | 정치·사회적인 배경"
 subtitle: subtitle
 date: 2021-08-21
-author: 작성자
+author: 
 summary:
   오랜 시간 일본군‘위안부’ 문제는 존재하지만 존재하지 않았다. 일본의 불법 강점과 전쟁범죄 책임은 극동국제군사재판(1946~1948)과 샌프란시스코 강화조약(1951)을 거치며 제대로 추궁되지 않았다. 냉전체제에서 미국은 동북아 안보와 아시아 안정이라는 명분으로 일본을 ‘반공의 방파제’로 삼으며 관대한 처분을 내렸다. 뒤이은 미군정과 분단, 한국전쟁, 독재체제 등으로 한국은 일제 식민지배와 관련된 과거사를 제대로 청산할 수 없었다. 박정희 군사정권 시기 체결된 한일청구권협정(1965)에도 일본군‘위안부’ 문제 등 전쟁범죄로 인한 피해 사항은 제외되었다. 이런 국내외 상황과 오랜 가부장적 문화가 결합되어 피해자들의 침묵은 지속된다.\
   
@@ -41,7 +41,7 @@ resources:
     vertical: left
     src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/1_한일협정+조인+특별+담화문을+발표하는+박정희+대통령.JPG
     description: 한일청구권협정 체결
-    target: 
+    target: items/ex-04/section-01-left/1_한일협정-조인-특별-담화문을-발표하는-박정희-대통령/
     target_title: "한일협정 조인 특별 담화문을 발표하는 박정희 대통령, 1965.6.23., 사진, 출처 국가기록원"
   - year: 1967
     eventDate: 1967
@@ -58,10 +58,7 @@ resources:
   - year: 1981
     eventDate: 1981 
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/1_1981+끌려간사람들★.jpg
     description: "윤정옥, 한국일보 '끌려간 사람들' 기사 연재를 통해 오키나와의 일본군'위안부' 피해자 배봉기 이야기 보도"
-    target: 
-    target_title: "끌려간 사람들 한국일보 기사, 1981, 신문, 기증 윤정옥"
   - year: 1982
     eventDate: 1982  
     vertical: left
@@ -73,9 +70,9 @@ resources:
   - year: 1984
     eventDate: 1984 
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/2_전두환대통령+일본방문+즈음한+우리의+입장_1.tiff
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/2_전두환대통령+일본방문+즈음한+우리의+입장_1.jpg
     description: "한교여연, 전두환 방일 맞이 '정신대' 문제 해결을 위한 서한 발송"
-    target: 
+    target: /items/ex-04/section-01-right/2_전두환대통령-일본방문-즈음한-우리의-입장_1/
     target_title: "전두환대통령 일본방문 즈음한 우리의 입장, 1984.8.23., 문서, 기증 윤영애"
   - year:
     eventDate: 1984
@@ -84,9 +81,9 @@ resources:
   - year: 1986
     eventDate: 1986 
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/3_부천경찰서+성고문+사건에+관한+고발장.jpg
+    src: https://archives.kdemo.or.kr/file-img/vol01/001/012/00101251/00101251_0001.jpg
     description: "부천경찰서 성고문 사건 발생"
-    target: 
+    target: https://archives.kdemo.or.kr/collections/view/10000072
     target_title: "부천경찰서 성고문 사건에 관한 고발장, 1986.7.5., 문서, 출처 한국기독교사회문제연구원, 민주화운동기념사업회"
   - year:
     eventDate: 1986 
@@ -129,7 +126,7 @@ resources:
   - year: 
     eventDate: 1988.4.
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/5-2_여성과+관광문화+자료집+★.jpg
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/5-2_여성과+관광문화+자료집.jpg
     description: "윤정옥, 한교여연 주최 '여성과 관광문화' 국제 세미나에서 '정신대' 문제 조사결과 보고"
     target: 
     target_title: "여성과 관광문화 자료집, 1998.4.21-23., 문서"
@@ -152,7 +149,7 @@ resources:
   - year: 
     eventDate: 1988.4.
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/6_일본+히로히또+국왕+사망에+대한+한국교회여성의+입장.tiff
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/6_일본+히로히또+국왕+사망에+대한+한국교회여성의+입장.jpg
     description: "한교여연, '정신대' 문제에 대한 사죄를 요구하는 성명서 발표"
     target: 
     target_title: "일본 히로히또 국왕 사망에 대한 한국교회여성의 입장, 1989.1.23., 문서, 기증 윤영애"    
@@ -171,7 +168,7 @@ resources:
   - year: 1990
     eventDate: 1990.1
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/7_정신대+원혼+서린+발자취+취재기+육필+원고★.jpg
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/7_정신대+원혼+서린+발자취+취재기+육필+원고.jpg
     description: "윤정옥, 한겨레신문에 '정신대 원혼 서린 발자취 취재기' 연재"
     target: 
     target_title: "정신대 원혼 서린 발자취 취재기 육필 원고, [1990], 문서, 기증 윤정옥" 
@@ -215,7 +212,7 @@ resources:
   - year:
     eventDate: 1990.11.16.
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/10_기독교회관으로+사무실을+이전하고+개최한+현판식.tiff
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/10_기독교회관으로+사무실을+이전하고+개최한+현판식.jpg
     description: "37개 여성단체, 한국정신대문제대책협의회(이하 정대협) 결성(회장 윤정옥, 서기 김혜원, 회계 김신실, 실무 윤영애와 방숙자)"
     target: 
     target_title: "기독교회관으로 사무실을 이전하고 개최한 현판식, 1992.11.16., 사진"
@@ -226,9 +223,9 @@ resources:
   - year: 1991
     eventDate: 1991.1.
     vertical: right
-    src: 
+    src: https://archives.kdemo.or.kr/file-img/vol01/008/578/00857862/00857862_0001.jpg
     description: "'아동성폭행 가해자 20년후 살인 사건' 발생"
-    target: 
+    target: https://archives.kdemo.or.kr/isad/view/00857862
     target_title: "김부남씨의 무죄와 성폭력특별법 제정을 요구하는 성폭력특별법제정추진위원회의 성명서, 1991.8.23., 문서, 출처 한국여성단체연합, 민주화운동기념사업회"
   - year:
     eventDate: 1991.1.
@@ -288,7 +285,7 @@ resources:
   - year:
     eventDate: 1991.9.18.
     vertical: left
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/14_국회+청원을+위해+한교여연에서+열린+기자회견.JPG
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/3_UN가입+신청을+위한+UN헌장+의무수락선언서에+서명하는+노태우+대통령.JPG
     description: "남북한 UN 동시 가입"
     target: 
     target_title: "UN가입 신청을 위한 UN헌장 의무수락선언서에 서명하는 노태우 대통령, 1991.7.19., 사진, 출처 국가기록원"
@@ -327,7 +324,7 @@ resources:
   - year:
     eventDate: 1991.12.21.
     vertical: left
-    src: 
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/4_SEATIC+Interrogation+Bulletin+No.+2(동남아시아번역심문센터+심리전+심문회보+제2호).JPG
     description: "일본군의 관여를 증명하는 연합군 문서 발견"
     target: 
     target_title: "SEATIC Interrogation Bulletin No. 2(동남아시아번역심문센터 심리전 심문회보 제2호), 문서, 출처 서울기록원"
@@ -342,7 +339,7 @@ resources:
   - year:
     eventDate: 1992.1.
     vertical: left
-    src: 
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/5_陸軍省+軍慰安所従業婦等募集ニ關スル件(군+위안소+종업부+등+모집에+관한+건).JPG
     description: "일본군의 관여를 증명하는 연합군 문서 발견"
     target: 
     target_title: "陸軍省 軍慰安所従業婦等募集ニ關スル件(군 위안소 종업부 등 모집에 관한 건), 문서, 출처 WAM"
@@ -356,7 +353,7 @@ resources:
   - year:
     eventDate: 1992.1.8.
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/16_일본대사관+앞+수요시위에+참석한+김학순.bmp
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/16_일본대사관+앞+수요시위에+참석한+김학순.jpg
     description: "정대협, 일본군'위안부' 문제 해결을 위한 정기 수요시위 시작"
     target: 
     target_title: "일본대사관 앞 수요시위에 참석한 김학순, 사진, 기증 양징자"
@@ -436,7 +433,7 @@ resources:
   - year:
     eventDate: 1993
     vertical: left
-    src: 
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/6_Study+concerning+the+right+to+restitution,+compensation+and+rehabilitation+for+victims+of+gross+violations+of+human+rights+and+fundamental+freedoms.JPG
     description: "UN 인권소위원회 특별보고관 테오 반 보벤, '인권과 자유에 중대한 침해를 입은 피해자에 대한 배상과 보상 및 회복의 권리에 관한 연구보고서' 제출"
     target: 
     target_title: "Study concerning the right to restitution, compensation and rehabilitation for victims of gross violations of human rights and fundamental freedoms, 1993.7.2., 문서"
@@ -482,7 +479,7 @@ resources:
   - year:
     eventDate: 1995.7.
     vertical: left
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/20_국민모금에+의한+위로금에+반대하는+기자회견.JPG
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/7_Working+paper+on+the+situation+of+systematic+rape,+sexual+slavery+and+slavery-like+practices+during+wartime,+including+internal+armed+conflict.JPG
     description: "UN 인권소위원회 특별보고관 린다 챠베즈, '전시 하 조직적 강간, 성노예제 및 그와 유사한 관행에 관한 연구보고서' 제출"
     target: 
     target_title: "Working paper on the situation of systematic rape, sexual slavery and slavery-like practices during wartime, including internal armed conflict, 1995.7.13., 문서"
@@ -508,7 +505,7 @@ resources:
   - year: 1996
     eventDate: 1996
     vertical: right
-    src: 
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-left/8_Report+on+the+mission+to+the+Democratic+People’s+Republic+of+Korea,+the+Republic+of+Korea+and+Japan+on+the+issue+of+military+sexual+slavery+in+wartime.JPG
     description: "UN 인권위원회 특별보고관 라디카 쿠마라스와미, '전쟁 중 군대 성노예제 문제에 관한 조선민주주의공화국, 대한민국, 일본 조사 보고서' 제출"
     target: 
     target_title: "Report on the mission to the Democratic People’s Republic of Korea, the Republic of Korea and Japan on the issue of military sexual slavery in wartime, 1996.1.4., 문서"
@@ -550,7 +547,7 @@ resources:
   - year: 1998
     eventDate: 1998.4.
     vertical: right
-    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/23_2000년+일본군성노예전범+영성국제법정+보고서+★.jpg
+    src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-04/section-01-right/23_2000년+일본군성노예전범+여성국제법정+보고서.jpg
     description: "'제5차 아시아연대회의에서 '2000년 일본군성노예전범 여성국제법정 개최' 결정"
     target: 
     target_title: "2000년 일본군성노예전범 영성국제법정 보고서, 문서"
