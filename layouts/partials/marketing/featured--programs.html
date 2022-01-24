@@ -2,7 +2,7 @@
     <div class="container py-20">
         <div class="relative">
             <h2 class="text-4xl text-aa-gray-900 border-b border-aa-gray-900 pb-6 mb-6 leading-none">교육 프로그램</h2>
-            <a class="absolute top-2 right-0 text-aa-purple-500" href="/research-and-learning/courses/">프로그램 전체보기</a>
+            <a class="absolute top-2 right-0 text-aa-purple-500" href="/learning-and-research/programs/">프로그램 전체보기</a>
         </div>
         {{ with .Site.GetPage "section" "programs" }}
         {{ range first 3 (where .Pages "Params.home_sticky" true ) }}

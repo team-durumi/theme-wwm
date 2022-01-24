@@ -29,5 +29,8 @@
 - 프로그램(programs)
 - 교육자료(resources)
 - 연구자료(papers)
-
+|- 국문(kr)
+|- 영문(en)
+|- 일문(jp)
+- Taxonomy를 적용해 보았으나, 전역 콘텐츠에 적용될 수 있고, 모델 적용에도 어울리지 않는 것으로 보여서 contents 폴더와 CMS를 분리했음. 
 
