@@ -66,12 +66,17 @@ ko:
         - 기억과 기록
         - 연대와 계승
         - 계승과 확장
-        body:
-        - 1. 기록의 체계적 수집과 보존
-        - 2. 문제인식 확산과 운동의 재생산
-        - 3. 전시를 통한 운동의 정신과 역사 계승
-        - 4. 국내외 아카이브 연대와 협력
-        - 5. 미래세대 기억·교육의 터전
+        목록:
+         - body: 1. 기록의 체계적 수집과 보존
+           image: "/images/mission-and-vision-001.jpg"
+         - body: 2. 문제인식 확산과 운동의 재생산
+           image: "/images/mission-and-vision-002.jpg"
+         - body: 3. 전시를 통한 운동의 정신과 역사 계승
+           image: "/images/mission-and-vision-003.jpg"
+         - body: 4. 국내외 아카이브 연대와 협력
+           image: "/images/mission-and-vision-004.jpg"
+         - body: 5. 미래세대 기억·교육의 터전
+           image: "/images/mission-and-vision-005.jpg"
     연혁:
       title: 연혁
       전쟁과여성인권박물관연혁:
@@ -410,12 +415,17 @@ en:
         - Remembrance and Archiving
         - Solidarity and Inheritance
         - Inheritance and Expansion
-        body:
-        - 1. Systemic collection and preservation of archival materials
-        - 2. Raising awareness of the issue and the movement
-        - 3. Inheritance of the spirit and history of the movement through exhibitions
-        - 4. Solidarity and cooperation with archives around the world
-        - 5. Foundation for remembrance and education of future generations
+        목록:
+         - body: 1. Systemic collection and preservation of archival materials
+           image: "/images/mission-and-vision-001.jpg"
+         - body: 2. Raising awareness of the issue and the movement
+           image: "/images/mission-and-vision-002.jpg"
+         - body: 3. Inheritance of the spirit and history of the movement through exhibitions
+           image: "/images/mission-and-vision-003.jpg"
+         - body: 4. Solidarity and cooperation with archives around the world
+           image: "/images/mission-and-vision-004.jpg"
+         - body: 5. Foundation for remembrance and education of future generations
+           image: "/images/mission-and-vision-005.jpg"
     연혁:
       title: Timeline(번역)
       전쟁과여성인권박물관연혁:
@@ -510,7 +520,7 @@ en:
             body:
             - "Special Exhibit Voice of August 14: Kim Hak-soon’s Testimony 30th Anniversary Commemorative Exhibition held"                     
       전쟁과여성인권박물관건립추진연혁:
-        title: 2.Timeline of the campaign to establish the War and Women’s Human Rights Museum
+        title: 2. Timeline of the campaign to establish the War and Women’s Human Rights Museum
         목록:
           - title: 1994
           - date: "00."
@@ -737,7 +747,7 @@ jp:
     인사말:
       title: ごあいさつ
       body:
-      - “戦争と女性の人権博物館へようこそ” n\
+      - “戦争と女性の人権博物館へようこそ”
       - 戦争と女性の人権博物館は、日本軍「慰安婦」サバイバーが経験した歴史を記憶し、教育するとともに、日本軍性奴隷制問題解決のために活動している空間です。現在も起きている戦時性暴力問題に関心を持ち、戦争や女性に対する暴力のない世の中のために連帯し、行動している博物館です。
       - 子どもたちが安全で平和な世界で育つことを望んでいた日本軍「慰安婦」被害生存者の長年の願いは、韓国内外の市民の共感を呼び、募金活動につながりました。 長い旅路を経て2012年5月5日こどもの日、戦争と女性の人権博物館は未来世代と市民たちへの特別なプレゼントとなり開館しました。
       - 戦争と女性の人権博物館は、様々な展示や教育プログラムを通じて過去の歴史と記憶を伝え、「女性・人権・平和」に向けた現在の活動を記録することで、未来世代により良い世界を受け継いでいきたいと思います。
@@ -754,12 +764,17 @@ jp:
         - 記憶と記録
         - 連帯と継承
         - 継承と拡張
-        body:
-        - 1. 記録の体系的な収集と保存
-        - 2. 問題認識の拡散と運動の再生産
-        - 3. 運動の精神と歴史を展示を通じて継承
-        - 4. 国内外アーカイブの連帯と協力
-        - 5. 未来世代の記憶・教育の場
+        목록:
+         - body: 1.記録の体系的な収集と保存
+           image: "/images/mission-and-vision-001.jpg"
+         - body: 2.問題認識の拡散と運動の再生産
+           image: "/images/mission-and-vision-002.jpg"
+         - body: 3.運動の精神と歴史を展示を通じて継承
+           image: "/images/mission-and-vision-003.jpg"
+         - body: 4.国内外アーカイブの連帯と協力
+           image: "/images/mission-and-vision-004.jpg"
+         - body: 5.未来世代の記憶・教育の場
+           image: "/images/mission-and-vision-005.jpg"        
     연혁:
       title: 연혁
       전쟁과여성인권박물관연혁:
