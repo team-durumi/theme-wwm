@@ -1,5 +1,5 @@
 {{ with site.Data.admission_guide.jp }}
-<div class="mb-20">
+<div class="mb-20" style="font-family:Kokoro,sans-serif;">
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">{{ .관람안내.title }}</h2>
     </div>
@@ -54,7 +54,7 @@
         </div>
     </div>
 </div>
-<div class="mb-20">
+<div class="mb-20" style="font-family:Kokoro,sans-serif;">
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">{{ .소식참여.title }}</h2>
     </div>
@@ -86,7 +86,7 @@
     </div>
 </div>
 
-<div class="mb-20">
+<div class="mb-20" style="font-family:Kokoro,sans-serif;">
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">{{ .박물관소개.title }}</h2>
     </div>  
@@ -94,10 +94,10 @@
         <h3 class="text-2xl font-bold text-aa-gray-900 leading-none">{{ .박물관소개.인사말.title }}</h3>
     </div>
     <div class="justify-center mb-20">
-        <h2 class="w-full flex-shrink-0 text-aa-purple-500 text-4xl font-bold leading-tight mb-8">{{ .박물관소개.인사말.message }}</h2>
-        <div class="w-full text-lg">
+        <h2 class="w-full flex-shrink-0 text-aa-purple-500 text-4xl font-bold leading-tight mb-8" >{{ .박물관소개.인사말.message }}</h2>
+        <div class="w-full text-lg" style="font-family:Kokoro">
             {{ range .박물관소개.인사말.body }}
-                <p class="mb-7">{{ . }}</p>
+                <p class="mb-7" style="font-family:Kokoro">{{ . }}</p>
             {{ end }}
         </div>
     </div>

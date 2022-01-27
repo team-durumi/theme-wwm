@@ -33,7 +33,7 @@
             </dl>
             <a class="inline-block border text-white py-3 px-7 bg-aa-purple-500 hover:bg-black mr-3 mt-14" href="{{ site.Params.bookingNaver }}" target="_blank">관람 예약</a>
         </div>
-        <div class="mt-10 lg:mt-0">
+        <div class="mt-10 lg:mt-0" style="font-family:Kokoro,sans-serif;">
             <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black mr-3 cursor-pointer" @click="enModal = true" href="#">English guide</a>
             <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black" @click="jpModal = true" href="#">日本語ガイド</a>
         </div>
@@ -161,7 +161,7 @@
 
 <!-- Modal -->
 {{ range $index, $element := site.Data.admission_guide }}
-<div x-show="{{ $index }}Modal">
+<div x-show="{{ $index }}Modal" style="font-family:Kokoro,sans-serif;">
     <div class="fixed w-full h-full top-0 left-0 bg-black bg-opacity-60"></div>
     <div class="absolute lg:w-10/12 w-full lg:top-24 top-0 lg:left-1/2 left-0 lg:transform lg:-translate-x-1/2 bg-white lg:rounded-xl overflow-hidden z-50">
         <a href="#" class="absolute block w-12 h-12 top-4 right-4" @click="{{ $index }}Modal = false">
