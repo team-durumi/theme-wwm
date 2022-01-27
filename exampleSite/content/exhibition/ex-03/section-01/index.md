@@ -29,11 +29,11 @@ resources:
       src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/ex-03/상설관/상설관1+왼편/1-2.73503.jpg
       description: ©UN PHOTO/UNHCR/R.LeMoyne
       target: /items/ex-03/상설관/상설관1-왼편/1-2.73503
-    - name: 1999년 코소보 내전 당시 인종청소로 죽임을 당한 희생자의 훼손된 시신 앞에서 울고 있는 여인
+    - name: item-04-02
       params:
         icon: photo
-      src: /exhibition/ex-03/section-01/s1-items1.png
-      description: ©김재명
+      src: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/exbition01/s0-item1.png
+      description: 
       target: 
     - name: 코소보 내전 당시 부비트랩(위장폭탄)에 다리를 잃은 13살 소녀
       params:
@@ -53,6 +53,7 @@ resources:
       subname: 보스니아-헤르체코비나 내전
       params:
         icon: photo
+      src:
       description: "'세계의 화약고'라 불리는 발칸반도에서 1992년부터 약 3년 반에 걸쳐 지속된 보스니아-헤르체고비나 내전은 강간이 '전쟁의 무기'로 사용된 대표적인 사례이다. 유고연방의 해체 과정에서 발생한 종족 간 분쟁에서 세르비아계 군인들은 '인종청소'와 '대량학살'의 수단으로 수많은 무슬림 여성들을 강간했다. 보스니아 내전 중 성폭력을 당한 여성들은 적게는 14,000명에 60,000명까지로 추산되고 있으며, 민간단체들의 보고에 따르면 35,000명 이상의 여성과 아이들이 감금된 수용소에서 매일 40명~50명의 남성들에게 강간을 당한 것으로 전해진다. 이 중에는 10세의 어린 소녀들도 있었다."
       target: 
 - partial_layout: full-1
@@ -60,6 +61,7 @@ resources:
     - name: "코소보"
       params:
         icon: photo
+      src:
       description: "1995년 보스니아 내전은 일단락됐지만, 1998년 신유고연방으로부터 분리독립을 요구하는 알바니아계 코소보 주민과 세르비아 정부군 사이에 또다시 전쟁의 불꽃이 일었다. 일년이 안 되는 전쟁 기간이었지만 조직적인 인종청소와 집단 강간이 코소보 전역에서 자행됐다. 이미 보스니아 내전에서 일어난 끔찍한 강간범죄를 알고 있던 알바니아계 여성들은 더욱 두려움에 떨었고, 이 때문에 어린 딸들을 지저분하게하거나 늙어 보이도록 위장시키기도 했다. 코소보에서는 2000년 1월 동안에만 100명 이상이 강간으로 인해 임신되었고 그 실제 수치는 훨씬 높을 것으로 추정된다."
 - partial_layout: horizontal-4    
   components: 
@@ -88,25 +90,25 @@ resources:
     - name: 콩고 소년병
       params:
         icon: photo
-      src: /exhibition/ex-03/section-01/s1-items2.png
+      src: 
       description: ©Amnesty International
       target: /items/ex-03/상설관/상설관1-왼편/1-2.73503
     - name:
       params:
         icon: photo
-      src: /exhibition/ex-03/section-01/s1-items3.png
+      src: 
       description:
       target: 
     - name: 팔에 난 상처를 보여주는 12살 소년병
       params:
         icon: photo
-      src: /exhibition/ex-03/section-01/s1-items4.png
+      src: 
       description: ©Amnesty International
       target: /items/ex-03/상설관/상설관1-왼편/1-9.31545
     - name: 우간다 소년병의 그림
       params:
         icon: photo
-      src: /exhibition/ex-03/section-01/s1-items5.png
+      src: 
       description: ©Amnesty International
       target: /items/ex-03/상설관/상설관1-왼편/1-3.31544
 - partial_layout: full-1
