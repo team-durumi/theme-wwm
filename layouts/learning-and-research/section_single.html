@@ -38,6 +38,23 @@
       <div class="lg:border-t border-aa-gray-200 pt-7 flex-grow">
         <ul class="flex lg:-mx-7 -mx-2">
           <li class="w-1/2 lg:px-7 px-2">
+            <span class="block overflow-hidden relative mb-4" style="padding-bottom:100%">
+              <img class="w-full absolute object-cover" src="/img/홈페이지-온라인-교육자료-001.jpg" alt="">
+            </span>
+            <a href="/img/홈페이지-온라인-교육자료.pdf" class="block lg:flex justify-between gap-8 mb-4 py-4 px-6 bg-aa-gray-50 border border-aa-gray-200 hover:border-aa-purple-500" download >
+              <span class="text-base text-aa-gray-700">PDF 다운로드</span>
+              <span class="text-aa-purple-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg>
+              </span>
+            </a>
+            <dl>
+              <dt class="text-aa-900">연령 : 전체</dt>
+              <dd class="text-sm text-aa-gray-500">*저작권은 전쟁과여성인권박물관에게 있으며, 파일(내용)을 무단 복제, 배포시 법적 책임을 물을 수 있습니다.</dd>
+            </dl>
+          </li>
+          <!-- <li class="w-1/2 lg:px-7 px-2">
             <span class="block overflow-hidden relative mb-4" style="padding-bottom:61.43%">
               <img class="w-full h-full absolute object-cover" src="/images/@content-08.png" alt="">
             </span>
@@ -53,24 +70,7 @@
               <dt class="text-aa-900">연령 : 15세 이하</dt>
               <dd class="text-sm text-aa-gray-500">(관련된 자료의 저작권은 전쟁과여성인권박물관에 있습니다.)</dd>
             </dl>
-          </li>
-          <li class="w-1/2 lg:px-7 px-2">
-            <span class="block overflow-hidden relative mb-4" style="padding-bottom:61.43%">
-              <img class="w-full h-full absolute object-cover" src="/images/@content-08.png" alt="">
-            </span>
-            <a href="#" class="block lg:flex justify-between gap-8 mb-4 py-4 px-6 bg-aa-gray-50 border border-aa-gray-200 hover:border-aa-purple-500">
-              <span class="text-base text-aa-gray-700">PDF 다운로드 | 15세 이하</span>
-              <span class="text-aa-purple-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                </svg>
-              </span>
-            </a>
-            <dl>
-              <dt class="text-aa-900">연령 : 15세 이하</dt>
-              <dd class="text-sm text-aa-gray-500">(관련된 자료의 저작권은 전쟁과여성인권박물관에 있습니다.)</dd>
-            </dl>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -150,13 +150,13 @@
           <dl class="mb-10">
             <dt class="text-lg font-bold mb-3.5">교육자료 읽어보기</dt>
             <dd>
-              <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
+              <!-- <div class="flex items-center mb-4 overflow-hidden" x-data="{ checked: false }">
                 <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_U15_version_resource" id="check02" x-model="formData.viewed_U15_version_resource" @click="checked = !checked">
                 <label for="check02">15세 이하 버전을 읽었습니다</label>
-              </div>
+              </div> -->
               <div class="flex items-center overflow-hidden" x-data="{ checked: false }">
                 <input class="rounded border w-5 h-5 mr-2" type="checkbox" name="viewed_general_version_resource" id="check03" x-model="formData.viewed_general_version_resource" @click="checked = !checked">
-                <label for="check03">일반인 버전을 읽었습니다</label>
+                <label for="check03">[전체연령] 버전을 읽었습니다</label>
               </div>
             </dd>
           </dl>
