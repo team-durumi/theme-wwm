@@ -10,7 +10,7 @@
 @links
   https://discourse.gohugo.io/t/cloudflareimageresize-and-development-preview/35288
 @use
-  partial "base/cf-image.html" (dict "style" "thumb" "src" $image_url "settings" .Site.Params) }}
+  {{ partial "base/cf-image.html" (dict "style" "thumb" "src" $image_url "settings" .Site.Params) }}
 */}}
 {{- $cfImagePrefix := .settings.cfImagePrefix -}}
 {{- $image_style := index .settings.cfImageStyles .style -}}

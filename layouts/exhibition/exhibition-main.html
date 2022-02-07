@@ -1,65 +1,67 @@
+{{/*  상설전시 /exhibition/  */}}
 {{ define "main" }}
 <div class="contents-area" id="main-content">
-    {{ partial "base/breadcrumb" . }}
-    <!-- contents -->
-    <div class="container pt-12 pb-28 relative">
-        <div class="mb-20">
-            <div class="mb-8">
-                <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">상설전시</h1>
-                <p>박물관 관람동선 그대로 상설전시를 둘러보세요.</p>
-            </div>
-            <ul class="lg:flex lg:flex-wrap -mx-2.5" >
-            {{ $permanentExhibitions := where .Pages ".Params.Type" "permanent" }}
-            {{ range $index, $element := $permanentExhibitions }}
-                <li class="mb-5 lg:w-1/2 px-2.5 relative">
-                    <a href="{{ .RelPermalink }}" class="text-white hover:text-aa-purple-50">
-                        <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-                            <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
-                            <span class="block absolute w-full h-full bg-black opacity-40"></span>
-                        </span>
-                        <span class="absolute w-full left-0 bottom-6 px-6">
-                            <span class="block pb-4 border-b border-white mb-4">상설전시 <b class="ml-4">{{ add $index 1 }}부</b></span>
-                            <strong class="block text-2xl pr-8">{{ .Title }}</strong>
-                            <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </li>
-            {{ end }}
-            </ul>
-        </div>
-
-        <div class="mb-20">
-            <div class="mb-8">
-                <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">특별전시</h1>
-                <p>1층 특별전시 공간의 기획 전시를 소개합니다.</p>
-            </div>
-            <ul class="lg:flex lg:flex-wrap -mx-2.5" >
-            {{ $specialExhibitions := where .Pages ".Params.Type" "special" }}
-            {{ range $index, $element := $specialExhibitions }}
-                    <li class="mb-5 lg:w-1/2 px-2.5 relative">
-                    <!-- 특별전시 섹션1로 바로 연결합니다. -->
-                    <a href="/exhibition/ex-04/section-01/" class="text-white hover:text-aa-purple-50">
-                        <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
-                            <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
-                            <span class="block absolute w-full h-full bg-black opacity-40"></span>
-                        </span>
-                        <span class="absolute w-full left-0 bottom-6 px-6">
-                            <span class="block pb-4 border-b border-white mb-4">특별전시 <b class="ml-4">{{ add $index 1 }}부</b></span>
-                            <strong class="block text-2xl pr-8">{{ .Title }}</strong>
-                            <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </li>
-            {{ end }}
-            </ul>
-        </div>
+  {{ partial "base/breadcrumb" . }}
+  <!-- contents -->
+  <div class="container pt-12 pb-28 relative">
+    <div class="mb-20">
+      <div class="mb-8">
+        <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">상설전시</h1>
+        <p>박물관 관람동선 그대로 상설전시를 둘러보세요.</p>
+      </div>
+      <ul class="lg:flex lg:flex-wrap -mx-2.5" >
+        {{ $permanentExhibitions := where .Pages ".Params.Type" "permanent" }}
+        {{- range $index, $element := $permanentExhibitions }}
+        {{- $cfImage := (partial "base/cf-image.html" (dict "style" "thumb" "src" .Params.image "settings" .Site.Params)) -}}
+        <li class="mb-5 lg:w-1/2 px-2.5 relative">
+          <a href="{{ .RelPermalink }}" class="text-white hover:text-aa-purple-50">
+            <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
+              <img class="w-full h-full absolute object-cover" src="{{ $cfImage }}" alt="">
+              <span class="block absolute w-full h-full bg-black opacity-40"></span>
+            </span>
+            <span class="absolute w-full left-0 bottom-6 px-6">
+              <span class="block pb-4 border-b border-white mb-4">상설전시 <b class="ml-4">{{ add $index 1 }}부</b></span>
+              <strong class="block text-2xl pr-8">{{ .Title }}</strong>
+              <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+        {{ end -}}
+      </ul>
     </div>
-    <!-- //contents -->
+
+    <div class="mb-20">
+      <div class="mb-8">
+        <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">특별전시</h1>
+        <p>1층 특별전시 공간의 기획 전시를 소개합니다.</p>
+      </div>
+      <ul class="lg:flex lg:flex-wrap -mx-2.5" >
+        {{ $specialExhibitions := where .Pages ".Params.Type" "special" }}
+        {{ range $index, $element := $specialExhibitions }}
+        <li class="mb-5 lg:w-1/2 px-2.5 relative">
+          <!-- 특별전시 섹션1로 바로 연결합니다. -->
+          <a href="/exhibition/ex-04/section-01/" class="text-white hover:text-aa-purple-50">
+            <span class="block overflow-hidden relative rounded-sm" style="padding-bottom:100%">
+              <img class="w-full h-full absolute object-cover" src="{{ .Params.Image }}" alt="">
+              <span class="block absolute w-full h-full bg-black opacity-40"></span>
+            </span>
+            <span class="absolute w-full left-0 bottom-6 px-6">
+              <span class="block pb-4 border-b border-white mb-4">특별전시 <b class="ml-4">{{ add $index 1 }}부</b></span>
+              <strong class="block text-2xl pr-8">{{ .Title }}</strong>
+              <svg class="absolute bottom-0 right-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.6668 9.33325L9.3335 22.6666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.667 9.33325H22.667V21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <!-- //contents -->
 </div>
 {{ end }}
