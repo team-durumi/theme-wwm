@@ -1,6 +1,15 @@
-{{/* https://discourse.gohugo.io/t/cloudflareimageresize-and-development-preview/35288 */}}
-{{ $cfImageUrl := "" }}
-{{ $cfImagePrefix := .settings.cfImagePrefix }}
-{{ $image_style := index .settings.cfImageStyles .style }}
-{{  $cfImageUrl = printf "%s/%s/%s" $cfImagePrefix $image_style .src }} 
-{{ return $cfImageUrl }}
+{{/** base/cf-image
+@params style (thumb|square|full...) settings (.Site.Params)
+@example https://durumi.io/cdn-cgi/image + /(thumb: 'fit=scale-down,width=300')/ + source_img_url
+.Site.Params
+  cfImagePrefix: 'https://durumi.io/cdn-cgi/image'
+  cfImageStyles:
+    thumb: 'fit=scale-down,width=300'
+    thumbStores: 'fit=scale-down,width=800'
+    full: 'fit=scale-down,width=1920'
+@links
+  https://discourse.gohugo.io/t/cloudflareimageresize-and-development-preview/35288
+*/}}
+{{- $cfImagePrefix := .settings.cfImagePrefix -}}
+{{- $image_style := index .settings.cfImageStyles .style -}}
+{{- return (printf "%s/%s/%s" $cfImagePrefix $image_style .src) -}}
