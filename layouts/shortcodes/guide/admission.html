@@ -174,23 +174,23 @@
             <div class="lg:flex justify-between">
                 <div class="leading-loose text-lg">
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.개관일.title }}<span>|</span></dt>
+                        <dt class="lg:w-20 w-24 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.개관일.title }}<span>|</span></dt>
                         <dd>{{ .관람안내.개관일.body }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.휴관일.title }}<span>|</span></dt>
+                        <dt class="lg:w-20 w-24 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.휴관일.title }}<span>|</span></dt>
                         <dd>{{ .관람안내.휴관일.title }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.주소.title }}<span>|</span></dt>
+                        <dt class="lg:w-20 w-24 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.주소.title }}<span>|</span></dt>
                         <dd>{{ .관람안내.주소.body }}</dd>
                     </dl>
                     <dl class="flex">
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.문의.title }}<span>|</span> </dt>
+                        <dt class="lg:w-20 w-24 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.문의.title }}<span>|</span> </dt>
                         <dd>{{ .관람안내.문의.body }}</dd>
                     </dl>
                     <dl>
-                        <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
+                        <dt class="lg:w-20 w-24 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}</dt>
                         <dd>
                             <ol class="ml-5">
                                 {{ range .관람안내.안내.body }}
@@ -213,7 +213,7 @@
                         {{ end }}
                     </dl>
                     <div class="w-56 h-56 bg-aa-gray-50 text-center fle">
-                        <img class="h-full mx-auto" src="/images/museum-booking01.png" alt="">
+                        <img class="h-full mx-auto" src="/images/museum-booking01.png" alt="온라인예약예시화면-01">
                     </div>
                 </li>
                 <li class="lg:flex justify-between mb-4">
@@ -225,18 +225,7 @@
 
                     </dl>
                     <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
-                        <img class="w-full mx-auto" src="/images/museum-booking02.png" alt="">
-                    </div>
-                </li>
-                <li class="lg:flex justify-between mb-4">
-                    <dl class="mb-2">
-                        <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">3</dt>
-                        {{ range .온라인예약안내.body_2 }}
-                            <dd>{{ . }}</dd>
-                        {{ end }}
-                    </dl>
-                    <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
-                        <img class="w-full mx-auto" src="/images/museum-booking03.png" alt="">
+                        <img class="h-full mx-auto" src="/images/museum-booking02.png" alt="온라인예약예시화면-02">
                     </div>
                 </li>
             </ul>

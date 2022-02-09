@@ -363,14 +363,15 @@ en:
   온라인예약안내: 
     title: Online Reservation Information
     body_1:
-    - 1. Select the date you wish to visit on the calendar. The selected date will be shown in green. * If a date has not been selected, today’s date will be shown in green. 
-    - 2. Select the time you wish to visit. You can check the number of remaining tickets per time slot.  
-    - 3. Make sure you have chosen the correct date and time, and click the ‘Next Page’ button on the bottom of the page.
+    - 1. Select the date you wish to visit on the calendar. The selected date will be shown in green.
+    - "* If a date has not been selected, today’s date will be shown in green." 
+    - 2. Select the time you wish to visit. You can check the number of remaining tickets per time slot. 
+    - 3. Select the number of tickets you wish to reserve. You can adjust the quantity by clicking the ‘-’ and ‘+’ buttons on the left and right.
+    - "* You can check out the total fee on the bottom of the page."
     body_2:
-    - 1. Select the number of tickets you wish to reserve. You can adjust the quantity by clicking the ‘-’ and ‘+’ buttons on the left and right. * You can check out the total fee on the bottom of the page.
-    - 2. Fill in information of the person making the reservation. The name and contact information of the person making the reservation are required to book tickets.
-    - 3. Check the information regarding collection and provision of personal information.
-    - 4. Make sure the form is filled out correctly. Click the “Make a reservation” button on the bottom of the page.
+    - 1. Fill in information of the person making the reservation. The name and contact information of the person making the reservation are required to book tickets.
+    - 2. Check the information regarding collection and provision of personal information.
+    - 3. Make sure the form is filled out correctly. Click the “Make a reservation” button on the bottom of the page.
     body_3:
     - 1. When the reservation is confirmed, you will see the following confirmation message. * If you turn on the ‘Notification’ button below, you can receive a push notification one day before your reserved date.  
 
