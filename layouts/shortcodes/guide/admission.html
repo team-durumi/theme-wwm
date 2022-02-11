@@ -127,34 +127,26 @@
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">시설 안내도 / 전경</h2>
     </div>
-    <ul class="bg-aa-gray-300 flex flex-wrap">
-        <li class="lg:w-1/4 w-full">
-            <a href="#">
-                <span class="block overflow-hidden relative" style="padding-bottom:100%">
-                    <img class="absolute h-full w-full object-cover" src="/images/facility/museum-overview.jpg" alt="">
-                </span>
-            </a>
+    <ul class="flex flex-wrap">
+        <li class="lg:w-1/2 w-full">
+            <span class="block overflow-hidden relative" style="padding-bottom:100%; padding-top: 20%">
+                <img class="absolute w-full object-cover" src="/images/facility/museum-overview.jpg" alt="박물관 전경">
+            </span>
         </li>
-        <li class="lg:w-1/4 w-full">
-            <a href="#">
-                <span class="block overflow-hidden relative" style="padding-bottom:100%">
-                    <img class="absolute h-full w-full object-cover" src="/images/facility/museum-facility-01.jpg" alt="">
-                </span>
-            </a>
+        <li class="lg:w-1/2 w-full">
+            <span class="block overflow-hidden relative" style="padding-bottom:100%">
+                <img class="absolute w-full" src="/images/facility/museum-facility-01.jpg" alt="박물관 지하 1층">
+            </span>
         </li>
-        <li class="lg:w-1/4 w-full">
-            <a href="#">
-                <span class="block overflow-hidden relative" style="padding-bottom:100%">
-                    <img class="absolute h-full w-full object-cover" src="/images/facility/museum-facility-02.jpg" alt="">
-                </span>
-            </a>
+        <li class="lg:w-1/2 w-full">
+            <span class="block overflow-hidden relative" style="padding-bottom:100%">
+                <img class="absolute w-full" src="/images/facility/museum-facility-02.jpg" alt="박물관 2층">
+            </span>
         </li>
-        <li class="lg:w-1/4 w-full">
-            <a href="#">
-                <span class="block overflow-hidden relative" style="padding-bottom:100%">
-                    <img class="absolute h-full w-full object-cover" src="/images/facility/museum-facility-03.jpg" alt="">
-                </span>
-            </a>
+        <li class="lg:w-1/2 w-full">
+            <span class="block overflow-hidden relative" style="padding-bottom:100%">
+                <img class="absolute w-full" src="/images/facility/museum-facility-03.jpg" alt="박물관 1층">
+            </span>
         </li>
     </ul>
 </div>
@@ -205,25 +197,25 @@
         <div class="lg:py-14 py-6 lg:px-28 px-4">
             <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">{{ .온라인예약안내.title }}</h2>
             <ul>
-                <li class="lg:flex justify-between mb-4">
-                    <dl class="mb-2">
+                <li class="justify-between mb-4">
+                    <dl class="mb-8">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">1</dt>
                         {{ range .온라인예약안내.body_1 }}
-                            <dd>{{ . }}</dd>
+                            <dd class="text-xl mb-2">{{ . }}</dd>
                         {{ end }}
                     </dl>
-                    <div class="w-56 h-56 bg-aa-gray-50 text-center fle">
+                    <div class="w-96 h-full bg-aa-gray-50 text-center mb-8">
                         <img class="h-full mx-auto" src="/images/museum-booking-01.png" alt="온라인예약예시화면-01">
                     </div>
                 </li>
-                <li class="lg:flex justify-between mb-4">
-                    <dl class="mb-2">
+                <li class="justify-between mb-4">
+                    <dl class="mb-8">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">2</dt>
                         {{ range .온라인예약안내.body_2 }}
-                            <dd>{{ . }}</dd>
+                            <dd class="text-xl mb-2">{{ . }}</dd>
                         {{ end }}
                     </dl>
-                    <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
+                    <div class="w-96 h-full bg-aa-gray-50 flex items-center">
                         <img class="h-full mx-auto" src="/images/museum-booking-02.png" alt="온라인예약예시화면-02">
                     </div>
                 </li>

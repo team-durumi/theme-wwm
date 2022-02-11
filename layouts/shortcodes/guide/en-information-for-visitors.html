@@ -176,25 +176,25 @@
         <div class="lg:py-14 py-6 lg:px-28 px-4">
             <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">{{ .온라인예약안내.title }}</h2>
             <ul>
-                <li class="lg:flex justify-between mb-4">
-                    <dl class="mb-2">
+                <li class="justify-between mb-4">
+                    <dl class="mb-8">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">1</dt>
                         {{ range .온라인예약안내.body_1 }}
-                            <dd>{{ . }}</dd>
+                            <dd class="text-xl mb-2">{{ . }}</dd>
                         {{ end }}
                     </dl>
-                    <div class="w-56 h-56 bg-aa-gray-50 text-center fle">
+                    <div class="w-96 h-full bg-aa-gray-50 text-center mb-8">
                         <img class="h-full mx-auto" src="/images/museum-booking-01.png" alt="온라인예약예시화면-01">
                     </div>
                 </li>
-                <li class="lg:flex justify-between mb-4">
-                    <dl class="mb-2">
+                <li class="justify-between mb-4">
+                    <dl class="mb-8">
                         <dt class="w-10 h-10 leading-10 text-center rounded-3xl bg-aa-purple-500 text-white mb-4">2</dt>
                         {{ range .온라인예약안내.body_2 }}
-                            <dd>{{ . }}</dd>
+                            <dd class="text-xl mb-2">{{ . }}</dd>
                         {{ end }}
                     </dl>
-                    <div class="w-56 h-56 bg-aa-gray-50 flex items-center">
+                    <div class="w-96 h-full bg-aa-gray-50 flex items-center">
                         <img class="h-full mx-auto" src="/images/museum-booking-02.png" alt="온라인예약예시화면-02">
                     </div>
                 </li>
