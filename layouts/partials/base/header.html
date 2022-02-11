@@ -43,7 +43,7 @@
         <ul class="absolute left-1/2 top-20 text-gray-700 transform -translate-x-1/2 text-center z-20 max-h-0 opacity-0 transition-all duration-300 overflow-hidden" :class="{ 'max-h-96 opacity-100 block': megaMenu, 'hidden': !megaMenu }" x-on:mouseover="megaMenu = true">
           {{ range .Children }}
             <li>
-              <a class="block py-3 px-3 text-center hover:bg-aa-gray-300" href="{{ .URL | absURL }}">{{ .Name }}</a>
+              <a class="block py-3 px-3 text-center hover:bg-aa-gray-200" href="{{ .URL | absURL }}">{{ .Name }}</a>
             </li>
           {{ end }}
         </ul>
