@@ -1,6 +1,6 @@
 ---
 title: "1부 | 정치·사회적인 배경"
-subtitle: subtitle
+subtitle:
 date: 2021-08-21
 author: 
 summary:

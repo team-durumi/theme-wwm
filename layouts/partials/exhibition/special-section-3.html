@@ -17,26 +17,110 @@
         <li class="lg:w-1/4"><a class="block lg:border-l lg:border-r border-black py-3.5 text-center text-aa-gray-900" href="/exhibition/ex-04/section-04">김학순의 용기를 계승하여</a></li>
     </ul>
 </div>
+<style>
+    .text-masonry{
+        height:5000px;
+    }
+    @media screen and (max-width:1023px) {
+        .text-masonry{
+            height:auto
+        }
 
-<div class="py-72">
+    }
+</style>
+<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet"><!--한나체 font-family: 'Hanna', sans-serif; -->
+<link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet"><!--제주 고딕 font-family: 'Jeju Gothic', sans-serif; -->
+<link href="http://fonts.googleapis.com/earlyaccess/jejuhallasan.css" rel="stylesheet"><!--제주 명조 font-family: 'Jeju Myeongjo', serif; -->
+<link href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css" rel="stylesheet"><!--나눔손글씨 붓 font-family: 'Nanum Brush Script', cursive; -->
+<link href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet"><!--나눔 명조 font-family: 'Nanum Myeongjo', serif; -->
+<link href="http://fonts.googleapis.com/earlyaccess/nanumpenscript.css" rel="stylesheet"><!--나눔손글씨 펜 font-family: 'Nanum Pen Script', cursive; -->
+<link href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css" rel="stylesheet"><!--이롭게 바탕체 font-family: 'Iropke Batang', serif; -->
+
+<div class="py-20 px-20 bg-aa-gray-600">
+  <ul class="text-masonry relative flex flex-wrap">
+    <h2 class="container text-5xl text-aa-special font-bold leading-snug mb-12">김학순의 말</h2>
+      {{ range $element := .Params.Resources }}
+      {{ if eq .part "part-1" }}
+      {{ range $element.components }}
+        <li class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center mb-12 px-2">
+            <dl class="text-center text-white" style="font-family: '{{ .font }}', serif;">
+                <dt class="text-2xl">{{ .message }}</dt>
+            </dl>
+        </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    <h2 class="container text-5xl text-aa-special font-bold leading-snug mb-12">부정의 말</h2>
+      {{ range $element := .Params.Resources }}
+      {{ if eq .part "part-2" }}
+      {{ range $element.components }}
+        <li class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center mb-12 px-2">
+            <dl class="text-center text-white" style="font-family: '{{ .font }}', serif;">
+                <dt class="text-xl mb-3">{{ .message }}</dt>
+                <dd class="text-md">{{ .speaker }}</dd>
+            </dl>
+        </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}        
+    <h2 class="container text-5xl text-aa-special font-bold leading-snug mb-12">용기의 말</h2>
+      {{ range $element := .Params.Resources }}
+      {{ if eq .part "part-3" }}
+      {{ range $element.components }}
+        <li class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center mb-12 px-2">
+            <dl class="text-center text-white" style="font-family: '{{ .font }}', serif;">
+                <dt class="text-xl mb-3">{{ .message }}</dt>
+                <dd class="text-md">{{ .speaker }}</dd>
+            </dl>
+        </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}        
+    <h2 class="container text-5xl text-aa-special font-bold leading-snug mb-12">기억의 말</h2>
+      {{ range $element := .Params.Resources }}
+      {{ if eq .part "part-4" }}
+      {{ range $element.components }}
+        <li class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center mb-12 px-2">
+            <dl class="text-center text-white" style="font-family: '{{ .font }}', serif;">
+                <dt class="text-xl mb-3">{{ .message }}</dt>
+                <dd class="text-md">{{ .speaker }}</dd>
+            </dl>
+        </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}        
+    <h2 class="container text-5xl text-aa-special font-bold leading-snug mb-12">연대의 말</h2>
+      {{ range $element := .Params.Resources }}
+      {{ if eq .part "part-5" }}
+      {{ range $element.components }}
+        <li class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center mb-12 px-2" >
+            <dl class="text-center text-white" style="font-family: '{{ .font }}', serif;">
+                <dt class="text-2xl mb-3">{{ .message }}</dt>
+                <dd class="text-lg">{{ .speaker }}</dd>
+            </dl>
+        </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+  </ul>
 </div>
 
 
- <!-- //contents -->
- <div class="text-white py-4" style="background:#F85D35">
-     <div class="container lg:flex justify-between items-center">
-        <a href="/exhibition/ex-04/section-02" class="flex">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>2부 | 김학순 삶의 궤적을 따라</span>
-         </a>
-         <a href="/exhibition/ex-04/section-04" class="flex justify-end">
-            <span>김학순의 용기를 계승하여</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-         </a>
+<!-- //contents -->
+<div class="text-white py-4" style="background:#F85D35">
+   <div class="container lg:flex justify-between items-center">
+      <a href="/exhibition/ex-04/section-02" class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>2부 | 김학순 삶의 궤적을 따라</span>
+       </a>
+       <a href="/exhibition/ex-04/section-04" class="flex justify-end">
+          <span>김학순의 용기를 계승하여</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+       </a>
 
-     </div>
- </div>
+   </div>
+</div>
