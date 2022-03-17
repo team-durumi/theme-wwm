@@ -1,25 +1,28 @@
+{{ with site.Data.admission_guide.ko.소식참여 }}
 <div class="flex justify-between gap-5 mb-20">
     <div class="text-aa-gray-50 bg-aa-gray-50 text-center py-10 flex-1">
         <dl class="mb-6">
-            <dt class="text-aa-gray-700 font-bold text-3xl mb-6">정기후원 신청하기</dt>
-            <dd class="leading-7 text-aa-gray-800 w-1/2 mx-auto">전쟁과여성인권박물관에 별도로 정기후원을 신청할 수 있습니다. 정기후원 신청시 박물관 선택 옵션을 체크하세요.</dd>
+            <dt class="text-aa-gray-700 font-bold text-3xl mb-6">{{ .정기후원신청하기.title }}</dt>
+            <dd class="leading-7 text-aa-gray-800 w-1/2 mx-auto">{{ .정기후원신청하기.body }}</dd>
         </dl>
-        <a href="https://mrmweb.hsit.co.kr/v2/Member/MemberJoin.aspx?action=join&server=anSZe1lBpJs/ev/3FiPISw==" class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" target="_blank">정기후원</a>
+        <a href="{{ .정기후원신청히기.link }}" class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" target="_blank">{{ .정기후원신청하기.buttonLabel }}</a>
     </div>
     <div class="text-aa-gray-50 bg-aa-gray-50 text-center py-10 flex-1">
         <dl class="mb-6">
-            <dt class="text-aa-gray-700 font-bold text-3xl mb-6">일시후원 신청하기</dt>
-            <dd class="leading-7 text-aa-gray-800 w-1/2 mx-auto">신용카드, 실시간계좌이체 등  편한 방식으로 후원하실 수 있습니다.<br/>&nbsp;
+            <dt class="text-aa-gray-700 font-bold text-3xl mb-6">{{ .일시후원신청하기.title }}</dt>
+            <dd class="leading-7 text-aa-gray-800 w-1/2 mx-auto">{{ .일시후원신청하기.body }}<br/>&nbsp;
             </dd>
         </dl>
-        <a href="https://online.mrm.or.kr/T5vJlVX"
-         class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" target="_blank">일시후원</a>
+        <a href="{{ .일시후원신청하기.link }}"
+         class="py-3 px-6 bg-aa-purple-500 text-white hover:bg-black" target="_blank">{{ .일시후원신청하기.buttonLabel }}</a>
     </div>
 </div>
 <dl class="bg-aa-purple-500 text-white text-center py-10">
-    <dt class="font-bold text-3xl mb-6">후원 문의</dt>
+    <dt class="font-bold text-3xl mb-6">{{ .후원문의.title }}</dt>
     <dd class="leading-7">
-        후원에 대해 궁금한 사항은 <br/>
-        정의기억연대 운영관리국 070-4903-0528(직) / tax@womenandwar.net 로 문의해 주시기 바랍니다.
+        {{ range .후원문의.body }}
+        {{ .}} <br/>
+        {{ end }}
     </dd>
 </dl>
+{{ end }}

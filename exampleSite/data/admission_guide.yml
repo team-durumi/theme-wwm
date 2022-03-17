@@ -84,17 +84,21 @@ ko:
       박물관기증자: 
         title: Dornor to the museum and the Korean Council              
   소식참여:
-    title: 소식/참여
     정기후원신청하기:
       title: 정기후원 신청하기
-      body:
-      - 전쟁과여성인권박물관에 별도로 정기후원을 신청할 수 있습니다. 정기후원 신청시 박물관 선택 옵션을 체크하세요.
-      - 정기후원
+      body: 전쟁과여성인권박물관에 별도로 정기후원을 신청할 수 있습니다. 정기후원 신청시 박물관 선택 옵션을 체크하세요.
+      link: "https://mrmweb.hsit.co.kr/v2/Member/MemberJoin.aspx?action=join&server=anSZe1lBpJs/ev/3FiPISw=="
+      buttonLabel: 정기후원
     일시후원신청하기:
       title: 일시후원 신청하기
+      body: 신용카드, 실시간계좌이체 등 편한 방식으로 후원하실 수 있습니다.
+      link: "https://online.mrm.or.kr/T5vJlVX"
+      buttonLabel: 일시후원
+    후원문의:
+      title: 후원문의
       body:
-      - 신용카드, 실시간계좌이체 등 편한 방식으로 후원하실 수 있습니다.
-      - 일시후원 
+      - 후원에 대해 궁금한 사항은
+      - 정의기억연대 운영관리국 070-4903-0528(직) / tax@womenandwar.net 로 문의해 주시기 바랍니다.
   박물관소개:
     title: 박물관소개
     인사말:
