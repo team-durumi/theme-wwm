@@ -2,7 +2,9 @@
 title: 3부 현재를 딛고 미래를 향하여
 date: 2021-01-07
 weight: 3
-summary: 지구상에는 전쟁이 계속되는 한 여성에 대한 폭력은 사라지지 않는다. 세계 속으로 시야를 넓혀 동시대 다른 공간 속에 살고 있는 또 다른 그녀들의 아픔을 바라본다.
+summary: |
+  지구상에는 전쟁이 계속되는 한 여성에 대한 폭력은 사라지지 않는다. 
+  세계 속으로 시야를 넓혀 동시대 다른 공간 속에 살고 있는 또 다른 그녀들의 아픔을 바라본다.
 image: https://wwm3.s3.ap-northeast-2.amazonaws.com/exhibition/(2)1층/상설,기획전시관/LHS_0786.jpg
 tags:
 type: permanent

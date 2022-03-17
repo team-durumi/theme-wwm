@@ -3,10 +3,10 @@ title: 관람예약 및 안내
 date: 2011-11-17
 layout: section_single
 banner:
-  title: 평화메세지
-  summary: 오시는길에 확인할 수 있는 평화 메세지
-  imageLink: /images/banner-archive-main.png
-  itemLink: /items/ex-02/운동사관/침묵을깨트리다/첫수요집회-사본/
+  title: 할머니의 삶이 소개된 박물관 티켓
+  summary: 피해자들의 외침
+  imageLink: /img/pagebanner/guide/admission.jpg
+  itemLink: /learning-and-research/resources/pdf-피해자들의-외침-전쟁과여성인권박물관-온라인-교육용-자료/
 ---
 
 {{< guide/admission >}}

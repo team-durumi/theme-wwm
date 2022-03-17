@@ -5,7 +5,7 @@ layout: section_single
 banner:
   title: 
   summary:
-  imageLink: /images/banner-archive-main.png
+  imageLink: /img/pagebanner/guide/admission.jpg
   itemLink:
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: 지난 전시
-date: 2022-01-21
+title: 주요 전시
+date: 2017-09-11T15:00:00.000Z
 banner:
-  title:
-  summary:
+  title: null
+  summary: null
   imageLink: /images/banner-archive-main.png
-  itemLink:
+  itemLink: null
 ---
