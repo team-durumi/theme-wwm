@@ -31,7 +31,58 @@ ko:
         body:
         - 7013A/B, 7711, 7016, 7737 경성중고, 홍대부속여중고입구 하차
         - 마포 15, 08 마을버스 → 경성중고사거리 하차
-        - ※별도의 주차장이 없으니 대중교통을 이용해주세요.           
+        - ※별도의 주차장이 없으니 대중교통을 이용해주세요.          
+  관람요금:
+    title: 관람요금
+    대인:
+      title: 대인(만19세-만64세)
+      body: 5,000원
+    소인:
+      title: 소인(만7세-만18세)
+      body: 3,000원
+    단체:
+      title: 단체(10인 이상)
+      대인:
+        title: 대인(만19세-만64세)
+        body: 4,000원
+      소인:
+        title: 소인(만7세-만18세)
+        body: 2,000원
+    무료:
+      title: 무료
+      일반:
+        title: 만6세이하, 만65세이상
+      장애인:
+        title: "[장애인 복지법]의 적용을 받는 장애인 및 그와 동행하는 보호자 1명"
+      수급자:
+        title: "[국민기초생활 보장법]에 따른 수급자"
+      박물관기증자: 
+        title: 박물관 기증자 및 특별공로자
+  영문관람요금:
+    대인:
+      title: Age 19-64
+      body: 5,000 won
+    소인:
+      title: Age 7-18
+      body: 3,000 won
+    단체:
+      title: Group(10 people or more)
+      대인:
+        title: Age 19-64
+        body: 4,000 won
+      소인:
+        title: Age 7-18
+        body: 2,000 won
+    무료:
+      title: Free
+      일반:
+        title: Ages 6 and under, Agres 65 and above
+      장애인:
+        title: People with disabilities
+      수급자:
+        title: Dornor to the museum and the Korean Council
+      박물관기증자: 
+        title: Dornor to the museum and the Korean Council              
   소식참여:
     title: 소식/참여
     정기후원신청하기:
@@ -359,7 +410,6 @@ en:
         - 7013A/B, 7711, 7016, 7737 → Get off at Gyeongseong High School intersection
         - Mapo Local Bus Number 15, 08 → Get off at Gyeongseong High School intersection
         - ※ The museum does not have a parking space. Please use public transportation.
-
   온라인예약안내: 
     title: Online Reservation Information
     body_1:

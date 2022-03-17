@@ -1,5 +1,5 @@
+{{ with site.Data.admission_guide.ko }}
 <div class="mb-20">
-    {{ with site.Data.admission_guide.ko }}
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">{{ .관람안내.title }}</h2>
     </div>
@@ -37,49 +37,48 @@
             <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black mr-3 cursor-pointer" @click="enModal = true" href="#">English guide</a>
             <a class="inline-block border border-aa-purple-500 py-2 px-6 text-aa-purple-500 hover:text-black hover:border-black" @click="jpModal = true" href="#">日本語ガイド</a>
         </div>
-        {{ end }}
     </div>
 </div>
 <div class="mb-20">
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
-        <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">관람요금</h2>
+        <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">{{ .관람요금.title }}</h2>
     </div>
     <div class="max-w-full overflow-x-scroll">
         <table class="w-full" >
             <tr>
                 <th class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
-                    <b class="block lg:text-xl text-base">대인(만19세-만64세)</b>
-                    <span class="block font-normal">Age 19-64</span>
+                    <b class="block lg:text-xl text-base">{{ .관람요금.대인.title }}</b>
+                    <span class="block font-normal">{{ .영문관람요금.대인.title }}</span>
                 </th>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
-                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">5,000원</b>
-                    <span>5,000 won</span>
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.대인.body }}</b>
+                    <span>{{ .영문관람요금.대인.body }}</span>
                 </td>
             </tr>
             <tr>
                 <th class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
-                    <b class="block lg:text-xl text-base">소인(만7세-만18세)</b>
-                    <span class="block font-normal">Age 7-18</span>
+                    <b class="block lg:text-xl text-base">{{ .관람요금.소인.title }}</b>
+                    <span class="block font-normal">{{ .영문관람요금.소인.title }}</span>
                 </th>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
-                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">3,000원</b>
-                    <span>3,000 won</span>
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.소인.body }}</b>
+                    <span>{{ .영문관람요금.소인.body }}</span>
                 </td>
             </tr>
             <tr>
                 <th rowspan="2" class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 px-2 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
-                    <b class="block lg:text-xl text-base">단체(10인 이상)</b>
-                    <span class="block font-normal">Group(10 people or more)</span>
+                    <b class="block lg:text-xl text-base">{{ .관람요금.단체.title }}</b>
+                    <span class="block font-normal">{{ .영문관람요금.단체.title }}</span>
                 </th>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
                     <div class="flex">
                         <div class="w-1/2">
-                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">대인(만19세-만64세)</b>
-                            <span>Age 19-64</span>
+                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.단체.대인.title }}</b>
+                            <span>{{ .영문관람요금.단체.대인.title }}</span>
                         </div>
                         <div class="w-1/2">
-                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">4,000원</b>
-                            <span>4,000 won</span>
+                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.단체.대인.body }}</b>
+                            <span>{{ .영문관람요금.단체.대인.body }}</span>
                         </div>
                     </div>
                 </td>
@@ -88,41 +87,48 @@
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
                     <div class="flex">
                         <div class="w-1/2">
-                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">소인(만7세-만18세)</b>
-                            <span>Age 7-18</span>
+                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.단체.소인.title }}</b>
+                            <span>{{ .영문관람요금.단체.소인.title }}</span>
                         </div>
                         <div class="w-1/2">
-                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">2,000원</b>
-                            <span>2,000 won</span>
+                            <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.단체.소인.body }}</b>
+                            <span>{{ .영문관람요금.단체.소인.body }}</span>
                         </div>
                     </div>
                 </td>
             </tr>
             <tr>
-                <th rowspan="3" class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
-                    <b class="block lg:text-xl text-base">무료</b>
-                    <span class="block font-normal">Free</span>
+                <th rowspan="4" class="w-1/3 text-aa-purple-600 bg-aa-purple-50 py-5 border-t border-r border-aa-gray-200" style="background:rgba(138, 100, 234, 0.08)">
+                    <b class="block lg:text-xl text-base">{{ .관람요금.무료.title }}</b>
+                    <span class="block font-normal">{{ .영문관람요금.무료.title }}</span>
                 </th>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
-                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">만6세 이하, 만65세 이상</b>
-                    <span>Ages 6 and under, Agres 65 and above</span>
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.무료.일반.title }}</b>
+                    <span>{{ .영문관람요금.무료.일반.title }}</span>
                 </td>
             </tr>
             <tr>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
-                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">장애인</b>
-                    <span>People with disabilities</span>
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.무료.장애인.title }}</b>
+                    <span>{{ .영문관람요금.무료.장애인.title }}</span>
                 </td>
             </tr>
             <tr>
                 <td class="py-5 border-t border-aa-gray-200 text-center px-2">
-                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">박물관 기증자</b>
-                    <span>Dornor to the museum and the Korean Council</span>
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.무료.박물관기증자.title }}</b>
+                    <span>{{ .영문관람요금.무료.박물관기증자.title }}</span>
+                </td>
+            </tr>            
+            <tr>
+                <td class="py-5 border-t border-aa-gray-200 text-center px-2">
+                    <b class="block lg:text-xl text-base font-bold text-aa-gray-900">{{ .관람요금.무료.수급자.title }}</b>
+                    <span>{{ .영문관람요금.무료.수급자.title }}</span>
                 </td>
             </tr>
         </table>
     </div>
-</div>    
+</div> 
+{{ end }}   
 <div class="mb-20">
     <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
         <h2 class="text-3xl font-bold text-aa-gray-900 leading-none">시설 안내도 / 전경</h2>
