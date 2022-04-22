@@ -1,0 +1,14 @@
+{{/*  base/resize-image
+@params
+  style: thumb
+  src: assets/images/test.png
+  settings: .Site.Params[cfImagePrefix+cfImageStyles]
+@use
+  {{ partial "base/resize-image" (dict "style" "thumb" "src" .Params.image "settings" .Site.Params)) }}
+*/}}
+{{ $url := urls.Parse .src }}
+{{ if and (eq $url.Scheme "") (eq $url.Host "") }}
+  {{ return ((resources.Get (trim .src "/")).Resize "600x").RelPermalink }}
+{{ else }}
+  {{ return (printf "%s/%s/%s" .settings.cfImagePrefix (index .settings.cfImageStyles .style) .src) }}
+{{ end }}
