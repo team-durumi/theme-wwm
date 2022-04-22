@@ -23,9 +23,8 @@
   <div class="swiper-container main-slider" x-ref="container">
     <div class="swiper-wrapper">
       {{- range (.Paginate (where .Site.RegularPages "Type" "slides")).Pages }}
-      {{- $cfImage := (partial "base/resize-image" (dict "style" "thumb" "src" .Params.image "settings" .Site.Params)) -}}
       <div class="swiper-slide">
-        <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url('{{ $cfImage }}')">
+        <div class="bg-no-repeat bg-cover bg-center flex items-center relative" style="background-image:url({{ .Params.image | absURL }})">
           <div class="w-full h-full absolute top-0 left-0 bg-black opacity-30"></div>
           <div class="container relative">
             <div class="text-white">
