@@ -1,9 +1,0 @@
----
-title: 교육자료
-date: 2021-12-27T20:23:39+09:00
-banner:
-  title:
-  summary:
-  imageLink: /img/pagebanner/learning-and-research/resources.jpg
-  itemLink:
----

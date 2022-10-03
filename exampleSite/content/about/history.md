@@ -1,6 +1,6 @@
 ---
 title: 연혁
-date: 2011-11-17
+date: 2022-09-20
 layout: section_single
 banner:
   title:

@@ -1,6 +1,6 @@
 ---
 title: 기부자의 벽
-date: 2011-11-17
+date: 2022-09-20
 layout: section_single
 banner:
   title: "박물관 내부에 전시되어 있는 기부자의 벽"

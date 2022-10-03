@@ -1,112 +1,108 @@
 main:
-  - name: 박물관이용
-    url: /guide
+  - name: 일본군성노예제
+    url: /comfort-women
     weight: -110
-  - name: 관람예약 및 안내
-    url: /guide/admission
+  - name: 일본군성노예제란?
+    url: /comfort-women/meanings
     weight: 1
-    parent: 박물관이용
-  - name: 오시는 길
-    url: /guide/location
+    parent: 일본군성노예제
+  - name: 운동사(연혁)
+    url: /comfort-women/history
     weight: 2
-    parent: 박물관이용
-  - name: 뮤지엄 샵
-    url: /guide/stores
+    parent: 일본군성노예제
+  - name: 피해자들의 외침
+    url: /comfort-women/testimonies
     weight: 3
-    parent: 박물관이용
+    parent: 일본군성노예제
 
-  - name: 전시
-    url: /exhibition
+  - name: 단체소개
+    url: about
     weight: -100
-  - name: 상설전시
-    url: /exhibition
-    weight: 1
-    parent: 전시
-  - name: 특별전시
-    url: /exhibition/ex-04/section-01/
-    weight: 2
-    parent: 전시
-  - name: 주요 전시
-    url: /exhibition/previous
-    weight: 3
-    parent: 전시    
-  - name: 소장품
-    url: /items
-    weight: 4
-    parent: 전시    
-
-  - name: 자료실
-    url: /archive
-    weight: -90
-  - name: 이달의 기록
-    url: /archive/featured
-    weight: 1
-    parent: 자료실    
-  - name: 기록물 이용
-    url: /archive/usage
-    weight: 2
-    parent: 자료실
-  - name: 기록물 기증
-    url: /archive/donate
-    weight: 3
-    parent: 자료실
-
-  - name: 교육/연구
-    url: /learning-and-research
-    weight: -90
-  - name: 온라인교육
-    url: /learning-and-research/e-learning
-    weight: 1
-    parent: 교육/연구   
-  - name: 프로그램
-    url: /learning-and-research/programs
-    weight: 2
-    parent: 교육/연구
-  - name: 교육자료
-    url: /learning-and-research/resources
-    weight: 3
-    parent: 교육/연구
-  - name: 연구자료
-    url: /learning-and-research/papers
-    weight: 4
-    parent: 교육/연구            
-
-  - name: 소식/참여
-    url: /connect
-    weight: -80
-  - name: 공지사항
-    url: /connect/notice
-    weight: 1
-    parent: 소식/참여
-  - name: 뉴스레터
-    url: /connect/newsletter
-    weight: 2
-    parent: 소식/참여
-  - name: 자원활동신청
-    url: /connect/volunteer
-    weight: 3
-    parent: 소식/참여
-  - name: 박물관 후원
-    url: /connect/support
-    weight: 4
-    parent: 소식/참여
-
-  - name: 박물관소개
-    url: /about
-    weight: -70
   - name: 인사말
     url: /about/greetings
     weight: 1
-    parent: 박물관소개
-  - name: 미션/비전
+    parent: 단체소개
+  - name: 미션과 비전
     url: /about/mission-and-vision
     weight: 2
-    parent: 박물관소개
-  - name: 연혁
-    url: /about/history
+    parent: 단체소개
+  - name: 조직과 사람들
+    url: /about/org-and-people
     weight: 3
-    parent: 박물관소개
-  - name: 기부자의벽
-    url: /about/donor-wall
+    parent: 단체소개   
+  - name: 살림살이
+    url: /about/budget
     weight: 4
-    parent: 박물관소개
+    parent: 단체소개
+  - name: 오시는길
+    url: /about/location
+    weight: 5
+    parent: 단체소개
+  - name: 정관
+    url: /about/articles
+    weight: 6
+    parent: 단체소개
+
+  - name: 주요활동
+    url: /actions
+    weight: -90
+  - name: 수요시위(보고, 성명서)
+    url: /actions/wednesday-demonstration
+    weight: 1
+    parent: 주요활동   
+  - name: 평화비 건립
+    url: /actions/statue-of-peace
+    weight: 2
+    parent: 주요활동
+  - name: 생존자 복지 지원
+    url: /actions/victim-support
+    weight: 3
+    parent: 주요활동
+  - name: 기림사업
+    url: /actions/international-memorial-day
+    weight: 4
+    parent: 주요활동
+  - name: 장학교육
+    url: /actions/scholarship
+    weight: 4
+    parent: 주요활동
+  - name: 나비기금
+    url: /actions/butterfly-fund
+    weight: 4
+    parent: 주요활동                 
+
+  - name: 단체소식
+    url: /connect
+    weight: -80
+  - name: 활동보고
+    url: /connect/report
+    weight: 1
+    parent: 단체소식   
+  - name: 공지/보도자료
+    url: /connect/notice
+    weight: 2
+    parent: 단체소식
+  - name: 언론동향
+    url: /connect/media-watch
+    weight: 3
+    parent: 단체소식
+  - name: 뉴스레터
+    url: /connect/newsletter
+    weight: 4
+    parent: 단체소식
+
+  - name: 후원/참여  
+    url: /donate-and-support
+    weight: -90
+  - name: 후원안내
+    url: /donate-and-support/guide
+    weight: 1
+    parent: 후원/참여  
+  - name: 봉사/재능기부
+    url: /donate-and-support/volunteer
+    weight: 2
+    parent: 후원/참여
+  - name: 수요시위참여
+    url: /donate-and-support/support
+    weight: 3
+    parent: 후원/참여

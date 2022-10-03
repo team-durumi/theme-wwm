@@ -8,5 +8,5 @@ banner:
   summary: null
   imageLink: /img/pagebanner/connect/volunteer.jpg
   itemLink: null
-show_forms: open
+show_forms: close
 ---

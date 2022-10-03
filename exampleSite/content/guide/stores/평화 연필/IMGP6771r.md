@@ -7,13 +7,13 @@ image:
 description:
 modified_at:
 created_at:
-featured: https://wwm3.s3.ap-northeast-2.amazonaws.com/stores/평화+연필/IMGP6771r.jpg
+featured: https://wwm-r2.womenandwar.workers.dev/stores/평화%20연필/IMGP6771r.jpg
 price: 5,000원
 buying_link: https://docs.google.com/forms/d/e/1FAIpQLSc9nedLjpcX4QsqHfsDClSUvnY_z8JjKZMrkfDJmnqozNUliA/viewform
 components:
-- https://wwm3.s3.ap-northeast-2.amazonaws.com/stores/평화+연필/IMGP6771r.jpg
-- https://wwm3.s3.ap-northeast-2.amazonaws.com/stores/평화+연필/IMGP6773r.jpg
-- https://wwm3.s3.ap-northeast-2.amazonaws.com/stores/평화+연필/IMGP6775r.jpg
+- https://wwm-r2.womenandwar.workers.dev/stores/평화%20연필/IMGP6771r.jpg
+- https://wwm-r2.womenandwar.workers.dev/stores/평화%20연필/IMGP6773r.jpg
+- https://wwm-r2.womenandwar.workers.dev/stores/평화%20연필/IMGP6775r.jpg
 tags:
 -
 ---
