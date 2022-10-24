@@ -1,0 +1,79 @@
+{{ define "main" }}
+{{- `<!-- _default/single.html  -->` | safeHTML -}}
+<!-- contents-area -->
+<div class="contents-area" id="main-content">
+    <!-- contents -->
+    <div class="container pt-12 pb-28 relative">
+        <div class="lg:flex lg:justify-between lg:flex-row-reverse lg:gap-10 mb-20">
+            <div class="lg:w-1/2 mb-6">
+                <div class="flex justify-between items-center mb-8">
+                    <a href="/guide/stores" class="flex justify-center text-aa-gray-700 hover:text-aa-purple-500">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        목록 돌아가기
+                    </a>
+                </div>
+                <div class="absolute lg:right-0 right-4 top-14 flex items-center gap-6">
+                    {{ partial "marketing/sharingbutton" .}}
+                </div>    
+                <div class="mb-8">
+                    <h1 class="text-4xl mb-4 text-aa-gray-900">{{ .Title }}</h1>
+                    <p class="text-aa-gray-700 leading-relaxed mb-4">가격 : {{ .Params.Price }}</p>
+                    <p class="text-aa-gray-700 leading-relaxed">{{ .Content }}</p>
+                </div>
+                <a class="block bg-aa-purple-500 text-center text-white py-3.5 hover:bg-black" href="{{ .Params.Buying_Link }}" target="_blank">구매 신청하기</a>
+            </div>
+            <div class="list-gallary03 lg:w-1/2">
+                <div class="block relative overflow-hidden mb-5">
+                    {{ $settings := .Site.Params }}
+                    {{ with (.Params.featured ) }}
+                      {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                      {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                    
+                        <img class="absolute h-full w-full object-cover" src="{{ $src }}" alt="">
+                    {{ end }}
+                </div>
+                <ul class="flex flex-wrap">
+                    {{ $settings := .Site.Params }}
+                    {{ range (.Params.components ) }}
+                      {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                      {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
+                    <li class="relative overflow-hidden">
+                        <img class="absolute h-full w-full object-cover" src="{{ $src }}">
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        <div class="mb-20">
+            <div class="flex justify-between items-center mb-6 border-b border-aa-gray-900 pb-6">
+                <h2 class="text-2xl text-aa-gray-900 leading-none">다른 아이템</h2>
+            </div>
+                
+            <ul class="list-gallary02 flex flex-wrap justify-between mb-20 gap-y-5">
+                {{ $relatives := .Parent.RegularPagesRecursive | shuffle | first 4 }}
+                {{ range $relatives}}
+                    <li>
+                        <span class="block relative overflow-hidden rounded-lg mb-4 ">
+                            {{ $settings := .Site.Params }}
+                            {{ with .Params.featured }}
+                              {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+                                {{ $src := partial "base/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}                        
+                            <img class="absolute h-full w-full object-cover" src="{{ $src }}" alt="">
+                            {{ end }}
+                        </span>
+                        <a href="{{ .Permalink }}">
+                            <span class="block">
+                                <b class="text-aa-gray-900 text-xl mb-2 block">{{ .Title }}</b>
+                                <span class="block text-sm text-aa-gray-700"> {{ .Params.Price }}</span>
+                            </span>
+                        </a>                        
+                    </li>
+                {{ end }}
+            </ul>
+
+        </div>
+    </div>
+     <!-- //contents --> 
+ </div>
+
+{{- `<!-- _default/single.html  -->` | safeHTML -}}
+{{ end }}

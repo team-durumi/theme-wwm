@@ -1,0 +1,43 @@
+<div class="container pt-12 py-20">
+  <div class="relative">
+    <h1 class="text-4xl mb-4 text-aa-gray-900 font-bold">최근활동</h1>
+    <a class="absolute top-2 right-0 text-aa-purple-500" href="/items">최근활동 모두보기</a>
+  </div>
+  <p class="text-lg mb-8 text-aa-gray-700">All / Updates / 日本語 / 기림사업 / 나비기금 / 동영상 / 소식 / 모금소식 / 생존자복지쉼터소식 / 연구조사 / 교육연대사업 / 이번 주 수요시위 / 일본국상대소송 / 장학사업 / 전시성폭력재발방지</p>
+  <ul class="masonry01 mb-20">
+    <li class="grid-sizer"></li>
+    <li class="gutter-sizer"></li>
+    {{ $settings := .Site.Params }}
+    {{ range first 8 (where site.RegularPages "Type" "items") }}
+    <li class="mb-10 grid-item">
+      <a href="{{ .Permalink }}">
+        <span class="overflow-hidden mr-7">
+          {{ range .Params.Components }}
+          {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+          {{ $src := partial "base/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+          <img class="w-full" src="{{ $src }}" alt="{{ $.Title }}">
+          {{ end }}
+        </span>
+        <span class="block">
+          <b class="text-aa-gray-900 text-xl font-normal mb-2 block">{{ .Title }}</b>
+        </span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', function(){
+    imagesLoaded( '.masonry01', function() {
+      new Masonry( '.masonry01', {
+        "itemSelector": ".grid-item",
+        "columnWidth": ".grid-sizer",
+        "gutter": ".gutter-sizer",
+        "percentPosition": "true"
+      })
+    })
+  })
+  </script>
+  

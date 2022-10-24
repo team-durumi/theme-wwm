@@ -1,0 +1,16 @@
+<li>
+	<a href="{{ .Permalink }}">
+    <span class="block relative overflow-hidden rounded-lg mb-4">
+      {{ $settings := .Site.Params }}
+      {{ with (.Params.featured ) }}
+          {{ $fileExtension := index (last 1 (split . ".")) 0 }}
+          {{ $src := partial "base/cf-image.html" (dict "style" "thumbStores" "src" . "settings" $settings) }}
+       <img class="object-cover h-60 w-full" src="{{ $src }}">
+      {{ end }}
+    </span>
+    <span class="block">
+      <b class="text-aa-gray-900 text-xl mb-2 block">{{ .Title }}</b>
+      <span class="block text-sm text-aa-gray-700">{{ .Params.description }}</span>
+    </span>
+  </a>  
+</li>
