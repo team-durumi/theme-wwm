@@ -5,6 +5,7 @@ description: 전쟁과여성인권박물관 홈페이지에 오신것을 환영�
 images:
   - img/site-feature-image.png
 logo: images/logo-ww.png
+site: ww
 
 license:
   title_of_work: 전쟁과여성인권박물관

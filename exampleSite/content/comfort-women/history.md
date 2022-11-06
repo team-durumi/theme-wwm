@@ -9,4 +9,6 @@ banner:
   itemLink: 
 ---
 운동사(연혁)
+
+https://womenandwar.net/kr/history-of-movement/
 {{< about/org-history >}}

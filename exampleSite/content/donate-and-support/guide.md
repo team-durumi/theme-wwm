@@ -5,8 +5,8 @@ layout: section_single
 banner:
   title:
   summary:
-  imageLink: /img/pagebanner/archive/usage.jpg
+  imageLink: /img/pagebanner/connect/support.jpg
   itemLink:
 ---
-후원안내
-{{< archives/use-materials >}}
+!! 정의기억연대 후원 메세지로 변경해야 함.
+{{< news/museum-donation >}}

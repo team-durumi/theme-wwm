@@ -16,7 +16,7 @@ main:
     parent: 일본군성노예제
 
   - name: 단체소개
-    url: about
+    url: /about
     weight: -100
   - name: 인사말
     url: /about/greetings
@@ -43,49 +43,53 @@ main:
     weight: 6
     parent: 단체소개
 
-  - name: 주요활동
+  - name: 활동소개
     url: /actions
     weight: -90
-  - name: 수요시위(보고, 성명서)
-    url: /actions/wednesday-demonstration
+  - name: 피해자지원
+    url: /categories/생존자복지/
     weight: 1
-    parent: 주요활동   
-  - name: 평화비 건립
-    url: /actions/statue-of-peace
+    parent: 활동소개
+  - name: 수요시위
+    url: /categories/this-week/
     weight: 2
-    parent: 주요활동
-  - name: 생존자 복지 지원
-    url: /actions/victim-support
+    parent: 활동소개
+  - name: 국내연대
+    url: /categories/연대사업/
     weight: 3
-    parent: 주요활동
-  - name: 기림사업
-    url: /actions/international-memorial-day
+    parent: 활동소개
+  - name: 해외연대
+    url: /categories/updates/
     weight: 4
-    parent: 주요활동
-  - name: 장학교육
-    url: /actions/scholarship
-    weight: 4
-    parent: 주요활동
-  - name: 나비기금
-    url: /actions/butterfly-fund
-    weight: 4
-    parent: 주요활동                 
+    parent: 활동소개   
+  - name: 교육사업
+    url: /categories/연구조사교육/
+    weight: 5
+    parent: 활동소개  
+  - name: 평화비
+    url: /categories/기림사업/
+    weight: 6
+    parent: 활동소개
+  - name: 전시성폭력재발방지
+    url: categories/나비기금
+    weight: 7
+    parent: 활동소개
 
   - name: 단체소식
     url: /connect
-    weight: -80
-  - name: 활동보고
-    url: /connect/report
-    weight: 1
-    parent: 단체소식   
-  - name: 공지/보도자료
+    weight: -80 
+  - name: 공지
     url: /connect/notice
+    weight: 1
+    parent: 단체소식
+  - name: 보도자료
+    url: /connect/press-release
     weight: 2
     parent: 단체소식
-  - name: 언론동향
-    url: /connect/media-watch
+  - name: 자료실
+    url: /connect/resource
     weight: 3
-    parent: 단체소식
+    parent: 단체소식    
   - name: 뉴스레터
     url: /connect/newsletter
     weight: 4

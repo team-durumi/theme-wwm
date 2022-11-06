@@ -10,4 +10,3 @@ banner:
   
 ---
 살림살이
-{{< about/wall-of-donator >}}
