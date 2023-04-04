@@ -19,7 +19,13 @@
             </dl>
             <dl class="flex">
                 <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.문의.title }}<span>|</span> </dt>
-                <dd>{{ .관람안내.문의.body }}</dd>
+                <dd>
+                    <ul class="list-decimal ml-5">
+                    {{ range .관람안내.문의.body }}
+                        <li>{{ . }}</li>
+                    {{ end }}
+                    </ul>
+                </dd>
             </dl>
             <dl class="flex">
                 <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
