@@ -6,33 +6,83 @@
     <div class="lg:flex justify-between">
         <div class="leading-loose text-lg">
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.개관일.title }}<span>|</span></dt>
+                <dd>
+                    <ul>
+                        {{ range .관람안내.body_1 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <dd>
+                    <ul>
+                        {{ range .관람안내.body_2 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <!--dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.개관일.title }}<span>|</span></dt-->
                 <dd>{{ .관람안내.개관일.body }}</dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.휴관일.title }}<span>|</span></dt>
+                <!--dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.휴관일.title }}<span>|</span></dt-->
                 <dd>{{ .관람안내.휴관일.body }}</dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.주소.title }}<span>|</span></dt>
+                <!--dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.주소.title }}<span>|</span></dt-->
                 <dd>{{ .관람안내.주소.body }}</dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.문의.title }}<span>|</span> </dt>
-                <dd>{{ .관람안내.문의.body }}</dd>
-            </dl>
-            <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
                 <dd>
-                    <ul class="list-decimal ml-5">
-                        {{ range .관람안내.안내.body }}
+                    <ul>
+                        {{ range .관람안내.body_3 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <dd>
+                    <ul>
+                        {{ range .관람안내.문의.body }}
                         <li>{{ . }}</li>
                         {{ end }}
                     </ul>
                 </dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.지하철.title }}<span>|</span></dt>
+                <dd>
+                    <ul class="ml-10">
+                        {{ range .관람안내.문의.contact }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
+                <dd>
+                    <ul class="list-decimal ml-5">
+                        {{ range .관람안내.안내.body_1 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <dd>
+                    <ul>
+                        {{ range .관람안내.안내.body_2 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="flex mt-5">
+                <dt class="lg:w-24 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.지하철.title }}<span>|</span></dt>
                 <dd>
                     <ul class="list-decimal ml-5">
                         {{ range .관람안내.오시는길.지하철.body }}
@@ -42,7 +92,7 @@
                 </dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.버스.title }}<span>|</span></dt>
+                <dt class="lg:w-18 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.버스.title }}<span>|</span></dt>
                 <dd>
                     <ul class="list-decimal ml-5">
                         {{ range .관람안내.오시는길.버스.body }}

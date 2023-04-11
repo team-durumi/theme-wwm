@@ -18,7 +18,11 @@ featuredImages:
   - image1.png
   - image2.jpg
 
-bookingNaver: https://docs.google.com/forms/d/17Ao2Ly8M5YQT_dhy60_PXvN16XM6vohfoZn31lRvqeg/viewform?edit_requested=true
+#2023년4월4일 구글폼으로 교체 
+bookingNaver: https://booking.naver.com/booking/6/bizes/596312
+bookingForEnglish: http://bit.ly/3JVYQBH
+bookingForJapanese: http://bit.ly/3lX1XRU
+
 
 footer:
   전화: 02-392-5252

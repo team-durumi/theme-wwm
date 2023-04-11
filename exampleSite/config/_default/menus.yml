@@ -1,112 +1,112 @@
 main:
-  - name: 일본군성노예제
-    url: /comfort-women
+  - name: 박물관이용
+    url: /guide
     weight: -110
-  - name: 일본군성노예제란?
-    url: /comfort-women/meanings
+  - name: 관람예약 및 안내
+    url: /guide/admission
     weight: 1
-    parent: 일본군성노예제
-  - name: 운동사(연혁)
-    url: /comfort-women/history
+    parent: 박물관이용
+  - name: 오시는 길
+    url: /guide/location
     weight: 2
-    parent: 일본군성노예제
-  - name: 피해자들의 외침
-    url: /comfort-women/testimonies
+    parent: 박물관이용
+  - name: 뮤지엄 샵
+    url: /guide/stores
     weight: 3
-    parent: 일본군성노예제
+    parent: 박물관이용
 
-  - name: 단체소개
-    url: /about
+  - name: 전시
+    url: /exhibition
     weight: -100
+  - name: 상설전시
+    url: /exhibition
+    weight: 1
+    parent: 전시
+  - name: 특별전시
+    url: /exhibition/ex-04/section-01/
+    weight: 2
+    parent: 전시
+  - name: 주요전시
+    url: /exhibition/previous
+    weight: 3
+    parent: 전시
+  - name: 소장품
+    url: /items
+    weight: 4
+    parent: 전시
+
+  - name: 자료실
+    url: /archive
+    weight: -90
+  - name: 이달의 기록
+    url: /archive/featured
+    weight: 1
+    parent: 자료실    
+  - name: 기록물 이용
+    url: /archive/usage
+    weight: 2
+    parent: 자료실
+  - name: 기록물 기증
+    url: /archive/donate
+    weight: 3
+    parent: 자료실
+
+  - name: 교육/연구
+    url: /learning-and-research
+    weight: -80
+  - name: 온라인교육
+    url: /learning-and-research/e-learning
+    weight: 1
+    parent: 교육/연구   
+  - name: 프로그램
+    url: /learning-and-research/programs
+    weight: 2
+    parent: 교육/연구
+  - name: 교육자료
+    url: /learning-and-research/resources
+    weight: 3
+    parent: 교육/연구
+  - name: 연구자료
+    url: /learning-and-research/papers
+    weight: 4
+    parent: 교육/연구             
+
+  - name: 소식/참여
+    url: /connect
+    weight: -70
+  - name: 공지사항
+    url: /connect/notice
+    weight: 1
+    parent: 소식/참여
+  - name: 뉴스레터
+    url: /connect/newsletter
+    weight: 2
+    parent: 소식/참여
+  - name: 자원활동신청
+    url: /connect/volunteer
+    weight: 3
+    parent: 소식/참여
+  - name: 박물관 후원
+    url: /connect/support
+    weight: 4
+    parent: 소식/참여
+
+  - name: 박물관소개
+    url: /about
+    weight: -60
   - name: 인사말
     url: /about/greetings
     weight: 1
-    parent: 단체소개
-  - name: 미션과 비전
+    parent: 박물관소개
+  - name: 미션/비전
     url: /about/mission-and-vision
     weight: 2
-    parent: 단체소개
-  - name: 조직과 사람들
-    url: /about/org-and-people
+    parent: 박물관소개
+  - name: 연혁
+    url: /about/history
     weight: 3
-    parent: 단체소개   
-  - name: 살림살이
-    url: /about/budget
+    parent: 박물관소개
+  - name: 기부자의벽
+    url: /about/donor-wall
     weight: 4
-    parent: 단체소개
-  - name: 오시는길
-    url: /about/location
-    weight: 5
-    parent: 단체소개
-  - name: 정관
-    url: /about/articles
-    weight: 6
-    parent: 단체소개
-
-  - name: 활동소개
-    url: /actions
-    weight: -90
-  - name: 피해자지원
-    url: /categories/생존자복지/
-    weight: 1
-    parent: 활동소개
-  - name: 수요시위
-    url: /categories/this-week/
-    weight: 2
-    parent: 활동소개
-  - name: 국내연대
-    url: /categories/연대사업/
-    weight: 3
-    parent: 활동소개
-  - name: 해외연대
-    url: /categories/updates/
-    weight: 4
-    parent: 활동소개   
-  - name: 교육사업
-    url: /categories/연구조사교육/
-    weight: 5
-    parent: 활동소개  
-  - name: 평화비
-    url: /categories/기림사업/
-    weight: 6
-    parent: 활동소개
-  - name: 전시성폭력재발방지
-    url: categories/나비기금
-    weight: 7
-    parent: 활동소개
-
-  - name: 단체소식
-    url: /connect
-    weight: -80 
-  - name: 공지
-    url: /connect/notice
-    weight: 1
-    parent: 단체소식
-  - name: 보도자료
-    url: /connect/press-release
-    weight: 2
-    parent: 단체소식
-  - name: 자료실
-    url: /connect/resource
-    weight: 3
-    parent: 단체소식    
-  - name: 뉴스레터
-    url: /connect/newsletter
-    weight: 4
-    parent: 단체소식
-
-  - name: 후원/참여  
-    url: /donate-and-support
-    weight: -90
-  - name: 후원안내
-    url: /donate-and-support/guide
-    weight: 1
-    parent: 후원/참여  
-  - name: 봉사/재능기부
-    url: /donate-and-support/volunteer
-    weight: 2
-    parent: 후원/참여
-  - name: 수요시위참여
-    url: /donate-and-support/support
-    weight: 3
-    parent: 후원/참여
+    parent: 박물관소개

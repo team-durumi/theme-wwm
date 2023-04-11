@@ -12,12 +12,14 @@ ko:
       body: 서울 마포구 월드컵북로 11길 20
     문의:
       title: 문의
-      body: 02-392-5252
+      body: 
+      - Tel  02-392-5252
+      - E-mail  museum@womenandwar.net
     안내:
       title: 안내
       body:
-      - 전쟁과여성인권박물관은 코로나19로 인하여 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)
-      - 시간 당 관람 인원을 30명으로 제한합니다. (*선착순 마감)
+      - 전쟁과여성인권박물관은 원할한 관람을 위해 사전 예약제를 운영 (* 예약 시간대에만 입장 가능)
+      - 시간 당 예약관람 인원을 50명으로 제한합니다. (*선착순 마감)
       - 오디오 가이드[한국어, 영어, 일어] 제공 (*별도의 교육이나 전시 설명은 진행하지 않습니다)
     오시는길:
       지하철:
@@ -90,14 +92,12 @@ ko:
       buttonLabel: 정기후원
     일시후원신청하기:
       title: 일시후원 신청하기
-      body: 박물관 후원계좌( KB국민은행 069137-04-021905 전쟁과여성인권박물관 ), 신용카드·실시간계좌이체 등 편한 방식으로 후원하실 수 있습니다.
+      body: 박물관 운영을 위해 후원해주세요.
       link: "https://online.mrm.or.kr/T5vJlVX"
       buttonLabel: 일시후원
     후원문의:
       title: 후원문의
       body:
-      - 박물관 후원계좌
-      - KB국민은행 069137-04-021905(전쟁과여성인권박물관)
       - 후원에 대해 궁금한 사항은
       - 정의기억연대 운영관리국 070-4903-0528(직) / tax@womenandwar.net 로 문의해 주시기 바랍니다.
   박물관소개:
@@ -393,25 +393,25 @@ ko:
             - 건물 리모델링 공사 착공식                                                                                                                                                                 
 en: 
   관람안내:
-    title: Visit
+    title: Online Reservation Information
     개관일:
-      title: Opening Hours
+      title: Opening
       body: Tue-Sat, 10am-6pm (*Admission closed at 5pm)
     휴관일:
       title: Closed
-      body: Sun-Mon
+      body: every Sunday and Monday, New Year's Day, Chuseok holiday, Lunar New Year holidays, Christmas
     주소:
       title: Address
       body: 20 Worldcupbuk-ro 11-gil Mapo-gu Seoul
     문의:
       title: Contact
-      body: 02-392-5252
+      body: 82-2-392-5252, museum@womenandwar.net
     안내:
       title: Information
       body:
-      - 1. Due to COVID-19, the War and Women’s Human Rights Museum is accepting visitors on a reservation-only basis. (*You can only enter during the time slot you booked)
-      - 2. The maximum number of visitors is limited to 30 people per hour (*first-come, first-serve basis)
-      - 3. Audio guide [Korean, English, Japanese] is provided
+      - 1. The War and Women's Human Rights Museum operates a reservation system for smooth viewing. ( * You can only enter during the reserved time period.)
+      - 2. Reservations are limited to 50 people per hour. (* Closed on a first-come, first-served basis)
+      - 3. Audio guide [Korean, English, Japanese] provided. (* Separate education or exhibition explanations are not conducted)
     오시는길:
       지하철:
         title: Subway
@@ -742,26 +742,42 @@ en:
             - Remodeling started          
 jp: 
   관람안내:
-    title: 博物館のご利用案内
+    title: オンライン予約のご案内
+    body_1:
+    - この度は当博物館にご関心をお寄せいただきありがとうございます。
+    - ご来館をご希望される場合、Googleフォームにてご予約の申し込みをお願い致します。
+    body_2:
+    - ご予約に先立ち、以下のご案内を必ずお読みください。
     개관일:
       title: 開館日
-      body: 火-土、午前10時から午後6時まで  (*入館は閉館の1時間前まで)
+      body: "○ 開館日 ： 火～土　午前10時～午後6時（最終入場：午後5時）"
     휴관일:
       title: 休館日
-      body: 日-月、祝日
+      body: "○ 休館日 : 日・月、1月1日、チュソク、旧正月、12月25日"
     주소:
-      title: 住  所
-      body: ソウル市 麻浦区 ワールドカップ北路 11ギル 20
+      title: 住所
+      body: "○ 住所 : ソウル市 麻浦区 ワールドカップ北路 11ギル 20"
+    body_3:
+    - ○ 当博物館では円滑な観覧のため、事前予約生を運営しています。（＊ご予約された時間帯のみ入場可能）
+    - ○ 時間あたり予約できる人数は50名上限です（＊先着〆）   
+    - ○ オーディオ・ガイド（韓国語・英語・日本語）提供（＊別途の教育や展示説明は行っておりません） 
     문의:
       title: お問い合わせ
-      body: 02-392-5252
+      body: 
+      - お問い合わせ
+      - ご予約およびご不明な点がございましたら以下の連絡先までお問い合わせください
+      contact:
+      - "○ TEL ： +82) 2-392-5252"
+      - "○ E-mail : museum@womenandwar.net"
     안내:
       title: 案    内
-      body:
-      - 戦争と女性の人権博物館は新型コロナウィルスにより、事前予約制で運営しております。
-        (* ご予約時に指定された時間帯のみ入場可能です。)
-      - 各時間帯の観覧人数を30名までに制限しております。(*先着順締め切り)
-      - 音声ガイド[韓国語、英語、日本語]提供
+      body_1:
+      - 戦争と女性の人権博物館では円滑な観覧のため、事前予約制を運営しております。(* ご予約された時間帯のみ入場可能です)
+      - 予約人数は時間帯ごと５０名上限です。(*先着順で〆)
+      - オーディオ・ガイド（韓国語、英語、日本語）提供 (*別途の教育や展示の説明は行っておりません。)
+      - 観覧可能な時間は毎週火曜～土曜午前10時から午後６時までです。 (*最終入場：午後５時)
+      body_2:
+      - "お問い合わせ:  82-2-392-5252 (戦争と女性の人権博物館)"
     오시는길:
       지하철:
         title: アクセス
