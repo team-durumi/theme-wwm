@@ -92,7 +92,7 @@
                 </dd>
             </dl>
             <dl class="flex">
-                <dt class="lg:w-18 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.버스.title }}<span>|</span></dt>
+                <dt class="lg:w-24 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.오시는길.버스.title }}<span>|</span></dt>
                 <dd>
                     <ul class="list-decimal ml-5">
                         {{ range .관람안내.오시는길.버스.body }}
@@ -125,16 +125,34 @@
                 </dd>
             </dl>
             {{ end }}
-            <dl class="flex">
-                <dt class="lg:w-24 w-36 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .소식참여.일시후원신청하기.title }}<span>|</span></dt>
+            <dl class="flex mt-5">
                 <dd>
-                    <ul class="list-decimal ml-5">
+                    <ul>
+                        {{ range .소식참여.일시후원신청하기.여는글.body_1 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    <ul class="mt-5">
+                        {{ range .소식참여.일시후원신청하기.여는글.body_2 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    <ul class="mt-5">
+                        {{ range .소식참여.일시후원신청하기.여는글.body_3 }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>                    
+                </dd>
+            </dl>
+            <dl class="flex">
+                <dd>
+                    <ul class="list-decimal ml-10">
                         {{ range .소식참여.일시후원신청하기.body }}
                         <li>{{ . }}</li>
                         {{ end }}
                     </ul>
                 </dd>
-            </dl>              
+            </dl>             
         </div>
     </div>
 </div>
