@@ -173,6 +173,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </a>
+        {{ if eq $index "en" }}
         <div class="lg:py-14 py-6 lg:px-28 px-4">
             <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-6">{{ .관람안내.title }}</h2>
             <div class="lg:flex justify-between">
@@ -206,6 +207,86 @@
                 </div>
             </div>
         </div>
+        {{ else }}
+        <div class="lg:py-14 py-6 lg:px-28 px-4">
+            <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-6">{{ .관람안내.title }}</h2>
+            <div class="leading-loose text-lg">
+                <dl class="flex">
+                    <dd>
+                        <ul>
+                            {{ range .관람안내.body_1 }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex mt-5">
+                    <dd>
+                        <ul>
+                            {{ range .관람안내.body_2 }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex mt-5">
+                    <dd>{{ .관람안내.개관일.body }}</dd>
+                </dl>
+                <dl class="flex">
+                    <dd>{{ .관람안내.휴관일.body }}</dd>
+                </dl>
+                <dl class="flex">
+                    <dd>{{ .관람안내.주소.body }}</dd>
+                </dl>
+                <dl class="flex">
+                    <dd>
+                        <ul>
+                            {{ range .관람안내.body_3 }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex mt-5">
+                    <dd>
+                        <ul>
+                            {{ range .관람안내.문의.body }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex">
+                    <dd>
+                        <ul class="ml-10">
+                            {{ range .관람안내.문의.contact }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex mt-5">
+                    <dt class="lg:w-16 w-20 text-aa-gray-900 font-bold flex justify-between mr-3 flex-shrink-0">{{ .관람안내.안내.title }}<span>|</span></dt>
+                    <dd>
+                        <ul class="list-decimal ml-5">
+                            {{ range .관람안내.안내.body_1 }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex mt-5">
+                    <dd>
+                        <ul>
+                            {{ range .관람안내.안내.body_2 }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        {{ end }}       
         <!--div class="lg:py-14 py-6 lg:px-28 px-4">
             <h2 class="text-2xl font-bold text-aa-gray-900 leading-none mb-8">{{ .온라인예약안내.title }}</h2>
             <ul>
