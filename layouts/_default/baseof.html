@@ -17,7 +17,7 @@
     <link href="/assets/style.min.css" rel="stylesheet" />
     {{ else }}
       {{- $options := dict "inlineImports" true }}
-      {{ $styles := resources.Get "style.css" | resources.PostCSS $options }}
+      {{ $styles := resources.Get "style.css" | css.PostCSS $options }}
       {{ if hugo.IsProduction }}{{ $styles = $styles | minify | resources.PostProcess }}{{ end -}}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
     {{ end -}}{{- block "headJs" . }}{{ end -}}
